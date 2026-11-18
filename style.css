@@ -16,8 +16,8 @@
   /* Neutros do tema claro */
   --creme: #F4E7DC;   /* fundo da página (Cream) */
   --papel: #FBF4EE;   /* superfícies */
-  --tinta: #26030A;   /* texto (Ink) */
-  --cinza: #5C2A30;   /* texto secundário */
+  --tinta: #870842;   /* texto: Magenta (par 9) */
+  --cinza: #7A3555;   /* texto secundário */
   --linha: #E6D2C6;
 
   /* Nomes antigos, apontando para a paleta nova (o site inteiro usa estes) */
@@ -884,8 +884,8 @@ h2 em { font-size: 1.1em; }
   color-scheme: dark;
   --creme: #4C0610;   /* fundo: Wine */
   --papel: #5C0E1C;   /* superfícies */
-  --tinta: #F4E7DC;   /* texto creme */
-  --cinza: #E8CFC8;   /* texto secundário */
+  --tinta: #FFD283;   /* texto: Honey (par 3) */
+  --cinza: #F0D9B5;   /* texto secundário */
   --linha: #7A2232;
   --listra1: #561018; --listra2: #601422; --listra-borda: #8A3A48;
   --rabisco: #530A16;
@@ -1270,3 +1270,119 @@ a.tile:hover .tile-img img.tile-elem { scale: 1.07; transform: translate(calc(va
   .nav .int-rotulo { display: none; }
   .nav .menu-btn { order: 3; }
 }
+
+/* =========================================================
+   PARES PRIORITÁRIOS (definidos pela Adrieli)
+   Quadrado = fundo. Bolinha = elementos e texto.
+   --c-fg: cor do texto · --c-forma: cor das formas decorativas.
+   Nos pares 4, 5 e 10 a bolinha não chega a 3:1 com o fundo:
+   ela fica só nas formas decorativas e o texto usa Ink.
+   As classes de cor antigas (bg-*) apontam para estes pares.
+   ========================================================= */
+.c1, .bg-verde { --c-bg: #183900; --c-fg: #CBEE2F; --c-forma: #CBEE2F; }   /* 9.7:1 */
+.c2, .bg-amarelo, .bg-cobre { --c-bg: #FED12E; --c-fg: #4C0610; --c-forma: #4C0610; }   /* 10.7:1 */
+.c3, .bg-wine, .bg-tinta, .bg-preto, .bg-grafite { --c-bg: #4C0610; --c-fg: #FFD283; --c-forma: #FFD283; }   /* 11.0:1 */
+.c4, .bg-azul, .bg-periwinkle { --c-bg: #9BA8EF; --c-fg: #26030A; --c-forma: #FF6533; }   /* 1.3:1 → texto Ink 8.4:1 */
+.c5, .bg-laranja, .bg-coral { --c-bg: #FF6533; --c-fg: #26030A; --c-forma: #D1D7F2; }   /* 2.1:1 → texto Ink 6.5:1 */
+.c6, .bg-limao, .bg-menta, .bg-verde-vivo { --c-bg: #CBEE2F; --c-fg: #183900; --c-forma: #183900; }   /* 9.7:1 */
+.c7, .bg-vinho, .bg-roxo { --c-bg: #870842; --c-fg: #FEB3D2; --c-forma: #FEB3D2; }   /* 5.9:1 */
+.c8, .bg-rosa, .bg-lilas, .bg-lilas-claro, .bg-celeste { --c-bg: #FEB3D2; --c-fg: #870842; --c-forma: #870842; }   /* 5.9:1 */
+.c9, .bg-branco { --c-bg: #F4E7DC; --c-fg: #870842; --c-forma: #870842; }   /* 8.1:1 */
+.c10, .bg-vermelho { --c-bg: #FF0149; --c-fg: #26030A; --c-forma: #FFD283; }   /* 2.8:1 → texto Ink 4.9:1 */
+:is(.c1, .bg-verde, .c2, .bg-amarelo, .bg-cobre, .c3, .bg-wine, .bg-tinta, .bg-preto, .bg-grafite, .c4, .bg-azul, .bg-periwinkle, .c5, .bg-laranja, .bg-coral, .c6, .bg-limao, .bg-menta, .bg-verde-vivo, .c7, .bg-vinho, .bg-roxo, .c8, .bg-rosa, .bg-lilas, .bg-lilas-claro, .bg-celeste, .c9, .bg-branco, .c10, .bg-vermelho) { background-color: var(--c-bg); color: var(--c-fg); }
+:root[data-tema="escuro"] :is(.c3, .bg-wine, .bg-tinta, .bg-preto, .bg-grafite) { outline: 1.5px solid #7A2232; outline-offset: -1.5px; }
+:root:not([data-tema="escuro"]) :is(.c9, .bg-branco) { outline: 1.5px solid #D9C2B4; outline-offset: -1.5px; }
+
+/* formas decorativas na cor da bolinha */
+.carta li::before { color: var(--c-forma, currentColor); }
+.carta h3 { border-bottom-color: var(--c-forma, currentColor); }
+.numero i { color: var(--c-forma, currentColor); border-color: var(--c-forma, currentColor); }
+
+/* quadros da grade: o par fica no quadro; rótulos invertem o par */
+.tile-rotulo h3, .tile-rotulo span, .tile-premio { background: var(--c-fg); color: var(--c-bg); }
+.tile .seta-circulo { background: var(--c-fg); color: var(--c-bg); border-color: var(--c-fg); }
+
+/* peças fixas nos pares */
+.btn-limao { background: #CBEE2F; color: #183900; border-color: #CBEE2F; }
+.voltar:hover { background: #CBEE2F; color: #183900; border-color: #CBEE2F; }
+.selo { background: #CBEE2F; color: #183900; }
+.pulso { background: #183900; }
+.f-balao { background: var(--grao), #FEB3D2; background-size: 180px; color: #870842; }
+.t-rosa { background: #FEB3D2; color: #870842; }
+.t-celeste { background: #FED12E; color: #4C0610; }
+.t-limao { background: #CBEE2F; color: #183900; }
+.t-verde { background: #870842; color: #FEB3D2; }
+.sg-fundo { fill: #CBEE2F; }
+.selo-giratorio text { fill: #183900; }
+.sg-seta { stroke: #183900; }
+.sim-ativo .sim-botao { background: #CBEE2F; color: #183900; border-color: #183900; }
+.checagens li::before { background: #CBEE2F; color: #183900; }
+.pp-sims button[aria-pressed="true"] { background: #CBEE2F; color: #183900; border-color: #CBEE2F; }
+.pder-tag { border-color: currentColor; }
+.pder-tag i { background: currentColor; }
+.tag-p { background: #FEB3D2; color: #870842; }
+.tag-d { background: #FED12E; color: #4C0610; }
+.tag-e { background: #CBEE2F; color: #183900; }
+.tag-r { background: #870842; color: #FEB3D2; }
+.passo-forma { border-color: currentColor; }
+.pf-1 { background: #FEB3D2; color: #870842; }
+.pf-2 { background: #FED12E; color: #4C0610; }
+.pf-3 { background: #CBEE2F; color: #183900; }
+.pf-4 { background: #870842; color: #FEB3D2; }
+.variavel svg * { stroke: currentColor; }
+
+/* contato e "próximo projeto": par 1 (Forest + Lime) */
+.contato { background: #183900; color: #CBEE2F; border-color: #2A5410; }
+.contato .etiqueta-clara, .contato-sub, .nota-acess, .nota-acess strong, .contato .rodape, .contato .rodape a { color: #CBEE2F; }
+.contato .rodape { border-top-color: rgb(203 238 47 / .3); }
+.contato .redes a { border-color: rgb(203 238 47 / .5); color: #CBEE2F; }
+.contato .redes li a:hover { background: #CBEE2F; color: #183900; border-color: #CBEE2F; }
+.email-grande { text-decoration-color: #FFD283; }
+.email-grande:hover, .contato .rodape a:hover { color: #FFD283; }
+.assinatura em { color: #FFD283; }
+.ad-bora b { color: #870842; }
+.ad-carinho text { fill: #183900; }
+.ad-oi { background: #FED12E; color: #4C0610; }
+.fx-flor b { color: #870842; }
+.proximo { background: var(--grao), #183900; background-size: 180px, auto; color: #CBEE2F; border-color: #2A5410; }
+.proximo span { color: #CBEE2F; }
+.proximo i { background: #CBEE2F; color: #183900; }
+
+/* diagrama da pesquisa e vitrine da paleta: par 3 (Wine + Honey) */
+.cena { background: var(--grao), radial-gradient(circle at 70% 20%, #870842, #4C0610 72%); background-size: 180px, auto; color: #FFD283; border-color: #7A2232; }
+.cena-rotulo, .cena-ator, .cena-ator strong, .cena-nota { color: #FFD283; }
+.cena-rotulo::before { border-color: #CBEE2F; }
+.cena-distancia { background: repeating-linear-gradient(90deg, #FFD283 0 8px, transparent 8px 14px); }
+.cena-distancia::before { border-right-color: #FFD283; }
+.cena-distancia::after { border-left-color: #FFD283; }
+.cena-distancia b { background: #CBEE2F; color: #183900; }
+.cena-nota strong { color: #CBEE2F; }
+@media (max-width: 600px) {
+  .cena-distancia { background: repeating-linear-gradient(180deg, #FFD283 0 8px, transparent 8px 14px); }
+  .cena-distancia::before { border-right-color: transparent; border-bottom-color: #FFD283; }
+  .cena-distancia::after { border-left-color: transparent; border-top-color: #FFD283; }
+}
+.paleta-pilulas { background: var(--grao), #4C0610; background-size: 180px, auto; color: #FFD283; border-color: #7A2232; }
+.pp-sims button { color: #FFD283; border-color: #7A2232; }
+.pp-rotulo, .pp-rotulo b, .pp-rotulo .pp-nota, .pp-legenda { color: #FFD283; }
+.pp-rotulo .pp-nota i { background: #FFD283; color: #4C0610; }
+.pp-rotulo .pp-nota i.falha { background: transparent; color: #FFD283; border-color: #FFD283; }
+
+/* tela de carregamento: par 6 no centro */
+.loader-centro { background: #CBEE2F; color: #183900; }
+.loader-barra { background: rgb(24 57 0 / .2); }
+.loader-barra::after { background: #183900; }
+
+/* menu no tema escuro segue o par 3 (texto Honey) */
+:root[data-tema="escuro"] .nav-links a:not(.btn) { color: var(--tinta); }
+
+/* vitrine dos pares (colophon) */
+.pares { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem 1.2rem; margin-top: 2.4rem; }
+.par { margin: 0; }
+.par-q { position: relative; aspect-ratio: 1; border-radius: 6px; display: grid; place-items: center; }
+.par-q i { width: 40%; aspect-ratio: 1; border-radius: 50%; }
+.par-q b { position: absolute; left: .55rem; top: .45rem; font-size: .78rem; font-weight: 700; }
+.par figcaption { margin-top: .55rem; font-size: .78rem; line-height: 1.4; color: #FFD283; }
+.par figcaption strong { display: block; font-size: .82rem; }
+@media (max-width: 700px) { .pares { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.cena { background-color: #4C0610; }
