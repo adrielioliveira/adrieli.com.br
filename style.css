@@ -3,48 +3,47 @@
    ========================================================= */
 :root {
   /* =====================================================
-     PALETA: 6 cores + neutros, cada uma em 3 tons
-     (claro, base, escuro), como na referência.
-     * = tom gerado para completar a família.
+     PALETA: 6 cores em 3 tons (claro, base, escuro) + creme.
      ===================================================== */
-  --ember-claro: #FFB7B7;  --ember: #FC4D17;  --ember-escuro: #6B2137;   /* Blush · Ember · Wine */
-  --amber-claro: #FCF0DD;  --amber: #EEBE55;  --amber-escuro: #974320;   /* Creamsicle Dream · Sunlit Amber · Rustic Copper */
-  --olive-claro: #F3EEC8;  --olive: #D0C360;  --olive-escuro: #4D4718;   /* Olive Mist* · Olive Gold · Deep Olive* */
-  --sage-claro:  #D7FFE9;  --sage:  #96AA9F;  --sage-escuro:  #1C423E;   /* Minty Frost · Sage Stone · Forest Shadow */
-  --sky-claro:   #E4F0FF;  --sky:   #B7D8FF;  --sky-escuro:   #233E66;   /* Sky Mist* · Ice Blue · Deep Sky* */
-  --mauve-claro: #DEDDFC;  --mauve: #9DA7EA;  --mauve-escuro: #383154;   /* Ethereal Lavender · Misty Mauve · Twilight Indigo */
-  --neutro-claro: #F9EEE5; --neutro: #4C4242; --neutro-escuro: #4A0325;  /* Cream · Warm Graphite · Plum */
+  --lime-claro: #CBEE2F; --lime: #183900; --lime-escuro: #0B1900;   /* Lime · Forest · Deep Forest */
+  --pink-claro: #FEB3D2; --pink: #870842; --pink-escuro: #5E012E;   /* Blossom · Magenta · Mulberry */
+  --red-claro: #FF0149; --red: #4C0610; --red-escuro: #26030A;   /* Ruby · Wine · Ink */
+  --amber-claro: #FFD283; --amber: #F7BB39; --amber-escuro: #D1900F;   /* Honey · Amber · Ochre */
+  --orange-claro: #FF9173; --orange: #FF6533; --orange-escuro: #D33916;   /* Peach · Tangerine · Rust */
+  --peri-claro: #D1D7F2; --peri: #9BA8EF; --peri-escuro: #425399;   /* Mist · Periwinkle · Indigo */
+  --neutro-claro: #F4E7DC;  /* Cream */
 
   /* Neutros do tema claro */
-  --creme: #F9EEE5;   /* fundo da página (Cream) */
-  --papel: #FFFAF6;   /* superfícies */
-  --tinta: #2B0B1E;   /* texto */
-  --cinza: #5B3A4A;   /* texto secundário */
-  --linha: #EAD8CF;
+  --creme: #F4E7DC;   /* fundo da página (Cream) */
+  --papel: #FBF4EE;   /* superfícies */
+  --tinta: #26030A;   /* texto (Ink) */
+  --cinza: #5C2A30;   /* texto secundário */
+  --linha: #E6D2C6;
 
   /* Nomes antigos, apontando para a paleta nova (o site inteiro usa estes) */
-  --laranja: var(--ember);
-  --vermelho: var(--ember);
-  --rosa: var(--ember-claro);
-  --coral: var(--ember-claro);
-  --vinho: var(--ember-escuro);
-  --limao: var(--amber);          /* cor de destaque: botões e links */
+  --laranja: var(--orange);
+  --vermelho: var(--red-claro);
+  --rosa: var(--pink-claro);
+  --coral: var(--orange-claro);
+  --vinho: var(--pink);
+  --limao: var(--lime-claro);     /* cor de destaque: botões e links */
   --cobre: var(--amber-escuro);
-  --amarelo: var(--olive);
-  --verde-vivo: var(--sage);
-  --menta: var(--sage-claro);
-  --verde: var(--sage-escuro);
-  --celeste: var(--sky);
-  --periwinkle: var(--sky-claro);
-  --azul: var(--mauve);
-  --lilas: var(--mauve-claro);
-  --lilas-claro: var(--mauve-claro);
-  --roxo: var(--mauve-escuro);
+  --amarelo: var(--amber);
+  --verde-vivo: var(--lime-claro);
+  --menta: var(--lime-claro);
+  --verde: var(--lime);
+  --celeste: var(--peri-claro);
+  --periwinkle: var(--peri-claro);
+  --azul: var(--peri);
+  --lilas: var(--peri-claro);
+  --lilas-claro: var(--peri-claro);
+  --roxo: var(--peri-escuro);
+  --mauve-escuro: var(--peri-escuro);  /* usado pelo interruptor */
 
-  --preto: #2B0B1E;   /* tinta fixa sobre as cores */
-  --branco: #F9EEE5;  /* creme fixo sobre fundos escuros */
-  --listra1: #F1E2D8; --listra2: #F8EDE6; --listra-borda: #C7AFA5;
-  --rabisco: #F0E0D6;
+  --preto: #26030A;   /* tinta fixa sobre as cores */
+  --branco: #F4E7DC;  /* creme fixo sobre fundos escuros */
+  --listra1: #EEDFD3; --listra2: #F7EEE6; --listra-borda: #C4ACA0;
+  --rabisco: #EEDDD0;
   --raio: 28px;
   --fonte: "Bricolage Grotesque", system-ui, sans-serif;
   --serif: "Instrument Serif", Georgia, serif;
@@ -86,22 +85,22 @@ h2 em { font-size: 1.1em; }
 /* ===== Cores de fundo utilitárias ===== */
 .bg-laranja { background: var(--laranja); color: var(--preto); }
 .bg-vermelho { background: var(--vermelho); color: var(--preto); }
-.bg-rosa { background: var(--rosa); color: var(--ember-escuro); }
-.bg-coral { background: var(--coral); color: var(--ember-escuro); }
-.bg-vinho { background: var(--vinho); color: var(--ember-claro); }
-.bg-limao { background: var(--limao); color: var(--preto); }
-.bg-cobre { background: var(--cobre); color: var(--amber-claro); }
+.bg-rosa { background: var(--rosa); color: var(--pink-escuro); }
+.bg-coral { background: var(--coral); color: var(--preto); }
+.bg-vinho { background: var(--vinho); color: var(--pink-claro); }
+.bg-limao { background: var(--limao); color: var(--lime-escuro); }
+.bg-cobre { background: var(--cobre); color: var(--preto); }
 .bg-amarelo { background: var(--amarelo); color: var(--preto); }
-.bg-verde-vivo { background: var(--verde-vivo); color: var(--preto); }
-.bg-menta { background: var(--menta); color: var(--sage-escuro); }
-.bg-verde { background: var(--verde); color: var(--sage-claro); }
+.bg-verde-vivo { background: var(--verde-vivo); color: var(--lime-escuro); }
+.bg-menta { background: var(--menta); color: var(--lime-escuro); }
+.bg-verde { background: var(--verde); color: var(--lime-claro); }
 .bg-celeste { background: var(--celeste); color: var(--preto); }
-.bg-periwinkle { background: var(--periwinkle); color: var(--sky-escuro); }
+.bg-periwinkle { background: var(--periwinkle); color: var(--peri-escuro); }
 .bg-azul { background: var(--azul); color: var(--preto); }
-.bg-lilas { background: var(--lilas); color: var(--mauve-escuro); }
-.bg-lilas-claro { background: var(--lilas-claro); color: var(--mauve-escuro); }
-.bg-roxo { background: var(--roxo); color: var(--mauve-claro); }
-.bg-grafite { background: var(--neutro); color: var(--branco); }
+.bg-lilas { background: var(--lilas); color: var(--peri-escuro); }
+.bg-lilas-claro { background: var(--lilas-claro); color: var(--peri-escuro); }
+.bg-roxo { background: var(--roxo); color: var(--peri-claro); }
+.bg-grafite { background: var(--preto); color: var(--branco); }
 .bg-tinta { background: var(--tinta); color: var(--papel); }
 .bg-branco { background: var(--branco); color: var(--preto); }
 .bg-preto { background: var(--preto); color: var(--branco); }
@@ -883,18 +882,18 @@ h2 em { font-size: 1.1em; }
    ========================================================= */
 :root[data-tema="escuro"] {
   color-scheme: dark;
-  --creme: #4A0325;   /* fundo: Plum da referência */
-  --papel: #5C0B33;   /* superfícies */
-  --tinta: #F9EEE5;   /* texto creme */
-  --cinza: #E2CDD5;   /* texto secundário */
-  --linha: #7A2450;
-  --listra1: #520729; --listra2: #5C0D32; --listra-borda: #8A3A62;
-  --rabisco: #55082D;
+  --creme: #4C0610;   /* fundo: Wine */
+  --papel: #5C0E1C;   /* superfícies */
+  --tinta: #F4E7DC;   /* texto creme */
+  --cinza: #E8CFC8;   /* texto secundário */
+  --linha: #7A2232;
+  --listra1: #561018; --listra2: #601422; --listra-borda: #8A3A48;
+  --rabisco: #530A16;
 }
 :root[data-tema="escuro"] body::after { filter: invert(1); mix-blend-mode: screen; opacity: .05; }
 :root[data-tema="escuro"] .blob { opacity: .26 !important; }
 :root[data-tema="escuro"] .nav-links a:not(.btn) { color: var(--limao); }
-:root[data-tema="escuro"] .nav-links a:not(.btn):hover { background: #6A1840; }
+:root[data-tema="escuro"] .nav-links a:not(.btn):hover { background: #6A1424; }
 
 .tema {
   position: fixed; left: 16px; top: 50%; transform: translateY(-50%); z-index: 55;
@@ -1091,27 +1090,25 @@ a.tile:hover .geleia { transform: rotate(14deg) scale(1.06); }
 
 /* =========================================================
    FAMÍLIAS DE COR INTERCAMBIÁVEIS
-   7 famílias x 3 tons. O texto de cada tom já vem testado
-   (WCAG AA, de 5,3:1 a 13,8:1):
-     tom-claro  -> texto no tom escuro da família
-     tom-base   -> tinta ameixa (ou creme, no grafite)
-     tom-escuro -> texto no tom claro da família
-   Uso: class="fam-sage tom-escuro". Troque a família ou o tom
-   em qualquer cartão, quadro ou forma: o contraste se mantém.
+   6 famílias x 3 tons. Cada tom já traz a cor de texto testada.
+   Uso: class="fam-peri tom-escuro". Troque a família ou o tom:
+   o texto acompanha. Todos passam em WCAG AA (4,5:1), exceto
+   Rust (orange escuro, 4,0:1): use só com texto grande (24px+)
+   ou como forma, sem texto.
    ========================================================= */
-.fam-ember  { --f-claro: var(--ember-claro);  --f-base: var(--ember);  --f-escuro: var(--ember-escuro);  --f-texto-base: var(--preto); }
-.fam-amber  { --f-claro: var(--amber-claro);  --f-base: var(--amber);  --f-escuro: var(--amber-escuro);  --f-texto-base: var(--preto); }
-.fam-olive  { --f-claro: var(--olive-claro);  --f-base: var(--olive);  --f-escuro: var(--olive-escuro);  --f-texto-base: var(--preto); }
-.fam-sage   { --f-claro: var(--sage-claro);   --f-base: var(--sage);   --f-escuro: var(--sage-escuro);   --f-texto-base: var(--preto); }
-.fam-sky    { --f-claro: var(--sky-claro);    --f-base: var(--sky);    --f-escuro: var(--sky-escuro);    --f-texto-base: var(--preto); }
-.fam-mauve  { --f-claro: var(--mauve-claro);  --f-base: var(--mauve);  --f-escuro: var(--mauve-escuro);  --f-texto-base: var(--preto); }
-.fam-neutro { --f-claro: var(--neutro-claro); --f-base: var(--neutro); --f-escuro: var(--neutro-escuro); --f-texto-base: var(--branco); }
-.tom-claro { background: var(--f-claro); color: var(--f-escuro); }
-.tom-base, .tom-medio { background: var(--f-base); color: var(--f-texto-base); }
-.tom-escuro { background: var(--f-escuro); color: var(--f-claro); }
+.fam-lime { --f-claro: #CBEE2F; --t-claro: #0B1900; --f-base: #183900; --t-base: #CBEE2F; --f-escuro: #0B1900; --t-escuro: #CBEE2F; }
+.fam-pink { --f-claro: #FEB3D2; --t-claro: #5E012E; --f-base: #870842; --t-base: #FEB3D2; --f-escuro: #5E012E; --t-escuro: #FEB3D2; }
+.fam-red { --f-claro: #FF0149; --t-claro: #26030A; --f-base: #4C0610; --t-base: #F4E7DC; --f-escuro: #26030A; --t-escuro: #F4E7DC; }
+.fam-amber { --f-claro: #FFD283; --t-claro: #26030A; --f-base: #F7BB39; --t-base: #26030A; --f-escuro: #D1900F; --t-escuro: #26030A; }
+.fam-orange { --f-claro: #FF9173; --t-claro: #26030A; --f-base: #FF6533; --t-base: #26030A; --f-escuro: #D33916; --t-escuro: #26030A; }
+.fam-peri { --f-claro: #D1D7F2; --t-claro: #425399; --f-base: #9BA8EF; --t-base: #26030A; --f-escuro: #425399; --t-escuro: #D1D7F2; }
+.tom-claro { background: var(--f-claro); color: var(--t-claro); }
+.tom-base, .tom-medio { background: var(--f-base); color: var(--t-base); }
+.tom-escuro { background: var(--f-escuro); color: var(--t-escuro); }
 
 /* grade de famílias (colophon), no formato da referência */
-.fam-grade { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); border-radius: 18px; overflow: hidden; transition: filter .2s; }
+.fam-col.unica { grid-template-rows: 1fr; }
+.fam-grade { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)) minmax(0, .8fr); border-radius: 18px; overflow: hidden; transition: filter .2s; }
 .fam-col { display: grid; grid-template-rows: 1fr 3fr 1.6fr; min-height: 460px; }
 .fam-col > div { padding: .9rem .8rem; display: flex; flex-direction: column; gap: .15rem; font-size: .8rem; line-height: 1.3; }
 .fam-col b { font-size: .92rem; letter-spacing: -.01em; }
@@ -1133,7 +1130,7 @@ a.tile:hover .geleia { transform: rotate(14deg) scale(1.06); }
 html.carregando { overflow: hidden; }
 html.carregando .loader {
   display: block; position: fixed; inset: 0; z-index: 1000;
-  background: #4A0325; cursor: pointer;
+  background: #4C0610; cursor: pointer;
   --cel: clamp(92px, 13vw, 168px);
 }
 .loader-grade {
@@ -1144,8 +1141,8 @@ html.carregando .loader {
 .lc { position: relative; isolation: isolate; }
 .lc i {
   position: absolute; inset: 0; border-radius: 50%;
-  background-color: #FC4D17;
-  background-image: radial-gradient(circle at 74% 78%, var(--c2, #9DA7EA) 0, transparent 68%);
+  background-color: #FF6533;
+  background-image: radial-gradient(circle at 74% 78%, var(--c2, #9BA8EF) 0, transparent 68%);
   box-shadow: inset 0 0 0 1px rgb(255 255 255 / .28);
   animation: lc-cor 7.2s linear infinite;
   animation-delay: var(--d, 0s);
@@ -1160,13 +1157,13 @@ html.carregando .loader {
   animation-delay: calc(var(--d, 0s) - 3.6s), var(--d2, 0s);
 }
 @keyframes lc-cor {
-  0%   { background-color: #FC4D17; }
-  17%  { background-color: #EEBE55; }
-  33%  { background-color: #FFB7B7; }
-  50%  { background-color: #D7FFE9; }
-  67%  { background-color: #B7D8FF; }
-  83%  { background-color: #9DA7EA; }
-  100% { background-color: #FC4D17; }
+  0%   { background-color: #FF6533; }
+  17%  { background-color: #F7BB39; }
+  33%  { background-color: #FEB3D2; }
+  50%  { background-color: #CBEE2F; }
+  67%  { background-color: #D1D7F2; }
+  83%  { background-color: #9BA8EF; }
+  100% { background-color: #FF6533; }
 }
 @keyframes lc-desliza {
   from { transform: translate(42%, -30%); }
@@ -1180,18 +1177,18 @@ html.carregando .loader {
   position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 2;
   display: flex; align-items: center; gap: .8rem;
   padding: .85rem 1.5rem .85rem 1rem; border-radius: 999px;
-  background: #2B0B1E; color: #F9EEE5; white-space: nowrap;
+  background: #26030A; color: #F4E7DC; white-space: nowrap;
   box-shadow: 0 20px 50px rgb(0 0 0 / .35);
   font-size: clamp(1.05rem, 2.4vw, 1.5rem); font-weight: 600; letter-spacing: -.02em;
 }
 .loader-centro svg { width: 2.1em; height: 2.1em; flex: none; }
 .loader-centro em { font-size: 1.15em; }
 .loader-barra { position: absolute; left: 1.2rem; right: 1.6rem; bottom: .45rem; height: 3px; border-radius: 3px; background: rgb(249 238 229 / .18); overflow: hidden; }
-.loader-barra::after { content: ""; position: absolute; inset: 0; background: #EEBE55; transform-origin: left; animation: lc-barra 2.2s cubic-bezier(.3, .7, .3, 1) forwards; }
+.loader-barra::after { content: ""; position: absolute; inset: 0; background: #F7BB39; transform-origin: left; animation: lc-barra 2.2s cubic-bezier(.3, .7, .3, 1) forwards; }
 @keyframes lc-barra { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 .loader-pular .toque { display: none; }
 @media (pointer: coarse) { .loader-pular .mouse { display: none; } .loader-pular .toque { display: inline; } }
-.loader-pular { position: absolute; z-index: 2; left: 50%; bottom: 22px; transform: translateX(-50%); white-space: nowrap; font-size: clamp(.68rem, 2.6vw, .8rem); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #F9EEE5; background: rgb(43 11 30 / .8); padding: .35rem .8rem; border-radius: 999px; }
+.loader-pular { position: absolute; z-index: 2; left: 50%; bottom: 22px; transform: translateX(-50%); white-space: nowrap; font-size: clamp(.68rem, 2.6vw, .8rem); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #F4E7DC; background: rgb(43 11 30 / .8); padding: .35rem .8rem; border-radius: 999px; }
 .loader-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 /* saída: os círculos encolhem em onda e a tela some */
 .loader.saindo { transition: opacity .55s ease .35s; opacity: 0; }
@@ -1256,7 +1253,7 @@ a.tile:hover .tile-img img.tile-elem { scale: 1.07; transform: translate(calc(va
   transition: transform .35s cubic-bezier(.4, 1.4, .5, 1);
 }
 .int-pino svg { width: 15px; height: 15px; }
-.interruptor[aria-checked="true"] .int-trilho { background: var(--mauve-escuro); box-shadow: 0 4px 0 #1E1830, inset 0 0 0 1.5px rgb(255 255 255 / .2); }
+.interruptor[aria-checked="true"] .int-trilho { background: var(--mauve-escuro); box-shadow: 0 4px 0 #2A3666, inset 0 0 0 1.5px rgb(255 255 255 / .2); }
 .interruptor[aria-checked="true"] .int-pino { transform: translateX(26px); }
 .int-rotulo { min-width: 2.6em; }
 .sim-botao img { width: 1.6rem; height: 1.6rem; margin: -.15rem 0; }
@@ -1265,7 +1262,7 @@ a.tile:hover .tile-img img.tile-elem { scale: 1.07; transform: translate(calc(va
 .nav .interruptor { order: 3; margin-left: .4rem; box-shadow: none; padding: .3rem .75rem .3rem .3rem; background: transparent; border-color: var(--linha); }
 .nav .nav-links { order: 2; }
 .nav .int-trilho { width: 52px; height: 28px; box-shadow: 0 3px 0 var(--amber-escuro), inset 0 0 0 1.5px rgb(43 11 30 / .15); }
-.nav .interruptor[aria-checked="true"] .int-trilho { box-shadow: 0 3px 0 #1E1830, inset 0 0 0 1.5px rgb(255 255 255 / .2); }
+.nav .interruptor[aria-checked="true"] .int-trilho { box-shadow: 0 3px 0 #2A3666, inset 0 0 0 1.5px rgb(255 255 255 / .2); }
 .nav .int-pino { width: 22px; height: 22px; }
 .nav .interruptor[aria-checked="true"] .int-pino { transform: translateX(24px); }
 @media (max-width: 900px) {

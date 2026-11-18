@@ -213,7 +213,7 @@ if (!semMovimento && ponteiroFino) {
    ver as pílulas nas simulações de visão de cores.
    --------------------------------------------------------- */
 (function () {
-  const TINTA = "#2B0B1E", PAPEL = "#F9EEE5";
+  const TINTA = "#26030A", PAPEL = "#F4E7DC";
   const valido = (h) => /^#[0-9a-f]{6}$/i.test((h || "").trim());
   const lum = (h) => {
     const c = [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16) / 255)

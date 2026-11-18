@@ -16,7 +16,7 @@
   <meta property="og:image" content="https://adrieli.com.br/og-image.png">
   <meta property="og:image:alt" content="color for every way of seeing. Portfolio of Adrieli Both de Oliveira.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#2B0B1E">
+  <meta name="theme-color" content="#26030A">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,7 @@
 <body>
   <div class="loader" id="loader" aria-hidden="true">
     <div class="loader-grade"></div>
-    <p class="loader-centro"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="37" r="27" fill="#FC4D17"/><circle cx="50" cy="63" r="27" fill="#9DA7EA"/><path d="M26.34 50A27 27 0 0 1 73.66 50A27 27 0 0 1 26.34 50Z" fill="#9B3215"/><circle cx="50" cy="50" r="10.5" fill="#F9EEE5"/><circle cx="50" cy="50" r="4.6" fill="#2B0B1E"/></svg><span>color for every way of <em>seeing</em></span><span class="loader-barra"></span></p>
+    <p class="loader-centro"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="37" r="27" fill="#FF6533"/><circle cx="50" cy="63" r="27" fill="#9BA8EF"/><path d="M26.34 50A27 27 0 0 1 73.66 50A27 27 0 0 1 26.34 50Z" fill="#9B4330"/><circle cx="50" cy="50" r="10.5" fill="#F4E7DC"/><circle cx="50" cy="50" r="4.6" fill="#26030A"/></svg><span>color for every way of <em>seeing</em></span><span class="loader-barra"></span></p>
     <span class="loader-pular"><span class="mouse">click or press any key to skip</span><span class="toque">tap to skip</span></span>
   </div>
   <p class="loader-sr" role="status" id="loader-status"></p>
@@ -36,13 +36,13 @@
   var g=document.querySelector("#loader .loader-grade"),c=Math.min(innerWidth,1400)<700?92:Math.min(168,Math.max(92,innerWidth*.13)),
   cols=Math.ceil(innerWidth/c)+2,rows=Math.ceil(innerHeight/c)+2,f="";
   for(var r=0;r<rows;r++)for(var k=0;k<cols;k++){var d=-((r+k)*.32).toFixed(2),sd=(Math.abs(r-rows/2)+Math.abs(k-cols/2))*.03,par=(r*3+k)%4===0;
-  var V=["#FC4D17","#9DA7EA","#EEBE55","#B7D8FF","#FFB7B7","#FC4D17","#D7FFE9"];f+='<div class="lc" style="--d:'+d+'s;--d2:'+(-(r+k)*.6).toFixed(1)+'s;--sd:'+sd.toFixed(2)+'s;--c2:'+V[(r+2*k)%V.length]+'"><i></i>'+(par?'<i></i>':'')+'</div>';}
+  var V=["#FF6533","#9BA8EF","#F7BB39","#D1D7F2","#FEB3D2","#FF6533","#CBEE2F"];f+='<div class="lc" style="--d:'+d+'s;--d2:'+(-(r+k)*.6).toFixed(1)+'s;--sd:'+sd.toFixed(2)+'s;--c2:'+V[(r+2*k)%V.length]+'"><i></i>'+(par?'<i></i>':'')+'</div>';}
   g.innerHTML=f;g.style.gridTemplateColumns="repeat("+cols+","+c+"px)";g.style.gridAutoRows=c+"px";document.getElementById("loader-status").textContent="Loading portfolio";})();</script>
     <a class="pular" href="#conteudo">Skip to content</a>
 
   <header class="topo">
     <nav class="nav" aria-label="Main">
-      <a href="index.html" class="logo" aria-label="Adrieli Both de Oliveira, home">adrieli<svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle cx="50" cy="37" r="27" fill="#FC4D17"/><circle cx="50" cy="63" r="27" fill="#9DA7EA"/><path d="M26.34 50A27 27 0 0 1 73.66 50A27 27 0 0 1 26.34 50Z" fill="#9B3215"/><circle cx="50" cy="50" r="10.5" fill="#F9EEE5"/><circle cx="50" cy="50" r="4.6" fill="#2B0B1E"/></svg>both</a>
+      <a href="index.html" class="logo" aria-label="Adrieli Both de Oliveira, home">adrieli<svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle cx="50" cy="37" r="27" fill="#FF6533"/><circle cx="50" cy="63" r="27" fill="#9BA8EF"/><path d="M26.34 50A27 27 0 0 1 73.66 50A27 27 0 0 1 26.34 50Z" fill="#9B4330"/><circle cx="50" cy="50" r="10.5" fill="#F4E7DC"/><circle cx="50" cy="50" r="4.6" fill="#26030A"/></svg>both</a>
       <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
       <ul class="nav-links">
         <li><a href="index.html#work">work</a></li>
@@ -77,21 +77,21 @@
         <header class="cap-cabeca">
           <span class="cap-num bg-rosa">01</span>
           <h2>Color palette</h2>
-          <p>Six colors and a neutral, in three tones each.</p>
+          <p>Six colors in three tones each, plus a cream neutral.</p>
         </header>
         <div class="cap-corpo">
           <figure class="paleta-pilulas">
             <div class="pp-topo"><h3>Color palette.</h3><div class="pp-sims" role="group" aria-label="See the palette through a simulation"></div></div>
             <div class="fam-grade">
-              <div class="fam-col" role="group" aria-label="Ember family"><div style="background:#FFB7B7;color:#6B2137"><b>Blush</b><span>#FFB7B7</span><small>6.7:1 AA</small></div><div style="background:#FC4D17;color:#2B0B1E"><b>Ember</b><span>#FC4D17</span><small>5.3:1 AA</small></div><div style="background:#6B2137;color:#FFB7B7"><b>Wine</b><span>#6B2137</span><small>6.7:1 AA</small></div></div>
-              <div class="fam-col" role="group" aria-label="Amber family"><div style="background:#FCF0DD;color:#974320"><b>Creamsicle Dream</b><span>#FCF0DD</span><small>5.9:1 AA</small></div><div style="background:#EEBE55;color:#2B0B1E"><b>Sunlit Amber</b><span>#EEBE55</span><small>10.4:1 AAA</small></div><div style="background:#974320;color:#FCF0DD"><b>Rustic Copper</b><span>#974320</span><small>5.9:1 AA</small></div></div>
-              <div class="fam-col" role="group" aria-label="Olive family"><div style="background:#F3EEC8;color:#4D4718"><b>Olive Mist</b><span>#F3EEC8</span><small class="gerado">8.0:1 AAA</small></div><div style="background:#D0C360;color:#2B0B1E"><b>Olive Gold</b><span>#D0C360</span><small>10.0:1 AAA</small></div><div style="background:#4D4718;color:#F3EEC8"><b>Deep Olive</b><span>#4D4718</span><small class="gerado">8.0:1 AAA</small></div></div>
-              <div class="fam-col" role="group" aria-label="Sage family"><div style="background:#D7FFE9;color:#1C423E"><b>Minty Frost</b><span>#D7FFE9</span><small>10.2:1 AAA</small></div><div style="background:#96AA9F;color:#2B0B1E"><b>Sage Stone</b><span>#96AA9F</span><small>7.3:1 AAA</small></div><div style="background:#1C423E;color:#D7FFE9"><b>Forest Shadow</b><span>#1C423E</span><small>10.2:1 AAA</small></div></div>
-              <div class="fam-col" role="group" aria-label="Sky family"><div style="background:#E4F0FF;color:#233E66"><b>Sky Mist</b><span>#E4F0FF</span><small class="gerado">9.3:1 AAA</small></div><div style="background:#B7D8FF;color:#2B0B1E"><b>Ice Blue</b><span>#B7D8FF</span><small>12.2:1 AAA</small></div><div style="background:#233E66;color:#E4F0FF"><b>Deep Sky</b><span>#233E66</span><small class="gerado">9.3:1 AAA</small></div></div>
-              <div class="fam-col" role="group" aria-label="Mauve family"><div style="background:#DEDDFC;color:#383154"><b>Ethereal Lavender</b><span>#DEDDFC</span><small>9.1:1 AAA</small></div><div style="background:#9DA7EA;color:#2B0B1E"><b>Misty Mauve</b><span>#9DA7EA</span><small>7.8:1 AAA</small></div><div style="background:#383154;color:#DEDDFC"><b>Twilight Indigo</b><span>#383154</span><small>9.1:1 AAA</small></div></div>
-              <div class="fam-col" role="group" aria-label="Neutral family"><div style="background:#F9EEE5;color:#4A0325"><b>Cream</b><span>#F9EEE5</span><small>13.8:1 AAA</small></div><div style="background:#4C4242;color:#F9EEE5"><b>Warm Graphite</b><span>#4C4242</span><small>8.5:1 AAA</small></div><div style="background:#4A0325;color:#F9EEE5"><b>Plum</b><span>#4A0325</span><small>13.8:1 AAA</small></div></div>
+              <div class="fam-col" role="group" aria-label="Forest family"><div style="background:#CBEE2F;color:#0B1900"><b>Lime</b><span>#CBEE2F</span><small>13.7:1 AAA</small></div><div style="background:#183900;color:#CBEE2F"><b>Forest</b><span>#183900</span><small>9.7:1 AAA</small></div><div style="background:#0B1900;color:#CBEE2F"><b>Deep Forest</b><span>#0B1900</span><small>13.7:1 AAA</small></div></div>
+              <div class="fam-col" role="group" aria-label="Magenta family"><div style="background:#FEB3D2;color:#5E012E"><b>Blossom</b><span>#FEB3D2</span><small>8.3:1 AAA</small></div><div style="background:#870842;color:#FEB3D2"><b>Magenta</b><span>#870842</span><small>5.9:1 AA</small></div><div style="background:#5E012E;color:#FEB3D2"><b>Mulberry</b><span>#5E012E</span><small>8.3:1 AAA</small></div></div>
+              <div class="fam-col" role="group" aria-label="Wine family"><div style="background:#FF0149;color:#26030A"><b>Ruby</b><span>#FF0149</span><small>4.9:1 AA</small></div><div style="background:#4C0610;color:#F4E7DC"><b>Wine</b><span>#4C0610</span><small>12.9:1 AAA</small></div><div style="background:#26030A;color:#F4E7DC"><b>Ink</b><span>#26030A</span><small>15.7:1 AAA</small></div></div>
+              <div class="fam-col" role="group" aria-label="Amber family"><div style="background:#FFD283;color:#26030A"><b>Honey</b><span>#FFD283</span><small>13.5:1 AAA</small></div><div style="background:#F7BB39;color:#26030A"><b>Amber</b><span>#F7BB39</span><small>11.0:1 AAA</small></div><div style="background:#D1900F;color:#26030A"><b>Ochre</b><span>#D1900F</span><small>7.0:1 AAA</small></div></div>
+              <div class="fam-col" role="group" aria-label="Tangerine family"><div style="background:#FF9173;color:#26030A"><b>Peach</b><span>#FF9173</span><small>8.7:1 AAA</small></div><div style="background:#FF6533;color:#26030A"><b>Tangerine</b><span>#FF6533</span><small>6.5:1 AA</small></div><div style="background:#D33916;color:#26030A"><b>Rust</b><span>#D33916</span><small>4.0:1 AA large</small></div></div>
+              <div class="fam-col" role="group" aria-label="Periwinkle family"><div style="background:#D1D7F2;color:#425399"><b>Mist</b><span>#D1D7F2</span><small>5.0:1 AA</small></div><div style="background:#9BA8EF;color:#26030A"><b>Periwinkle</b><span>#9BA8EF</span><small>8.4:1 AAA</small></div><div style="background:#425399;color:#D1D7F2"><b>Indigo</b><span>#425399</span><small>5.0:1 AA</small></div></div>
+              <div class="fam-col unica" role="group" aria-label="Cream neutral"><div style="background:#F4E7DC;color:#26030A"><b>Cream</b><span>#F4E7DC</span><small>15.7:1 AAA</small></div></div>
             </div>
-            <figcaption class="pp-legenda">Six colors and a neutral, each in three tones: light, base and dark. Each tone shows its name, HEX and the contrast of the text set on it. Any tone can take any place on the site, because its text color comes with it. Tones marked “generated” complete a family. The buttons show the palette through four simulations.</figcaption>
+            <figcaption class="pp-legenda">Six colors in three tones each (light, base and dark), plus a cream neutral. Each tone shows its name, HEX and the contrast of the text set on it. Any tone can take any place on the site, because its text color comes with it. Rust passes only for large text (AA large), so I use it for shapes, not for small text. The buttons show the palette through four simulations.</figcaption>
           </figure>
         </div>
       </div>

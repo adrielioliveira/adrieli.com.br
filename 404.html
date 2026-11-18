@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page not found · Adrieli Both de Oliveira</title>
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#2B0B1E">
+  <meta name="theme-color" content="#26030A">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,7 @@
 <body>
   <div class="loader" id="loader" aria-hidden="true">
     <div class="loader-grade"></div>
-    <p class="loader-centro"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="37" r="27" fill="#FC4D17"/><circle cx="50" cy="63" r="27" fill="#9DA7EA"/><path d="M26.34 50A27 27 0 0 1 73.66 50A27 27 0 0 1 26.34 50Z" fill="#9B3215"/><circle cx="50" cy="50" r="10.5" fill="#F9EEE5"/><circle cx="50" cy="50" r="4.6" fill="#2B0B1E"/></svg><span>color for every way of <em>seeing</em></span><span class="loader-barra"></span></p>
+    <p class="loader-centro"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="37" r="27" fill="#FF6533"/><circle cx="50" cy="63" r="27" fill="#9BA8EF"/><path d="M26.34 50A27 27 0 0 1 73.66 50A27 27 0 0 1 26.34 50Z" fill="#9B4330"/><circle cx="50" cy="50" r="10.5" fill="#F4E7DC"/><circle cx="50" cy="50" r="4.6" fill="#26030A"/></svg><span>color for every way of <em>seeing</em></span><span class="loader-barra"></span></p>
     <span class="loader-pular"><span class="mouse">click or press any key to skip</span><span class="toque">tap to skip</span></span>
   </div>
   <p class="loader-sr" role="status" id="loader-status"></p>
@@ -32,11 +32,11 @@
   var g=document.querySelector("#loader .loader-grade"),c=Math.min(innerWidth,1400)<700?92:Math.min(168,Math.max(92,innerWidth*.13)),
   cols=Math.ceil(innerWidth/c)+2,rows=Math.ceil(innerHeight/c)+2,f="";
   for(var r=0;r<rows;r++)for(var k=0;k<cols;k++){var d=-((r+k)*.32).toFixed(2),sd=(Math.abs(r-rows/2)+Math.abs(k-cols/2))*.03,par=(r*3+k)%4===0;
-  var V=["#FC4D17","#9DA7EA","#EEBE55","#B7D8FF","#FFB7B7","#FC4D17","#D7FFE9"];f+='<div class="lc" style="--d:'+d+'s;--d2:'+(-(r+k)*.6).toFixed(1)+'s;--sd:'+sd.toFixed(2)+'s;--c2:'+V[(r+2*k)%V.length]+'"><i></i>'+(par?'<i></i>':'')+'</div>';}
+  var V=["#FF6533","#9BA8EF","#F7BB39","#D1D7F2","#FEB3D2","#FF6533","#CBEE2F"];f+='<div class="lc" style="--d:'+d+'s;--d2:'+(-(r+k)*.6).toFixed(1)+'s;--sd:'+sd.toFixed(2)+'s;--c2:'+V[(r+2*k)%V.length]+'"><i></i>'+(par?'<i></i>':'')+'</div>';}
   g.innerHTML=f;g.style.gridTemplateColumns="repeat("+cols+","+c+"px)";g.style.gridAutoRows=c+"px";document.getElementById("loader-status").textContent="Loading portfolio";})();</script>
     <header class="topo">
     <nav class="nav" aria-label="Main">
-      <a href="/" class="logo" aria-label="Adrieli Both de Oliveira, home">adrieli<svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle cx="50" cy="37" r="27" fill="#FC4D17"/><circle cx="50" cy="63" r="27" fill="#9DA7EA"/><path d="M26.34 50A27 27 0 0 1 73.66 50A27 27 0 0 1 26.34 50Z" fill="#9B3215"/><circle cx="50" cy="50" r="10.5" fill="#F9EEE5"/><circle cx="50" cy="50" r="4.6" fill="#2B0B1E"/></svg>both</a>
+      <a href="/" class="logo" aria-label="Adrieli Both de Oliveira, home">adrieli<svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle cx="50" cy="37" r="27" fill="#FF6533"/><circle cx="50" cy="63" r="27" fill="#9BA8EF"/><path d="M26.34 50A27 27 0 0 1 73.66 50A27 27 0 0 1 26.34 50Z" fill="#9B4330"/><circle cx="50" cy="50" r="10.5" fill="#F4E7DC"/><circle cx="50" cy="50" r="4.6" fill="#26030A"/></svg>both</a>
       <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
       <ul class="nav-links">
         <li><a href="/#work">work</a></li>
