@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How This Site Was Built · Adrieli Both de Oliveira</title>
+  <meta name="description" content="The palette, type and accessibility checks behind this portfolio.">
+  <!-- RASCUNHO: apague a linha "robots" abaixo quando o site estiver pronto para os programas -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://adrieli.com.br/colophon.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Adrieli Both de Oliveira">
+  <meta property="og:title" content="How This Site Was Built · Adrieli Both de Oliveira">
+  <meta property="og:description" content="The palette, type and accessibility checks behind this portfolio.">
+  <meta property="og:url" content="https://adrieli.com.br/colophon.html">
+  <meta property="og:image" content="https://adrieli.com.br/og-image.png">
+  <meta property="og:image:alt" content="color for every way of seeing. Portfolio of Adrieli Both de Oliveira.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#2B0B1E">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <script>try{document.documentElement.dataset.tema=localStorage.getItem("tema")||"escuro"}catch(e){document.documentElement.dataset.tema="escuro"}</script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Skip to content</a>
+
+  <header class="topo">
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" class="logo" aria-label="Adrieli Both de Oliveira, home">adrieli<svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle cx="50" cy="37" r="27" fill="#FC4D17"/><circle cx="50" cy="63" r="27" fill="#9DA7EA"/><path d="M26.34 50A27 27 0 0 1 73.66 50A27 27 0 0 1 26.34 50Z" fill="#9B3215"/><circle cx="50" cy="50" r="10.5" fill="#F9EEE5"/><circle cx="50" cy="50" r="4.6" fill="#2B0B1E"/></svg>both</a>
+      <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html#work">work</a></li>
+        <li><a href="index.html#method">method</a></li>
+        <li><a href="research.html">research</a></li>
+        <li><a href="index.html#about">about</a></li>
+        <li><a href="index.html#contact" class="btn btn-limao btn-nav">get in touch ↗</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="case-hero" style="--acento: var(--limao); --acento2: var(--celeste);">
+      <div class="hero-blobs" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+      <div class="case-miolo">
+        <div class="blob3d" data-blob3d="rosa,celeste,azul" data-satelite="limao,amarelo,laranja" aria-hidden="true"></div>
+        <a class="voltar" href="index.html">← home</a>
+        <p class="case-num"><span>✓</span>colophon</p>
+        <h1>How this site was <em>built</em>.</h1>
+        <p class="case-lead">I built this portfolio with the method it describes. <strong>Every color pair below was checked for WCAG contrast and in four simulations.</strong></p>
+        <dl class="case-meta">
+          <div><dt>Type</dt><dd>Bricolage Grotesque, Instrument Serif</dd></div>
+          <div><dt>Code</dt><dd>HTML, CSS, JavaScript, three.js</dd></div>
+          <div><dt>Themes</dt><dd>Dark and light</dd></div>
+          <div><dt>Checks</dt><dd>WCAG 2.2 AA, four simulations</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="capitulo">
+      <div class="container cap-grid">
+        <header class="cap-cabeca">
+          <span class="cap-num bg-rosa">01</span>
+          <h2>Color palette</h2>
+          <p>Six colors and a neutral, in three tones each.</p>
+        </header>
+        <div class="cap-corpo">
+          <figure class="paleta-pilulas">
+            <div class="pp-topo"><h3>Color palette.</h3><div class="pp-sims" role="group" aria-label="See the palette through a simulation"></div></div>
+            <div class="fam-grade">
+              <div class="fam-col" role="group" aria-label="Ember family"><div style="background:#FFB7B7;color:#6B2137"><b>Blush</b><span>#FFB7B7</span><small>6.7:1 AA</small></div><div style="background:#FC4D17;color:#2B0B1E"><b>Ember</b><span>#FC4D17</span><small>5.3:1 AA</small></div><div style="background:#6B2137;color:#FFB7B7"><b>Wine</b><span>#6B2137</span><small>6.7:1 AA</small></div></div>
+              <div class="fam-col" role="group" aria-label="Amber family"><div style="background:#FCF0DD;color:#974320"><b>Creamsicle Dream</b><span>#FCF0DD</span><small>5.9:1 AA</small></div><div style="background:#EEBE55;color:#2B0B1E"><b>Sunlit Amber</b><span>#EEBE55</span><small>10.4:1 AAA</small></div><div style="background:#974320;color:#FCF0DD"><b>Rustic Copper</b><span>#974320</span><small>5.9:1 AA</small></div></div>
+              <div class="fam-col" role="group" aria-label="Olive family"><div style="background:#F3EEC8;color:#4D4718"><b>Olive Mist</b><span>#F3EEC8</span><small class="gerado">8.0:1 AAA</small></div><div style="background:#D0C360;color:#2B0B1E"><b>Olive Gold</b><span>#D0C360</span><small>10.0:1 AAA</small></div><div style="background:#4D4718;color:#F3EEC8"><b>Deep Olive</b><span>#4D4718</span><small class="gerado">8.0:1 AAA</small></div></div>
+              <div class="fam-col" role="group" aria-label="Sage family"><div style="background:#D7FFE9;color:#1C423E"><b>Minty Frost</b><span>#D7FFE9</span><small>10.2:1 AAA</small></div><div style="background:#96AA9F;color:#2B0B1E"><b>Sage Stone</b><span>#96AA9F</span><small>7.3:1 AAA</small></div><div style="background:#1C423E;color:#D7FFE9"><b>Forest Shadow</b><span>#1C423E</span><small>10.2:1 AAA</small></div></div>
+              <div class="fam-col" role="group" aria-label="Sky family"><div style="background:#E4F0FF;color:#233E66"><b>Sky Mist</b><span>#E4F0FF</span><small class="gerado">9.3:1 AAA</small></div><div style="background:#B7D8FF;color:#2B0B1E"><b>Ice Blue</b><span>#B7D8FF</span><small>12.2:1 AAA</small></div><div style="background:#233E66;color:#E4F0FF"><b>Deep Sky</b><span>#233E66</span><small class="gerado">9.3:1 AAA</small></div></div>
+              <div class="fam-col" role="group" aria-label="Mauve family"><div style="background:#DEDDFC;color:#383154"><b>Ethereal Lavender</b><span>#DEDDFC</span><small>9.1:1 AAA</small></div><div style="background:#9DA7EA;color:#2B0B1E"><b>Misty Mauve</b><span>#9DA7EA</span><small>7.8:1 AAA</small></div><div style="background:#383154;color:#DEDDFC"><b>Twilight Indigo</b><span>#383154</span><small>9.1:1 AAA</small></div></div>
+              <div class="fam-col" role="group" aria-label="Neutral family"><div style="background:#F9EEE5;color:#4A0325"><b>Cream</b><span>#F9EEE5</span><small>13.8:1 AAA</small></div><div style="background:#4C4242;color:#F9EEE5"><b>Warm Graphite</b><span>#4C4242</span><small>8.5:1 AAA</small></div><div style="background:#4A0325;color:#F9EEE5"><b>Plum</b><span>#4A0325</span><small>13.8:1 AAA</small></div></div>
+            </div>
+            <figcaption class="pp-legenda">Six colors and a neutral, each in three tones: light, base and dark. Each tone shows its name, HEX and the contrast of the text set on it. Any tone can take any place on the site, because its text color comes with it. Tones marked “generated” complete a family. The buttons show the palette through four simulations.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="capitulo">
+      <div class="container cap-grid">
+        <header class="cap-cabeca">
+          <span class="cap-num bg-limao">02</span>
+          <h2>Typographies</h2>
+          <p>One family for titles and text, one serif for emphasis.</p>
+        </header>
+        <div class="cap-corpo">
+          <div class="especime">
+            <div><small>Primary type · titles and text</small><p class="nome-fonte">Bricolage Grotesque</p><p class="alfabeto">abcdefghijklmnñopqrstuvwxyz<br>ABCDEFGHIJKLMNÑOPQRSTUVWXYZ<br>0123456789</p></div>
+            <div class="serif"><small>Secondary type · emphasis</small><p class="nome-fonte">Instrument Serif</p><p class="alfabeto">abcdefghijklmnñopqrstuvwxyz<br>ABCDEFGHIJKLMNÑOPQRSTUVWXYZ<br>0123456789</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="capitulo">
+      <div class="container cap-grid">
+        <header class="cap-cabeca">
+          <span class="cap-num bg-azul">03</span>
+          <h2>Accessibility checks</h2>
+          <p>What I tested before publishing.</p>
+        </header>
+        <div class="cap-corpo">
+          <ul class="checagens">
+            <li>Every text pair I measured passes WCAG 2.2 AA (4.5:1) in both themes.</li>
+            <li>Color never carries meaning alone. Problem, Decision, Evidence and Result use a shape and a word as well as a color.</li>
+            <li>The “Color vision check” button shows any page through protanopia, deuteranopia, tritanopia or achromatopsia.</li>
+            <li>A skip link and a visible focus ring support keyboard navigation.</li>
+            <li>Animations stop when the system asks for reduced motion.</li>
+          </ul>
+          <p class="nota"><span>Tools and credits: <span class="preencher">[preencher: as ferramentas que você usou e, se quiser, os créditos]</span></span></p>
+        </div>
+      </div>
+    </section>
+
+    <a class="proximo" href="index.html#work"><div><span>back to</span><br><strong>selected <em>work</em></strong></div><i aria-hidden="true">→</i></a>
+  </main>
+
+  <footer class="rodape-simples">
+    <p>© <span class="ano"></span> Adrieli Both de Oliveira</p>
+    <a href="#conteudo">back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="blob3d.js"></script>
+</body>
+</html>

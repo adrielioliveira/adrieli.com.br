@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found · Adrieli Both de Oliveira</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#2B0B1E">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <script>try{document.documentElement.dataset.tema=localStorage.getItem("tema")||"escuro"}catch(e){document.documentElement.dataset.tema="escuro"}</script>
+  <!-- Caminhos começam com "/" porque esta página aparece em qualquer endereço errado do site -->
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .erro { min-height: 100svh; display: grid; place-content: center; justify-items: center; gap: 1.6rem; text-align: center; padding: 120px 16px 80px; }
+    .erro .titulo-formas { font-size: clamp(3.4rem, 14vw, 8rem); gap: .2em; }
+    .erro .titulo-formas .fx { padding: .1em .45em .16em; }
+    .erro .fx-flor { width: 1.1em; height: 1.1em; }
+    .erro p { max-width: 36ch; color: var(--cinza); font-size: 1.15rem; }
+  </style>
+</head>
+<body>
+  <header class="topo">
+    <nav class="nav" aria-label="Main">
+      <a href="/" class="logo" aria-label="Adrieli Both de Oliveira, home">adrieli<svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle cx="50" cy="37" r="27" fill="#FC4D17"/><circle cx="50" cy="63" r="27" fill="#9DA7EA"/><path d="M26.34 50A27 27 0 0 1 73.66 50A27 27 0 0 1 26.34 50Z" fill="#9B3215"/><circle cx="50" cy="50" r="10.5" fill="#F9EEE5"/><circle cx="50" cy="50" r="4.6" fill="#2B0B1E"/></svg>both</a>
+      <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="/#work">work</a></li>
+        <li><a href="/#method">method</a></li>
+        <li><a href="/research.html">research</a></li>
+        <li><a href="/#about">about</a></li>
+        <li><a href="/#contact" class="btn btn-limao btn-nav">get in touch ↗</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo" class="erro">
+    <h1 class="titulo-formas" aria-label="404">
+      <span class="fx pilula bg-azul" aria-hidden="true">4</span>
+      <span class="fx-flor" aria-hidden="true"><svg viewBox="0 0 100 100"><g class="c-branco"><circle cx="80" cy="50" r="17"/><circle cx="71.2" cy="71.2" r="17"/><circle cx="50" cy="80" r="17"/><circle cx="28.8" cy="71.2" r="17"/><circle cx="20" cy="50" r="17"/><circle cx="28.8" cy="28.8" r="17"/><circle cx="50" cy="20" r="17"/><circle cx="71.2" cy="28.8" r="17"/><circle cx="50" cy="50" r="32"/></g></svg><b>0</b></span>
+      <span class="fx ticket bg-limao" aria-hidden="true">4</span>
+    </h1>
+    <p>This page does not exist. The link may have a typo, or the page moved.</p>
+    <a class="btn btn-limao" href="/">back to the portfolio ↗</a>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>
