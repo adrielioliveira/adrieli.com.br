@@ -1386,3 +1386,20 @@ a.tile:hover .tile-img img.tile-elem { scale: 1.07; transform: translate(calc(va
 .par figcaption strong { display: block; font-size: .82rem; }
 @media (max-width: 700px) { .pares { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .cena { background-color: #4C0610; }
+
+/* interruptor de tema na lateral esquerda, no meio da tela (vertical) */
+.interruptor.lateral {
+  position: fixed; left: 16px; top: 50%; transform: translateY(-50%); z-index: 55;
+  flex-direction: column; gap: .6rem; padding: .45rem .45rem .85rem;
+}
+.interruptor.lateral .int-trilho { width: 32px; height: 58px; }
+.interruptor.lateral[aria-checked="true"] .int-pino { transform: translateY(26px); }
+.interruptor.lateral .int-rotulo { writing-mode: vertical-rl; transform: rotate(180deg); min-width: 0; letter-spacing: .04em; }
+@media (max-width: 900px) {
+  .interruptor.lateral { top: auto; bottom: 16px; transform: none; flex-direction: row; padding: .45rem .9rem .45rem .45rem; }
+  .interruptor.lateral .int-trilho { width: 58px; height: 32px; }
+  .interruptor.lateral[aria-checked="true"] .int-pino { transform: translateX(26px); }
+  .interruptor.lateral .int-rotulo { writing-mode: horizontal-tb; transform: none; }
+}
+/* logo só com o nome */
+.logo svg { margin-left: .14em; }

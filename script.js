@@ -173,9 +173,8 @@ if (!semMovimento && ponteiroFino) {
   bt.className = "interruptor";
   bt.setAttribute("role", "switch");
   bt.innerHTML = '<span class="int-trilho"><span class="int-pino"></span></span><span class="int-rotulo"></span>';
-  const nav = document.querySelector(".nav");
-  (nav || document.body).appendChild(bt);
-  if (!nav) bt.classList.add("solto");
+  bt.classList.add("lateral");
+  document.body.appendChild(bt);
   const marcar = () => {
     const escuro = (raiz.dataset.tema || "escuro") === "escuro";
     bt.setAttribute("aria-checked", escuro);
