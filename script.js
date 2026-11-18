@@ -260,3 +260,31 @@ if (!semMovimento && ponteiroFino) {
     });
   });
 })();
+
+/* ---------------------------------------------------------
+   Tela de carregamento: fica no mínimo 1,5 s, sai quando a
+   página termina de carregar (no máximo 3,5 s) ou no
+   primeiro clique/tecla. Marca a visita para não repetir.
+   --------------------------------------------------------- */
+(function () {
+  const raiz = document.documentElement;
+  const loader = document.getElementById("loader");
+  if (!loader || !raiz.classList.contains("carregando")) return;
+  try { sessionStorage.setItem("intro", "1"); } catch (e) {}
+  const inicio = performance.now();
+  let saiu = false;
+  function sair() {
+    if (saiu) return;
+    saiu = true;
+    loader.classList.add("saindo");
+    const status = document.getElementById("loader-status");
+    if (status) status.textContent = "";
+    setTimeout(() => { raiz.classList.remove("carregando"); loader.remove(); }, 950);
+  }
+  const quandoPronto = () => setTimeout(sair, Math.max(0, 1700 - (performance.now() - inicio)));
+  if (document.readyState === "complete") quandoPronto();
+  else addEventListener("load", quandoPronto, { once: true });
+  setTimeout(sair, 3500);
+  loader.addEventListener("click", sair);
+  addEventListener("keydown", sair, { once: true });
+})();

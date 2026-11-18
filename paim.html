@@ -22,11 +22,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <script>try{document.documentElement.dataset.tema=localStorage.getItem("tema")||"escuro"}catch(e){document.documentElement.dataset.tema="escuro"}</script>
+  <script>try{document.documentElement.dataset.tema=localStorage.getItem("tema")||"escuro"}catch(e){document.documentElement.dataset.tema="escuro"}try{if(!sessionStorage.getItem("intro")&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("carregando")}catch(e){}</script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="pular" href="#conteudo">Skip to content</a>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-grade"></div>
+    <p class="loader-centro"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="37" r="27" fill="#FC4D17"/><circle cx="50" cy="63" r="27" fill="#9DA7EA"/><path d="M26.34 50A27 27 0 0 1 73.66 50A27 27 0 0 1 26.34 50Z" fill="#9B3215"/><circle cx="50" cy="50" r="10.5" fill="#F9EEE5"/><circle cx="50" cy="50" r="4.6" fill="#2B0B1E"/></svg><span>color for every way of <em>seeing</em></span><span class="loader-barra"></span></p>
+    <span class="loader-pular"><span class="mouse">click or press any key to skip</span><span class="toque">tap to skip</span></span>
+  </div>
+  <p class="loader-sr" role="status" id="loader-status"></p>
+  <script>(function(){var h=document.documentElement;if(!h.classList.contains("carregando"))return;
+  var g=document.querySelector("#loader .loader-grade"),c=Math.min(innerWidth,1400)<700?92:Math.min(168,Math.max(92,innerWidth*.13)),
+  cols=Math.ceil(innerWidth/c)+2,rows=Math.ceil(innerHeight/c)+2,f="";
+  for(var r=0;r<rows;r++)for(var k=0;k<cols;k++){var d=-((r+k)*.32).toFixed(2),sd=(Math.abs(r-rows/2)+Math.abs(k-cols/2))*.03,par=(r*3+k)%4===0;
+  var V=["#FC4D17","#9DA7EA","#EEBE55","#B7D8FF","#FFB7B7","#FC4D17","#D7FFE9"];f+='<div class="lc" style="--d:'+d+'s;--d2:'+(-(r+k)*.6).toFixed(1)+'s;--sd:'+sd.toFixed(2)+'s;--c2:'+V[(r+2*k)%V.length]+'"><i></i>'+(par?'<i></i>':'')+'</div>';}
+  g.innerHTML=f;g.style.gridTemplateColumns="repeat("+cols+","+c+"px)";g.style.gridAutoRows=c+"px";document.getElementById("loader-status").textContent="Loading portfolio";})();</script>
+    <a class="pular" href="#conteudo">Skip to content</a>
 
   <header class="topo">
     <nav class="nav" aria-label="Main">

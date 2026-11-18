@@ -1138,3 +1138,79 @@ a.tile:hover .geleia { transform: rotate(14deg) scale(1.06); }
   .fam-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; border-radius: 0; }
   .fam-col { border-radius: 16px; overflow: hidden; min-height: 330px; }
 }
+
+/* =========================================================
+   TELA DE CARREGAMENTO
+   Aparece uma vez por visita (sessionStorage), some em 1,5–3,5 s,
+   pode ser pulada com clique ou tecla e não aparece para quem
+   pede movimento reduzido. Cores mudam devagar, sem piscar.
+   ========================================================= */
+.loader { display: none; }
+html.carregando { overflow: hidden; }
+html.carregando .loader {
+  display: block; position: fixed; inset: 0; z-index: 1000;
+  background: #4A0325; cursor: pointer;
+  --cel: clamp(92px, 13vw, 168px);
+}
+.loader-grade {
+  position: absolute; inset: calc(var(--cel) * -.35);
+  display: grid; grid-template-columns: repeat(auto-fill, var(--cel)); grid-auto-rows: var(--cel);
+  gap: 6px; justify-content: center; align-content: center;
+}
+.lc { position: relative; isolation: isolate; }
+.lc i {
+  position: absolute; inset: 0; border-radius: 50%;
+  background-color: #FC4D17;
+  background-image: radial-gradient(circle at 74% 78%, var(--c2, #9DA7EA) 0, transparent 68%);
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / .28);
+  animation: lc-cor 7.2s linear infinite;
+  animation-delay: var(--d, 0s);
+}
+.lc i::before { /* brilho suave, como luz sobre a esfera */
+  content: ""; position: absolute; inset: 0; border-radius: 50%;
+  background: radial-gradient(circle at 30% 26%, rgb(255 255 255 / .42), transparent 52%);
+}
+.lc i + i { /* o par que desliza e se multiplica no encontro */
+  mix-blend-mode: multiply;
+  animation: lc-cor 7.2s linear infinite, lc-desliza 4.8s ease-in-out infinite alternate;
+  animation-delay: calc(var(--d, 0s) - 3.6s), var(--d2, 0s);
+}
+@keyframes lc-cor {
+  0%   { background-color: #FC4D17; }
+  17%  { background-color: #EEBE55; }
+  33%  { background-color: #FFB7B7; }
+  50%  { background-color: #D7FFE9; }
+  67%  { background-color: #B7D8FF; }
+  83%  { background-color: #9DA7EA; }
+  100% { background-color: #FC4D17; }
+}
+@keyframes lc-desliza {
+  from { transform: translate(42%, -30%); }
+  to   { transform: translate(-6%, 8%); }
+}
+.loader::after { /* grão */
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: var(--grao); opacity: .14; mix-blend-mode: overlay;
+}
+.loader-centro {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 2;
+  display: flex; align-items: center; gap: .8rem;
+  padding: .85rem 1.5rem .85rem 1rem; border-radius: 999px;
+  background: #2B0B1E; color: #F9EEE5; white-space: nowrap;
+  box-shadow: 0 20px 50px rgb(0 0 0 / .35);
+  font-size: clamp(1.05rem, 2.4vw, 1.5rem); font-weight: 600; letter-spacing: -.02em;
+}
+.loader-centro svg { width: 2.1em; height: 2.1em; flex: none; }
+.loader-centro em { font-size: 1.15em; }
+.loader-barra { position: absolute; left: 1.2rem; right: 1.6rem; bottom: .45rem; height: 3px; border-radius: 3px; background: rgb(249 238 229 / .18); overflow: hidden; }
+.loader-barra::after { content: ""; position: absolute; inset: 0; background: #EEBE55; transform-origin: left; animation: lc-barra 2.2s cubic-bezier(.3, .7, .3, 1) forwards; }
+@keyframes lc-barra { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.loader-pular .toque { display: none; }
+@media (pointer: coarse) { .loader-pular .mouse { display: none; } .loader-pular .toque { display: inline; } }
+.loader-pular { position: absolute; z-index: 2; left: 50%; bottom: 22px; transform: translateX(-50%); white-space: nowrap; font-size: clamp(.68rem, 2.6vw, .8rem); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #F9EEE5; background: rgb(43 11 30 / .8); padding: .35rem .8rem; border-radius: 999px; }
+.loader-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+/* saída: os círculos encolhem em onda e a tela some */
+.loader.saindo { transition: opacity .55s ease .35s; opacity: 0; }
+.loader.saindo .lc { transition: transform .5s cubic-bezier(.6, 0, .4, 1); transition-delay: var(--sd, 0s); transform: scale(0); }
+.loader.saindo .loader-centro { transition: opacity .3s, transform .3s; opacity: 0; transform: translate(-50%, -50%) scale(.92); }
+@media (prefers-reduced-motion: reduce) { html.carregando .loader { display: none; } html.carregando { overflow: auto; } }
