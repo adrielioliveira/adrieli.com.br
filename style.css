@@ -1231,7 +1231,6 @@ a.tile:hover .tile-img img.tile-elem { scale: 1.07; transform: translate(calc(va
 /* =========================================================
    INTERRUPTOR DE TEMA (o elemento "toggle", funcionando)
    ========================================================= */
-.tema { display: none; }
 .interruptor.solto { position: fixed; left: 16px; bottom: 16px; z-index: 60; }
 .interruptor {
   display: inline-flex; align-items: center; gap: .65rem;
@@ -1403,3 +1402,25 @@ a.tile:hover .tile-img img.tile-elem { scale: 1.07; transform: translate(calc(va
 }
 /* logo só com o nome */
 .logo svg { margin-left: .14em; }
+
+/* seletor de tema (como na referência): cápsula vertical à esquerda, no meio */
+.tema {
+  left: 16px; top: 50%; transform: translateY(-50%);
+  gap: 2px; padding: 4px;
+  background: var(--papel); border: 1px solid var(--linha);
+  box-shadow: 0 10px 24px rgb(0 0 0 / .2);
+}
+.tema button {
+  gap: .5rem; padding: .85rem .55rem;
+  font-size: .9rem; font-weight: 600; color: var(--cinza);
+  transition: background .25s, color .25s;
+}
+.tema button:hover { color: var(--tinta); }
+.tema button svg { width: 17px; height: 17px; }
+.tema button:not([aria-pressed="true"]) svg { display: none; }
+.tema button[aria-pressed="true"] { background: var(--tinta); color: var(--papel); }
+@media (max-width: 900px) {
+  .tema { top: auto; bottom: 16px; transform: none; flex-direction: row; }
+  .tema button { flex-direction: row; padding: .5rem .85rem; }
+  .tema button span { writing-mode: horizontal-tb; transform: none; }
+}

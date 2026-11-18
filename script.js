@@ -161,30 +161,28 @@ if (!semMovimento && ponteiroFino) {
 }
 
 /* ---------------------------------------------------------
-   Tema escuro / claro: o elemento "toggle" virou interruptor
-   de verdade (role="switch").
+   Tema escuro / claro: seletor vertical à esquerda, no meio
+   da tela, com as opções Dark e Light (aria-pressed).
    --------------------------------------------------------- */
 (function () {
   const raiz = document.documentElement;
-  const lua = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor"/></svg>';
-  const sol = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
-  const bt = document.createElement("button");
-  bt.type = "button";
-  bt.className = "interruptor";
-  bt.setAttribute("role", "switch");
-  bt.innerHTML = '<span class="int-trilho"><span class="int-pino"></span></span><span class="int-rotulo"></span>';
-  bt.classList.add("lateral");
-  document.body.appendChild(bt);
-  const marcar = () => {
-    const escuro = (raiz.dataset.tema || "escuro") === "escuro";
-    bt.setAttribute("aria-checked", escuro);
-    bt.setAttribute("aria-label", "Dark theme");
-    bt.querySelector(".int-pino").innerHTML = escuro ? lua : sol;
-    bt.querySelector(".int-rotulo").textContent = escuro ? "Dark" : "Light";
-  };
-  bt.addEventListener("click", () => {
-    raiz.dataset.tema = (raiz.dataset.tema || "escuro") === "escuro" ? "claro" : "escuro";
-    try { localStorage.setItem("tema", raiz.dataset.tema); } catch (err) {}
+  const lua = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
+  const sol = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+  const grupo = document.createElement("div");
+  grupo.className = "tema";
+  grupo.setAttribute("role", "group");
+  grupo.setAttribute("aria-label", "Theme");
+  grupo.innerHTML =
+    `<button type="button" data-tema="escuro">${lua}<span>Dark</span></button>` +
+    `<button type="button" data-tema="claro">${sol}<span>Light</span></button>`;
+  document.body.appendChild(grupo);
+  const marcar = () =>
+    grupo.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.tema === (raiz.dataset.tema || "escuro")));
+  grupo.addEventListener("click", (e) => {
+    const b = e.target.closest("button");
+    if (!b) return;
+    raiz.dataset.tema = b.dataset.tema;
+    try { localStorage.setItem("tema", b.dataset.tema); } catch (err) {}
     marcar();
   });
   marcar();
