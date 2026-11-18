@@ -63,7 +63,6 @@
       </div>
 
       <div class="hero-miolo">
-        <div class="blob3d" data-blob3d="laranja,rosa,azul" data-satelite="limao,verde,azul" aria-hidden="true"></div>
         <div class="hero-topo">
           <p class="selo"><span class="pulso"></span>portfolio · fall 2027 applications</p>
           <p class="hero-intro">Hi! I’m <strong>Adrieli Both de Oliveira</strong>, art director and designer.</p>
@@ -96,6 +95,8 @@
             <a href="tcc.html" class="btn btn-contorno">start with my thesis</a>
           </div>
         </div>
+
+        <div class="flutua" aria-hidden="true"><img class="fl" src="elementos/brilho.svg" alt="" loading="lazy" style="--x:72%;--y:0%;--w:24%;--z:0.6;--r:8deg;--dl:-1s"><img class="fl" src="elementos/olhar.svg" alt="" loading="lazy" style="--x:16%;--y:4%;--w:52%;--z:1.6;--r:-6deg;--dl:0s"><img class="fl" src="elementos/vr.svg" alt="" loading="lazy" style="--x:50%;--y:48%;--w:50%;--z:1.0;--r:7deg;--dl:-2.5s"><img class="fl" src="elementos/cursor.svg" alt="" loading="lazy" style="--x:30%;--y:74%;--w:26%;--z:2.2;--r:-10deg;--dl:-4s"></div>
 
         <!-- Fotos em leque: troque os fundos por <img src="..." alt=""> dentro de cada figure -->
         <div class="colagem" aria-hidden="true">
@@ -150,16 +151,16 @@
           <h2>selected <em>work</em></h2>
           <p>Each project page follows the same path: problem, decision, evidence, result.</p>
         </div>
-        <!-- Capa real: dentro de .tile-img, troque a <span class="geleia"> por <img src="img/capa.jpg" alt=""> -->
+        <!-- Capa real: dentro de .tile-img, troque o <img class="tile-elem"> por <img src="img/capa.jpg" alt=""> -->
         <div class="tiles">
           <a href="tcc.html" class="tile t-2">
-            <div class="tile-img bg-roxo"><span class="geleia g-rosa"></span></div>
+            <div class="tile-img bg-roxo"><img class="tile-elem" src="elementos/disco.svg" alt="" loading="lazy"></div>
             <span class="tile-premio">Launched at Mix PP 2026</span>
             <div class="tile-rotulo"><h3>Color <em>first</em></h3><span>thesis · 2024</span></div>
             <span class="seta-circulo" aria-hidden="true">↗</span>
           </a>
           <a href="sensa.html" class="tile ">
-            <div class="tile-img bg-laranja"><span class="geleia g-amarela"></span></div>
+            <div class="tile-img bg-laranja"><img class="tile-elem" src="elementos/balao.svg" alt="" loading="lazy"></div>
             <span class="tile-premio">Silver · 16th Prêmio Universitário</span>
             <div class="tile-rotulo"><h3>Sensa<em>!</em></h3><span>branding · 2023</span></div>
             <span class="seta-circulo" aria-hidden="true">↗</span>
@@ -169,28 +170,28 @@
             <p>Created to <em>create.</em></p>
           </div>
           <a href="research.html" class="tile ">
-            <div class="tile-img bg-azul"><span class="geleia g-lilas"></span></div>
+            <div class="tile-img bg-azul"><img class="tile-elem" src="elementos/cabeca.svg" alt="" loading="lazy"></div>
             <div class="tile-rotulo"><h3>Color in real <em>conditions</em></h3><span>research proposal</span></div>
             <span class="seta-circulo" aria-hidden="true">↗</span>
           </a>
           <a href="paim.html" class="tile t-2">
-            <div class="tile-img bg-lilas"><span class="geleia g-verde"></span></div>
+            <div class="tile-img bg-lilas"><img class="tile-elem" src="elementos/janela.svg" alt="" loading="lazy"></div>
             <div class="tile-rotulo"><h3>Renner <em>co-brandings</em></h3><span>art direction · 2024–now</span></div>
             <span class="seta-circulo" aria-hidden="true">↗</span>
           </a>
           <a href="campaigns.html#give" class="tile ">
-            <div class="tile-img bg-rosa"><span class="geleia g-azul"></span></div>
+            <div class="tile-img bg-rosa"><img class="tile-elem" src="elementos/gotas.svg" alt="" loading="lazy"></div>
             <span class="tile-premio">Gold · 17th Prêmio Universitário</span>
             <div class="tile-rotulo"><h3>Give a Little of <em>Yourself</em></h3><span>campaign · 2024</span></div>
             <span class="seta-circulo" aria-hidden="true">↗</span>
           </a>
           <a href="ebook.html" class="tile ">
-            <div class="tile-img bg-amarelo"><span class="geleia g-azul"></span></div>
+            <div class="tile-img bg-amarelo"><img class="tile-elem" src="elementos/caneta.svg" alt="" loading="lazy"></div>
             <div class="tile-rotulo"><h3>Popularizando a Ciência da <em>Comunicação</em></h3><span>editorial · 2024</span></div>
             <span class="seta-circulo" aria-hidden="true">↗</span>
           </a>
           <a href="campaigns.html#rudauana" class="tile ">
-            <div class="tile-img bg-verde"><span class="geleia g-amarela"></span></div>
+            <div class="tile-img bg-verde"><img class="tile-elem" src="elementos/brilho.svg" alt="" loading="lazy"></div>
             <span class="tile-premio">Grand Prix · 16th Prêmio Universitário</span>
             <div class="tile-rotulo"><h3>Rudauana</h3><span>campaign · 2023</span></div>
             <span class="seta-circulo" aria-hidden="true">↗</span>
@@ -214,37 +215,27 @@
 
         <div class="leque">
           <article class="carta bg-verde" style="--r:-7deg; --y:18px">
-            <span class="adesivo-icone" aria-hidden="true">
-              <svg viewBox="0 0 80 80"><circle cx="34" cy="34" r="20" class="st-celeste"/><path d="M49 49l18 18" class="st-linha" style="stroke-width:9 !important"/></svg>
-            </span>
+            <span class="adesivo-icone" aria-hidden="true"><img src="elementos/lupa.svg" alt=""></span>
             <h3>1. diagnose</h3>
             <ul><li>Audit the brand as it is</li><li>Ask the people who read it</li><li>Measure before drawing</li></ul>
           </article>
           <article class="carta bg-periwinkle" style="--r:-3deg; --y:-4px">
-            <span class="adesivo-icone" aria-hidden="true">
-              <svg viewBox="0 0 80 80"><circle cx="28" cy="30" r="16" class="st-amarelo"/><circle cx="52" cy="30" r="16" class="st-vinho"/><circle cx="40" cy="52" r="16" class="st-limao"/></svg>
-            </span>
+            <span class="adesivo-icone" aria-hidden="true"><img src="elementos/leque.svg" alt=""></span>
             <h3>2. palette first</h3>
             <ul><li>Color before logo or layout</li><li>Contrast checked with WCAG</li><li>A ColorADD symbol for each color</li></ul>
           </article>
           <article class="carta bg-laranja" style="--r:2deg; --y:-14px">
-            <span class="adesivo-icone" aria-hidden="true">
-              <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="30" class="st-celeste"/><circle cx="31" cy="34" r="4" class="st-tinta-plano"/><circle cx="49" cy="34" r="4" class="st-tinta-plano"/><path d="M28 47c7 9 17 9 24 0" class="st-linha"/></svg>
-            </span>
+            <span class="adesivo-icone" aria-hidden="true"><img src="elementos/olhar.svg" alt=""></span>
             <h3>3. test</h3>
             <ul><li>Each piece next to its simulations</li><li>Eight types of color vision deficiency</li></ul>
           </article>
           <article class="carta bg-vinho" style="--r:5deg; --y:0px">
-            <span class="adesivo-icone" aria-hidden="true">
-              <svg viewBox="0 0 80 80"><rect x="12" y="16" width="56" height="48" rx="6" class="st-limao"/><path d="M40 16v48" class="st-linha"/></svg>
-            </span>
+            <span class="adesivo-icone" aria-hidden="true"><img src="elementos/tecla.svg" alt=""></span>
             <h3>4. build the system</h3>
             <ul><li>A full brand manual</li><li>Rules for every use of color</li></ul>
           </article>
           <article class="carta bg-lilas-claro" style="--r:9deg; --y:22px">
-            <span class="adesivo-icone" aria-hidden="true">
-              <svg viewBox="0 0 80 80"><path d="M40 68S10 50 10 30a15 15 0 0 1 30-6 15 15 0 0 1 30 6c0 20-30 38-30 38z" class="st-vinho"/></svg>
-            </span>
+            <span class="adesivo-icone" aria-hidden="true"><img src="elementos/balao.svg" alt=""></span>
             <h3>5. people at the center</h3>
             <ul><li>Individuals with color vision deficiency read the work</li><li>A seat on my thesis board</li><li>Participants in my future research</li></ul>
           </article>
@@ -359,6 +350,5 @@
   </main>
 
   <script src="script.js"></script>
-  <script src="blob3d.js"></script>
 </body>
 </html>

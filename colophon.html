@@ -58,14 +58,14 @@
     <section class="case-hero" style="--acento: var(--limao); --acento2: var(--celeste);">
       <div class="hero-blobs" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
       <div class="case-miolo">
-        <div class="blob3d" data-blob3d="rosa,celeste,azul" data-satelite="limao,amarelo,laranja" aria-hidden="true"></div>
+        <div class="flutua" aria-hidden="true"><img class="fl" src="elementos/adesivo.svg" alt="" loading="lazy" style="--x:66%;--y:0%;--w:30%;--z:0.8;--r:10deg;--dl:-1s"><img class="fl" src="elementos/leque.svg" alt="" loading="lazy" style="--x:6%;--y:8%;--w:62%;--z:1.4;--r:-6deg;--dl:0s"><img class="fl" src="elementos/tecla.svg" alt="" loading="lazy" style="--x:56%;--y:56%;--w:40%;--z:2.2;--r:6deg;--dl:-3s"></div>
         <a class="voltar" href="index.html">← home</a>
         <p class="case-num"><span>✓</span>colophon</p>
         <h1>How this site was <em>built</em>.</h1>
         <p class="case-lead">I built this portfolio with the method it describes. <strong>Every color pair below was checked for WCAG contrast and in four simulations.</strong></p>
         <dl class="case-meta">
           <div><dt>Type</dt><dd>Bricolage Grotesque, Instrument Serif</dd></div>
-          <div><dt>Code</dt><dd>HTML, CSS, JavaScript, three.js</dd></div>
+          <div><dt>Code</dt><dd>HTML, CSS, JavaScript, SVG</dd></div>
           <div><dt>Themes</dt><dd>Dark and light</dd></div>
           <div><dt>Checks</dt><dd>WCAG 2.2 AA, four simulations</dd></div>
         </dl>
@@ -127,6 +127,8 @@
             <li>The “Color vision check” button shows any page through protanopia, deuteranopia, tritanopia or achromatopsia.</li>
             <li>A skip link and a visible focus ring support keyboard navigation.</li>
             <li>Animations stop when the system asks for reduced motion.</li>
+            <li>The loading screen shows once per visit, leaves within 3.5 seconds, can be skipped with any key or click, and never flashes.</li>
+            <li>The theme control is a real switch: screen readers announce it as “Dark theme, on” or “off”.</li>
           </ul>
           <p class="nota"><span>Tools and credits: <span class="preencher">[preencher: as ferramentas que você usou e, se quiser, os créditos]</span></span></p>
         </div>
@@ -142,6 +144,5 @@
   </footer>
 
   <script src="script.js"></script>
-  <script src="blob3d.js"></script>
 </body>
 </html>

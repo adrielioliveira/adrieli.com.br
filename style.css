@@ -875,23 +875,7 @@ h2 em { font-size: 1.1em; }
   .sim-botao { padding: .75rem; }
 }
 
-/* =========================================================
-   FORMAS 3D (blob3d.js)
-   ========================================================= */
-.blob3d { position: absolute; z-index: 1; pointer-events: none; aspect-ratio: 1; }
-.blob3d canvas { display: block; width: 100% !important; height: 100% !important; filter: drop-shadow(0 30px 28px rgb(19 19 19 / .16)); }
-/* forma plana de reserva, enquanto o 3D carrega ou se ele falhar */
-.blob3d::before {
-  content: ""; position: absolute; inset: 14% 16% 18% 12%;
-  border-radius: 46% 54% 60% 40% / 42% 46% 54% 58%;
-  background: radial-gradient(circle at 40% 35%, var(--rosa), var(--laranja) 55%, var(--azul) 110%);
-  opacity: .9; transition: opacity .6s;
-}
-.blob3d.pronto::before { opacity: 0; }
-.hero .blob3d { right: -1%; top: 64px; width: clamp(200px, 21vw, 320px); }
-.case-hero .blob3d { right: 0; top: 30px; width: clamp(220px, 23vw, 330px); }
-@media (max-width: 1100px) { .case-hero .blob3d { display: none; } }
-@media (max-width: 900px) { .hero .blob3d { display: none; } }
+
 @media (prefers-reduced-motion: reduce) { .foto-card { animation: none; } }
 
 /* =========================================================
@@ -1021,7 +1005,7 @@ a.tile:hover .geleia { transform: rotate(14deg) scale(1.06); }
   margin-top: 2.2rem; padding-top: 0; border-top: 0;
 }
 .case-meta > div { border-top: 1.5px solid var(--linha); padding-top: .9rem; }
-.case-hero .blob3d { position: relative; right: auto; top: auto; grid-area: blob; justify-self: center; width: min(100%, 300px); margin-top: 1rem; }
+.case-hero .flutua { grid-area: blob; justify-self: center; width: min(100%, 340px); margin-top: .5rem; }
 
 .capitulo { padding: clamp(3rem, 7vw, 5.5rem) 0; }
 .cap-grid { grid-template-columns: minmax(0, 1fr); max-width: 1100px; gap: 1.8rem; }
@@ -1038,8 +1022,8 @@ a.tile:hover .geleia { transform: rotate(14deg) scale(1.06); }
 
 @media (max-width: 1100px) { .pder { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 900px) {
-  .case-miolo { grid-template-columns: 1fr; grid-template-areas: "voltar" "num" "titulo" "lead" "formal" "meta"; }
-  .case-hero .blob3d { display: none; }
+  .case-miolo { grid-template-columns: 1fr; grid-template-areas: "voltar" "num" "titulo" "lead" "formal" "meta" "blob"; }
+  .case-hero .flutua { width: min(78%, 280px); margin: 2.4rem auto 0; }
 }
 @media (max-width: 600px) { .pder, .pder:has(> :nth-child(2):last-child) { grid-template-columns: 1fr; } }
 
@@ -1214,3 +1198,78 @@ html.carregando .loader {
 .loader.saindo .lc { transition: transform .5s cubic-bezier(.6, 0, .4, 1); transition-delay: var(--sd, 0s); transform: scale(0); }
 .loader.saindo .loader-centro { transition: opacity .3s, transform .3s; opacity: 0; transform: translate(-50%, -50%) scale(.92); }
 @media (prefers-reduced-motion: reduce) { html.carregando .loader { display: none; } html.carregando { overflow: auto; } }
+
+/* =========================================================
+   ELEMENTOS 2.5D (pasta elementos/): composições flutuantes
+   Cada peça tem uma profundidade (--z): as mais "próximas"
+   se movem mais com o mouse, como camadas de uma cena 3D.
+   ========================================================= */
+.flutua { position: relative; aspect-ratio: 1; pointer-events: none; }
+.fl {
+  position: absolute; left: var(--x); top: var(--y); width: var(--w); height: auto;
+  transform: translate3d(calc(var(--mx, 0) * var(--z) * 16px), calc(var(--my, 0) * var(--z) * 12px), 0) rotate(var(--r));
+  transition: transform .25s ease-out;
+  animation: fl-flutuar 7s ease-in-out infinite; animation-delay: var(--dl, 0s);
+  filter: drop-shadow(0 16px 14px rgb(43 11 30 / .22));
+}
+@keyframes fl-flutuar { 50% { translate: 0 -12px; } }
+.hero .flutua { position: absolute; z-index: 1; right: 0; top: 40px; width: clamp(240px, 27vw, 390px); }
+@media (max-width: 900px) { .hero .flutua { display: none; } }
+
+/* elementos nos quadros da grade */
+.tile-img img.tile-elem {
+  position: absolute; right: 7%; top: 9%; width: 54%; height: auto; object-fit: contain;
+  filter: drop-shadow(0 18px 16px rgb(43 11 30 / .25));
+  transform: translate(calc(var(--px, 0) * -14px), calc(var(--py, 0) * -14px)) rotate(-4deg);
+  transition: transform .5s cubic-bezier(.2, .8, .2, 1), scale .5s cubic-bezier(.2, .8, .2, 1);
+}
+.t-2 .tile-img img.tile-elem { width: 34%; right: 9%; top: 7%; }
+a.tile:hover .tile-img img.tile-elem { scale: 1.07; transform: translate(calc(var(--px, 0) * -14px), calc(var(--py, 0) * -14px)) rotate(4deg); }
+@media (max-width: 600px) { .tile-img img.tile-elem, .t-2 .tile-img img.tile-elem { width: 50%; } }
+
+/* adesivos das cartas do método */
+.adesivo-icone { width: 92px; height: 92px; top: -48px; }
+.adesivo-icone img { width: 100%; height: 100%; filter: drop-shadow(0 8px 8px rgb(43 11 30 / .25)); }
+
+/* =========================================================
+   INTERRUPTOR DE TEMA (o elemento "toggle", funcionando)
+   ========================================================= */
+.tema { display: none; }
+.interruptor.solto { position: fixed; left: 16px; bottom: 16px; z-index: 60; }
+.interruptor {
+  display: inline-flex; align-items: center; gap: .65rem;
+  padding: .45rem .9rem .45rem .45rem; border-radius: 999px; cursor: pointer;
+  background: var(--papel); color: var(--tinta); border: 1.5px solid var(--linha);
+  font: inherit; font-size: .88rem; font-weight: 600;
+  box-shadow: 0 10px 24px rgb(0 0 0 / .18);
+}
+.int-trilho {
+  position: relative; width: 58px; height: 32px; border-radius: 999px; flex: none;
+  background: var(--amber); box-shadow: 0 4px 0 var(--amber-escuro), inset 0 0 0 1.5px rgb(43 11 30 / .15);
+  transition: background .3s, box-shadow .3s;
+}
+.int-pino {
+  position: absolute; top: 3px; left: 3px; width: 26px; height: 26px; border-radius: 50%;
+  background: radial-gradient(circle at 34% 30%, #fff, var(--branco) 60%);
+  box-shadow: 0 3px 0 rgb(43 11 30 / .25);
+  display: grid; place-items: center; color: var(--preto);
+  transition: transform .35s cubic-bezier(.4, 1.4, .5, 1);
+}
+.int-pino svg { width: 15px; height: 15px; }
+.interruptor[aria-checked="true"] .int-trilho { background: var(--mauve-escuro); box-shadow: 0 4px 0 #1E1830, inset 0 0 0 1.5px rgb(255 255 255 / .2); }
+.interruptor[aria-checked="true"] .int-pino { transform: translateX(26px); }
+.int-rotulo { min-width: 2.6em; }
+.sim-botao img { width: 1.6rem; height: 1.6rem; margin: -.15rem 0; }
+
+/* interruptor dentro do menu */
+.nav .interruptor { order: 3; margin-left: .4rem; box-shadow: none; padding: .3rem .75rem .3rem .3rem; background: transparent; border-color: var(--linha); }
+.nav .nav-links { order: 2; }
+.nav .int-trilho { width: 52px; height: 28px; box-shadow: 0 3px 0 var(--amber-escuro), inset 0 0 0 1.5px rgb(43 11 30 / .15); }
+.nav .interruptor[aria-checked="true"] .int-trilho { box-shadow: 0 3px 0 #1E1830, inset 0 0 0 1.5px rgb(255 255 255 / .2); }
+.nav .int-pino { width: 22px; height: 22px; }
+.nav .interruptor[aria-checked="true"] .int-pino { transform: translateX(24px); }
+@media (max-width: 900px) {
+  .nav .interruptor { order: 2; margin-left: auto; margin-right: .5rem; padding: .3rem; border: 0; }
+  .nav .int-rotulo { display: none; }
+  .nav .menu-btn { order: 3; }
+}

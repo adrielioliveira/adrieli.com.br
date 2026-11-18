@@ -1,3 +1,4 @@
+const BASE_SCRIPT = (document.currentScript && document.currentScript.src) || location.href;
 // Ano automático no rodapé
 document.querySelectorAll(".ano").forEach((el) => (el.textContent = new Date().getFullYear()));
 
@@ -64,7 +65,7 @@ Object.entries(simulacoes).forEach(([id, s]) => {
 });
 document.body.appendChild(defs);
 
-const icone = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>';
+const icone = '<img src="' + new URL("elementos/olhar.svg", BASE_SCRIPT).href + '" alt="">';
 const simBotao = document.createElement("button");
 simBotao.className = "sim-botao";
 simBotao.type = "button";
@@ -121,15 +122,14 @@ try {
 const semMovimento = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const ponteiroFino = matchMedia("(pointer: fine)").matches;
 
-const colagem = document.querySelector(".colagem");
-const hero = document.querySelector(".hero");
-if (colagem && hero && !semMovimento && ponteiroFino) {
+const hero = document.querySelector(".hero, .case-hero");
+if (hero && !semMovimento && ponteiroFino) {
   let alvoX = 0, alvoY = 0, x = 0, y = 0, rodando = false;
   const passo = () => {
     x += (alvoX - x) * 0.08;
     y += (alvoY - y) * 0.08;
-    colagem.style.setProperty("--mx", x.toFixed(3));
-    colagem.style.setProperty("--my", y.toFixed(3));
+    hero.style.setProperty("--mx", x.toFixed(3));
+    hero.style.setProperty("--my", y.toFixed(3));
     if (Math.abs(alvoX - x) > 0.001 || Math.abs(alvoY - y) > 0.001) requestAnimationFrame(passo);
     else rodando = false;
   };
@@ -161,27 +161,31 @@ if (!semMovimento && ponteiroFino) {
 }
 
 /* ---------------------------------------------------------
-   Tema escuro / claro (botão vertical à esquerda)
+   Tema escuro / claro: o elemento "toggle" virou interruptor
+   de verdade (role="switch").
    --------------------------------------------------------- */
 (function () {
   const raiz = document.documentElement;
   const lua = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor"/></svg>';
   const sol = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
-  const grupo = document.createElement("div");
-  grupo.className = "tema";
-  grupo.setAttribute("role", "group");
-  grupo.setAttribute("aria-label", "Theme");
-  grupo.innerHTML =
-    `<button type="button" data-tema="escuro">${lua}<span>Dark</span></button>` +
-    `<button type="button" data-tema="claro">${sol}<span>Light</span></button>`;
-  document.body.appendChild(grupo);
-  const marcar = () =>
-    grupo.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.tema === (raiz.dataset.tema || "escuro")));
-  grupo.addEventListener("click", (e) => {
-    const b = e.target.closest("button");
-    if (!b) return;
-    raiz.dataset.tema = b.dataset.tema;
-    try { localStorage.setItem("tema", b.dataset.tema); } catch (err) {}
+  const bt = document.createElement("button");
+  bt.type = "button";
+  bt.className = "interruptor";
+  bt.setAttribute("role", "switch");
+  bt.innerHTML = '<span class="int-trilho"><span class="int-pino"></span></span><span class="int-rotulo"></span>';
+  const nav = document.querySelector(".nav");
+  (nav || document.body).appendChild(bt);
+  if (!nav) bt.classList.add("solto");
+  const marcar = () => {
+    const escuro = (raiz.dataset.tema || "escuro") === "escuro";
+    bt.setAttribute("aria-checked", escuro);
+    bt.setAttribute("aria-label", "Dark theme");
+    bt.querySelector(".int-pino").innerHTML = escuro ? lua : sol;
+    bt.querySelector(".int-rotulo").textContent = escuro ? "Dark" : "Light";
+  };
+  bt.addEventListener("click", () => {
+    raiz.dataset.tema = (raiz.dataset.tema || "escuro") === "escuro" ? "claro" : "escuro";
+    try { localStorage.setItem("tema", raiz.dataset.tema); } catch (err) {}
     marcar();
   });
   marcar();
