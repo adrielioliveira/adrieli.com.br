@@ -21,7 +21,7 @@ if (botao && links) {
 // Seções aparecem suavemente ao rolar
 const blocos = document.querySelectorAll(".secao, .capitulo");
 if ("IntersectionObserver" in window) {
-  blocos.forEach((s) => s.classList.add("revelar"));
+  // sem fade ao rolar: as seções aparecem direto (skill: "fade-in em cada seção" é padrão genérico)
   const observador = new IntersectionObserver(
     (entradas) =>
       entradas.forEach((e) => {
@@ -288,4 +288,28 @@ if (!semMovimento && ponteiroFino) {
   setTimeout(sair, 3500);
   loader.addEventListener("click", sair);
   addEventListener("keydown", sair, { once: true });
+})();
+
+/* ---------------------------------------------------------
+   Pausar movimento (WCAG 2.2.2): botão no rodapé de cada
+   página. Pausa faixa, flutuantes, selo e adesivos.
+   --------------------------------------------------------- */
+(function () {
+  const raiz = document.documentElement;
+  const rodape = document.querySelector(".rodape, .rodape-simples");
+  if (!rodape) return;
+  const b = document.createElement("button");
+  b.type = "button";
+  b.className = "pausar-movimento";
+  const aplicar = (pausado) => {
+    raiz.classList.toggle("pausado", pausado);
+    b.setAttribute("aria-pressed", pausado);
+    b.textContent = pausado ? "Retomar animações" : "Pausar animações";
+    try { sessionStorage.setItem("pausado", pausado ? "1" : ""); } catch (e) {}
+  };
+  b.addEventListener("click", () => aplicar(!raiz.classList.contains("pausado")));
+  rodape.appendChild(b);
+  let inicial = false;
+  try { inicial = sessionStorage.getItem("pausado") === "1"; } catch (e) {}
+  aplicar(inicial);
 })();

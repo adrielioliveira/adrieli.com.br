@@ -359,7 +359,7 @@ h2 em { font-size: 1.1em; }
 .leque { display: flex; justify-content: center; align-items: flex-start; padding: 4.5rem 0 1rem; }
 .carta {
   position: relative; flex: 0 0 clamp(200px, 21vw, 250px); min-height: 330px;
-  margin-inline: -1.1rem; padding: 2.8rem 1.5rem 1.8rem;
+  margin-inline: -.35rem; padding: 2.8rem 1.5rem 1.8rem;
   border-radius: 22px;
   box-shadow: 0 14px 34px rgb(19 19 19 / .12);
   transform: rotate(var(--r)) translateY(var(--y, 0));
@@ -1424,3 +1424,16 @@ a.tile:hover .tile-img img.tile-elem { scale: 1.07; transform: translate(calc(va
   .tema button { flex-direction: row; padding: .5rem .85rem; }
   .tema button span { writing-mode: horizontal-tb; transform: none; }
 }
+
+/* pausar movimento (WCAG 2.2.2) */
+.pausar-movimento {
+  font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer;
+  padding: .45rem .9rem; border-radius: 999px; background: transparent; color: var(--cinza);
+  border: 1.5px solid var(--linha);
+}
+.pausar-movimento:hover { color: var(--tinta); border-color: var(--tinta); }
+html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-state: paused !important; }
+/* carta do método: o adesivo fica acima do título, sem cobrir o texto */
+.carta { padding-top: 3.2rem; }
+.carta li { padding-right: .6rem; }
+.adesivo-icone { top: -52px; right: 10px; }
