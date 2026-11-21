@@ -1474,3 +1474,10 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
   .slot-img { border-radius: 16px; }
 }
 @media (max-width: 600px) { .creditos-faixa { margin-left: 0; margin-right: 0; padding-left: 22px; padding-right: 22px; } }
+
+/* margens laterais de 22px em todas as páginas no celular */
+@media (max-width: 600px) {
+  .container, .grade-wrap, .cabecalho-secao, .creditos-faixa { width: calc(100% - 44px); }
+  .proximo, .rodape-simples, .capa-case { width: calc(100% - 44px); }
+  .topo { padding-left: 22px; padding-right: 22px; }
+}
