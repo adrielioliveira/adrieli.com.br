@@ -1510,3 +1510,21 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
 }
 .loader-centro > svg { width: 64%; }
 .loader-barra { left: 36% !important; right: 36% !important; bottom: 12% !important; }
+
+/* anel em gradiente da paleta em volta da cápsula; o olho ocupa mais da caixa */
+@property --anel-ang { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+.loader-centro { position: absolute; }
+.loader-centro::before {
+  content: ""; position: absolute; inset: -22px; border-radius: 999px; z-index: -1;
+  background: conic-gradient(from var(--anel-ang), #FC4D17, #EEBE55, #FEB3D2, #9BA8EF, #CBEE2F, #FF6533, #FFD283, #FC4D17);
+  animation: anel-girar 6s linear infinite;
+}
+@keyframes anel-girar { to { --anel-ang: 360deg; } }
+.loader-centro > svg { width: 84%; }
+@media (prefers-reduced-motion: reduce) { .loader-centro::before { animation: none; } }
+.loader-centro { background: transparent !important; box-shadow: none !important; }
+.loader-centro::before { z-index: -2 !important; }
+.loader-centro::after {
+  content: ""; position: absolute; inset: 0; border-radius: 999px; z-index: -1;
+  background: #CBEE2F; box-shadow: 0 24px 60px rgb(0 0 0 / .35);
+}
