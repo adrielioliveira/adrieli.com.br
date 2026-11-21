@@ -242,7 +242,7 @@ if (!semMovimento && ponteiroFino) {
       const posicao = i % 2 ? "baixo" : "cima";
       li.innerHTML =
         rotulo(a, li.dataset.nomeA, extraA) +
-        `<div class="pp-forma${contorno}" style="--a:${valido(a) ? a : "#333"};--b:${valido(b) ? b : "#2a2a2a"}" role="img" aria-label="${li.dataset.nomeA || "color"} ${valido(a) ? a : ""} and ${li.dataset.nomeB || "color"} ${valido(b) ? b : ""}">` +
+        `<div class="pp-forma${contorno}" style="--a:${valido(a) ? a : "#333"};--b:${valido(b) ? b : "#26030A"}" role="img" aria-label="${li.dataset.nomeA || "color"} ${valido(a) ? a : ""} and ${li.dataset.nomeB || "color"} ${valido(b) ? b : ""}">` +
         (ok ? `<span class="pp-olho ${posicao}"></span>` : "") + `</div>` +
         rotulo(b, li.dataset.nomeB, extraB);
       if (escuro) li.querySelector(".pp-forma").classList.add("contorno");
