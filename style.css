@@ -1543,3 +1543,11 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
   100% { stroke-dasharray: 100 0; stroke-dashoffset: -100; }
 }
 @media (prefers-reduced-motion: reduce) { .anel-carga rect { animation: none; stroke-dasharray: 100 0; } }
+
+/* títulos em Courier Prime (máquina de escrever); texto corrido segue na Bricolage */
+h1, h2, h3, .titulo-hero, .case-hero h1, .titulo-b, .proj h3, .tile-rotulo h3, .carta h3, .grade-numerada h3, .proximo strong {
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-weight: 700; letter-spacing: -.02em;
+}
+h1 em, h2 em, h3 em, .proximo strong em { font-family: var(--serif); font-weight: 400; letter-spacing: 0; }
+.titulo-hero, .titulo-b { font-size: clamp(2.2rem, 7.4vw, 6.4rem); }
