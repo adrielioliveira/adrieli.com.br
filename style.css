@@ -1499,10 +1499,6 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
 }
 @media (prefers-reduced-motion: reduce) { .pupila-loader { animation: none; } }
 
-/* painel arredondado atrás da caixa do carregamento */
-.loader::before {
-  content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
-  width: min(78vw, 470px); height: min(82vh, 640px); border-radius: 96px;
-  background: #2B0B1E; box-shadow: 0 30px 80px rgb(0 0 0 / .45); z-index: 1;
-}
-.loader-centro { z-index: 2; }
+/* caixa central do carregamento: cantos bem arredondados (forma de squircle) */
+.loader-centro { border-radius: 32%; corner-shape: squircle; }
+@supports not (corner-shape: squircle) { .loader-centro { border-radius: 32%; } }
