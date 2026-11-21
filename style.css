@@ -1531,3 +1531,15 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
 
 /* anel mais fino */
 .loader-centro::before { inset: -10px !important; }
+
+/* carregamento: o anel em gradiente é desenhado em volta da caixa e recomeça em loop */
+.loader-centro::before, .loader-centro::after { display: none !important; }
+.loader-centro { background: #CBEE2F !important; }
+.loader-centro > .anel-carga { position: absolute; left: -12px; top: -12px; width: calc(100% + 24px); height: calc(100% + 24px); overflow: visible; z-index: 1; }
+.anel-carga rect { stroke-dasharray: 0 100; animation: anel-desenha 2.6s ease-in-out infinite; }
+@keyframes anel-desenha {
+  0% { stroke-dasharray: 0 100; stroke-dashoffset: 0; }
+  70% { stroke-dasharray: 100 0; stroke-dashoffset: 0; }
+  100% { stroke-dasharray: 100 0; stroke-dashoffset: -100; }
+}
+@media (prefers-reduced-motion: reduce) { .anel-carga rect { animation: none; stroke-dasharray: 100 0; } }
