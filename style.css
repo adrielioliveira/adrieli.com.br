@@ -1183,7 +1183,7 @@ html.carregando .loader {
 }
 .loader-centro svg { width: 2.1em; height: 2.1em; flex: none; }
 .loader-centro em { font-size: 1.15em; }
-.loader-barra { position: absolute; left: 1.2rem; right: 1.6rem; bottom: .45rem; height: 3px; border-radius: 3px; background: rgb(249 238 229 / .18); overflow: hidden; }
+.loader-barra { position: absolute; left: 1.2rem; right: 1.2rem; bottom: .9rem; height: 3px; border-radius: 3px; background: rgb(249 238 229 / .18); overflow: hidden; }
 .loader-barra::after { content: ""; position: absolute; inset: 0; background: #F7BB39; transform-origin: left; animation: lc-barra 2.2s cubic-bezier(.3, .7, .3, 1) forwards; }
 @keyframes lc-barra { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 .loader-pular .toque { display: none; }
@@ -1481,3 +1481,20 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
   .proximo, .rodape-simples, .capa-case { width: calc(100% - 44px); }
   .topo { padding-left: 22px; padding-right: 22px; }
 }
+
+/* tela de carregamento: caixa central maior, só o olho, que olha de um lado para o outro */
+.loader-centro {
+  width: min(62vw, 340px); aspect-ratio: 1; padding: 0; border-radius: 48px;
+  display: grid; place-items: center; white-space: normal; gap: 0;
+  background: #CBEE2F; color: #183900; box-shadow: 0 24px 60px rgb(0 0 0 / .35);
+  font-size: 1rem; font-weight: 400; letter-spacing: 0;
+}
+.loader-centro > svg { width: 62%; height: auto; display: block; }
+.pupila-loader { animation: olhar-lados 3.6s ease-in-out infinite; }
+@keyframes olhar-lados {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(6px); }
+}
+@media (prefers-reduced-motion: reduce) { .pupila-loader { animation: none; } }
