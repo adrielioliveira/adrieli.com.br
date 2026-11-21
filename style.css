@@ -1453,3 +1453,9 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
   .logo, .voltar, .rodape a, .rodape-simples a, .pausar-movimento, .tema button, .pp-sims button, .email-grande { min-height: 44px; display: inline-flex; align-items: center; }
   .email-grande { display: flex; }
 }
+
+/* caixa de destaque (layout B): à esquerda, pílulas sem itálico */
+.titulo-b { text-align: left; font-weight: 700; letter-spacing: -.045em; line-height: 1.02; }
+.pill-b { display: inline-block; padding: .02em .24em .08em; border-radius: .18em; }
+.p-way { background: #FEB3D2; color: #870842; }
+.p-seeing { background: #FFD283; color: #4C0610; }
