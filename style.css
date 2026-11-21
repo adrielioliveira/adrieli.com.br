@@ -1502,3 +1502,11 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
 /* caixa central do carregamento: cantos bem arredondados (forma de squircle) */
 .loader-centro { border-radius: 32%; corner-shape: squircle; }
 @supports not (corner-shape: squircle) { .loader-centro { border-radius: 32%; } }
+
+/* caixa do carregamento em cápsula alta, como na marcação: olho no centro */
+.loader-centro {
+  width: min(44vw, 240px); aspect-ratio: 1 / 1.9; border-radius: 999px;
+  corner-shape: round;
+}
+.loader-centro > svg { width: 64%; }
+.loader-barra { left: 36% !important; right: 36% !important; bottom: 12% !important; }
