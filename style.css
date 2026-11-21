@@ -1447,3 +1447,9 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
 /* botão de pausa dentro da seção verde de contato */
 .contato .pausar-movimento { color: #CBEE2F; border-color: rgb(203 238 47 / .5); }
 .contato .pausar-movimento:hover { color: #CBEE2F; border-color: #CBEE2F; }
+
+/* alvos de toque com pelo menos 44px em celular */
+@media (pointer: coarse), (max-width: 900px) {
+  .logo, .voltar, .rodape a, .rodape-simples a, .pausar-movimento, .tema button, .pp-sims button, .email-grande { min-height: 44px; display: inline-flex; align-items: center; }
+  .email-grande { display: flex; }
+}
