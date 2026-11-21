@@ -1528,3 +1528,6 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
   content: ""; position: absolute; inset: 0; border-radius: 999px; z-index: -1;
   background: #CBEE2F; box-shadow: 0 24px 60px rgb(0 0 0 / .35);
 }
+
+/* anel mais fino */
+.loader-centro::before { inset: -10px !important; }
