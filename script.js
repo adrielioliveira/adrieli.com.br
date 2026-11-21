@@ -313,3 +313,17 @@ if (!semMovimento && ponteiroFino) {
   try { inicial = sessionStorage.getItem("pausado") === "1"; } catch (e) {}
   aplicar(inicial);
 })();
+
+/* o olho segue o cursor: a pupila anda até 6px do centro, com o cursor a meia largura do olho */
+(function () {
+  const olho = document.querySelector(".fl-olho svg");
+  if (!olho || matchMedia("(prefers-reduced-motion: reduce)").matches || !matchMedia("(pointer: fine)").matches) return;
+  const pupila = olho.querySelector("#pupila-olho");
+  addEventListener("pointermove", (e) => {
+    const r = olho.getBoundingClientRect();
+    const dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2);
+    const d = Math.hypot(dx, dy) || 1, k = Math.min(1, d / (r.width * 0.5)) * 6 / d;
+    pupila.style.setProperty("--px", (dx * k).toFixed(2) + "px");
+    pupila.style.setProperty("--py", (dy * k).toFixed(2) + "px");
+  }, { passive: true });
+})();

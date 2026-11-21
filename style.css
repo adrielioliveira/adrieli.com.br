@@ -1459,3 +1459,8 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
 .pill-b { display: inline-block; padding: .02em .24em .08em; border-radius: .18em; }
 .p-way { background: #FEB3D2; color: #870842; }
 .p-seeing { background: #FFD283; color: #4C0610; }
+
+/* o olho da home segue o cursor (pupila); parado para toque e movimento reduzido */
+.fl-olho { display: block; }
+.fl-olho .olho-svg { display: block; width: 100%; height: auto; }
+#pupila-olho { transform: translate(var(--px, 0px), var(--py, 0px)); transition: transform .25s ease-out; }
