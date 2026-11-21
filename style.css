@@ -1,14 +1,3 @@
-/* Urbanist Variable (SIL OFL) só nos títulos, em caixa mista:
-   vogais minúsculas com 1,4x o tamanho e peso 625 (mesma altura e espessura das maiúsculas no peso 900). */
-@font-face {
-  font-family: "Urbanist";
-  src: url("fonts/Urbanist-VF.woff2") format("woff2");
-  font-weight: 100 900; font-style: normal; font-display: swap;
-}
-.pal { white-space: nowrap; }
-.v { font-family: "Urbanist", sans-serif; font-size: 1.4em; font-weight: 625; line-height: 0; vertical-align: baseline; }
-.titulo-hero, .case-hero h1 { font-family: "Urbanist", sans-serif; font-weight: 900; }
-.titulo-hero em, .case-hero h1 em { font-family: var(--serif); font-weight: 400; }
 /* =========================================================
    PALETA E VARIÁVEIS: troque aqui para mudar o visual todo
    ========================================================= */
@@ -195,7 +184,7 @@ h2 em { font-size: 1.1em; }
 /* Título com formas no meio (inspirado em tipografia + geometria) */
 .titulo-hero {
   position: relative; z-index: 2;
-  font-size: clamp(2.6rem, 9vw, 8.2rem);
+  font-size: clamp(2.6rem, 10.2vw, 9.4rem);
   font-weight: 700; line-height: .95; letter-spacing: -.05em;
 }
 .linha { display: flex; align-items: center; flex-wrap: wrap; gap: .06em .2em; }
