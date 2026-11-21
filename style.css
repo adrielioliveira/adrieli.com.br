@@ -1437,3 +1437,9 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
 .carta { padding-top: 3.2rem; }
 .carta li { padding-right: .6rem; }
 .adesivo-icone { top: -52px; right: 10px; }
+
+/* créditos e autoria de projetos em grupo ou em escritório */
+.creditos-faixa { margin: 0 auto; padding: 2rem 0 0; }
+.creditos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.4rem 1.6rem; margin: 0; border-top: 1.5px solid var(--linha); padding-top: 1.4rem; }
+.creditos > div { min-width: 0; }
+.creditos { margin-top: 1.6rem; margin-bottom: 1.6rem; }
