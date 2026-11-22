@@ -1639,3 +1639,16 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
 .amostra-destaque { font-size: clamp(2.6rem, 5.4vw, 4.2rem); line-height: .95; letter-spacing: -.04em; font-weight: 500; margin: 0; color: var(--tinta); }
 .amostra-texto p { margin: 0; }
 @media (max-width: 760px) { .grade-pontos-wrap { grid-template-columns: 1fr; } }
+
+/* Método: cards de cor com ícone, título e texto curto (padrão das referências) */
+.metodo { padding: clamp(3rem, 7vw, 5.5rem) 0 0; }
+.metodo-cabeca { max-width: 62ch; margin-bottom: 2rem; }
+.metodo-cabeca h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: .6rem; }
+.metodo-cabeca p { color: var(--cinza); font-size: 1.05rem; }
+.metodo-grade { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; }
+.metodo-card { border-radius: 24px; padding: 1.6rem 1.5rem 1.8rem; display: flex; flex-direction: column; gap: .7rem; min-height: 280px; }
+.metodo-icone { width: 2.6rem; height: 2.6rem; flex: none; }
+.metodo-card h3 { font-size: 1.5rem; letter-spacing: -.03em; font-weight: 700; margin: .9rem 0 0; }
+.metodo-card p { font-size: .98rem; line-height: 1.5; margin: 0; }
+@media (max-width: 900px) { .metodo-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .metodo-grade { grid-template-columns: 1fr; } .metodo-card { min-height: 0; } }
