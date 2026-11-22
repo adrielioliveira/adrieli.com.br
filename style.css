@@ -1684,3 +1684,9 @@ h1, h2, h3 { overflow-wrap: anywhere; }
 :root:not([data-tema="escuro"]) body.pagina-paineis main > section { background: #FFFFFF; border-radius: 28px; margin: 12px; overflow: hidden; }
 :root:not([data-tema="escuro"]) body.pagina-paineis .hero { margin-top: 12px; }
 @media (max-width: 600px) { body.pagina-paineis main > section { margin: 8px; border-radius: 22px; } }
+
+/* Home: tokens adaptados da referência (cinza neutro, raios 24/pílula, borda fina), com a paleta do site */
+:root:not([data-tema="escuro"]) body.pagina-paineis { background: #EDEDEC; }
+:root:not([data-tema="escuro"]) body.pagina-paineis main > section { border-radius: 24px; border: 1px solid #DCDCDA; }
+:root:not([data-tema="escuro"]) body.pagina-paineis .nav { border: 1px solid #DCDCDA; }
+:root:not([data-tema="escuro"]) body.pagina-paineis .nav-links a:not(.btn):hover { background: #FEB3D2; }
