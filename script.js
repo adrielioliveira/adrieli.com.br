@@ -408,3 +408,15 @@ if (!semMovimento && ponteiroFino) {
     obs.observe(g);
   });
 })();
+
+/* Grade de pontos: as 30 bolinhas preenchidas pulam uma a uma ao aparecer (uma vez só) */
+(function () {
+  const grade = document.querySelector(".grade-pontos");
+  if (!grade || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const obs = new IntersectionObserver(([e]) => {
+    if (!e.isIntersecting) return;
+    grade.classList.add("contando");
+    obs.disconnect();
+  }, { threshold: 0.5 });
+  obs.observe(grade);
+})();

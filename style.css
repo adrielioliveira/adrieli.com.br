@@ -1625,3 +1625,8 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
 .pt.on { background: var(--tinta); }
 .grade-pontos figcaption { margin-top: 1rem; font-size: .92rem; color: var(--cinza); line-height: 1.5; }
 .grade-pontos figcaption strong { color: var(--tinta); }
+
+/* Contagem rápida: cada bolinha preenchida dá um pequeno pulo, uma por uma */
+@keyframes pulinho { 0% { transform: translateY(0); } 40% { transform: translateY(-9px); } 100% { transform: translateY(0); } }
+.grade-pontos.contando .pt.on { animation: pulinho .36s ease-out both; animation-delay: calc(var(--i) * 70ms); }
+@media (prefers-reduced-motion: reduce) { .grade-pontos.contando .pt.on { animation: none; } }
