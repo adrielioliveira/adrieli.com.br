@@ -1477,9 +1477,10 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
 
 /* margens laterais no celular: conteúdo nunca encosta na borda da tela */
 @media (max-width: 600px) {
-  .capitulo, .creditos-faixa, .case-hero, .proximo, .rodape-simples { padding-left: 22px; padding-right: 22px; }
+  .creditos-faixa, .case-hero, .proximo, .rodape-simples { padding-left: 22px; padding-right: 22px; }
   .case-hero { margin-left: 8px; margin-right: 8px; }
-  .cap-grid, .cap-corpo, .creditos, .capa-case, .proximo, .rodape-simples { width: auto; max-width: none; margin-left: 0; margin-right: 0; }
+  .cap-corpo, .creditos, .capa-case, .proximo, .rodape-simples { width: auto; max-width: none; margin-left: 0; margin-right: 0; }
+  .cap-grid { max-width: none; }
   .capa-case { margin-left: 22px; margin-right: 22px; }
   .slot-img { border-radius: 16px; }
 }
