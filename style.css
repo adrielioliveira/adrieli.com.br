@@ -1553,3 +1553,14 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
   100% { stroke-dasharray: 100 0; stroke-dashoffset: -100; }
 }
 @media (prefers-reduced-motion: reduce) { .anel-carga rect { animation: none; stroke-dasharray: 100 0; } }
+
+/* Estatísticas da pesquisa: barra com marcador + número grande (diagnóstico) */
+.est-grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2.2rem 2rem; margin: 2.2rem 0 1rem; }
+.est { margin: 0; }
+.est-escala { position: relative; display: flex; justify-content: space-between; font-size: .8rem; color: var(--cinza); margin-bottom: .45rem; }
+.est-barra { position: absolute; left: 0; right: 0; top: 1.6rem; height: 52px; border-radius: 999px; background: linear-gradient(90deg, #F47A27, #5C239E); opacity: .9; }
+.est-barra i { position: absolute; top: -7px; bottom: -7px; left: var(--p); width: 3px; background: var(--tinta); border-radius: 2px; }
+.est-barra i::before { content: ""; position: absolute; top: -10px; left: -6px; border-left: 7.5px solid transparent; border-right: 7.5px solid transparent; border-top: 10px solid var(--tinta); }
+.est-num { font-size: clamp(3.2rem, 7vw, 5.2rem); line-height: .9; letter-spacing: -.05em; color: var(--tinta); margin: 4.2rem 0 .5rem; font-weight: 400; }
+.est-num small { font-size: .55em; color: var(--cinza); }
+.est figcaption { font-size: .92rem; color: var(--cinza); line-height: 1.45; max-width: 30ch; }
