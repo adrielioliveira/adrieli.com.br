@@ -1686,3 +1686,26 @@ h1, h2, h3 { overflow-wrap: anywhere; }
 :root:not([data-tema="escuro"]) body.pagina-paineis main > section { border-radius: 24px; border: 1px solid #DCDCDA; }
 :root:not([data-tema="escuro"]) body.pagina-paineis .nav { border: 1px solid #DCDCDA; }
 :root:not([data-tema="escuro"]) body.pagina-paineis .nav-links a:not(.btn):hover { background: #FEB3D2; }
+
+/* Home, desktop: layout em duas colunas como a referência (coluna de cartão à esquerda, painel à direita) */
+@media (min-width: 1000px) {
+  :root:not([data-tema="escuro"]) body.pagina-paineis { padding: 8px; }
+  :root:not([data-tema="escuro"]) body.pagina-paineis .topo { padding: 0 0 8px; }
+  :root:not([data-tema="escuro"]) body.pagina-paineis .hero { margin: 0; }
+  :root:not([data-tema="escuro"]) body.pagina-paineis .hero-blobs { display: none; }
+  body.pagina-paineis .hero-miolo { display: grid; grid-template-columns: 480px minmax(0, 1fr); grid-template-rows: auto auto 1fr; gap: 8px; max-width: none; margin: 0; min-height: calc(100vh - 80px); }
+  body.pagina-paineis .titulo-hero { grid-column: 1; grid-row: 1; background: #FFFFFF; border-radius: 24px; padding: 32px 30px 26px; font-size: clamp(2rem, 3vw, 3rem); }
+  body.pagina-paineis .hero-base { grid-column: 1; grid-row: 2; background: #FFFFFF; border-radius: 24px; padding: 26px 30px 30px; max-width: none; }
+  body.pagina-paineis .colagem { grid-column: 2; grid-row: 1 / span 3; position: relative; background: #F4F3F1; border-radius: 24px; min-height: 78vh; }
+}
+
+/* Home, desktop: painel de peças ocupa a coluna direita inteira */
+@media (min-width: 1000px) {
+  body.pagina-paineis .colagem { width: 100%; max-width: none; height: auto; min-height: 78vh; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0; }
+  body.pagina-paineis .colagem .foto-card { width: min(30%, 260px); aspect-ratio: 3 / 4; margin: 0 -2%; }
+  body.pagina-paineis .titulo-hero, body.pagina-paineis .hero-base { background: #F3F2F0; }
+}
+@media (min-width: 1000px) {
+  body.pagina-paineis .colagem { overflow: hidden; border-radius: 24px; padding: 0 4%; box-sizing: border-box; }
+  body.pagina-paineis .colagem .foto-card { width: min(23%, 230px); margin: 0 -1.5%; }
+}
