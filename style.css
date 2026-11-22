@@ -1617,3 +1617,11 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
 .rng figcaption { font-size: .92rem; color: var(--cinza); line-height: 1.45; max-width: 30ch; }
 @media (max-width: 760px) { .rng-grade { grid-template-columns: 1fr; } }
 
+
+/* Grade de pontos: 47 respondentes, 30 preenchidos (forma + cor, não só cor) */
+.grade-pontos { margin: 2.6rem 0 1.2rem; max-width: 520px; }
+.pontos-lista { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(10, 1fr); gap: clamp(.35rem, 1vw, .6rem); }
+.pt { aspect-ratio: 1; border-radius: 50%; border: 2px solid var(--tinta); background: transparent; }
+.pt.on { background: var(--tinta); }
+.grade-pontos figcaption { margin-top: 1rem; font-size: .92rem; color: var(--cinza); line-height: 1.5; }
+.grade-pontos figcaption strong { color: var(--tinta); }
