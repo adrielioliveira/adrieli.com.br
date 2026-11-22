@@ -1570,28 +1570,21 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
 .grade-2 > .slot, .grade-3 > .slot { min-width: 0; }
 .slot-img video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: #000; }
 
-/* Galeria da página de lançamento: sem espaços vazios, tamanhos variados */
-.galeria { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.6rem); align-items: start; margin-top: 1rem; }
+/* Galeria da página de lançamento: pares de fotos com a mesma altura, sem espaço vazio */
+.galeria { display: flex; flex-direction: column; gap: clamp(1.2rem, 2.2vw, 1.8rem); margin-top: 1rem; }
+.g-row { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(1rem, 2vw, 1.6rem); align-items: start; }
+.g-row.inv { grid-template-columns: 7fr 5fr; }
 .g-item { margin: 0; min-width: 0; }
-.g-item .slot-img { position: relative; overflow: hidden; border-radius: 22px; background: #000; height: auto; aspect-ratio: 16 / 9; }
+.g-item .slot-img { position: relative; overflow: hidden; border-radius: 22px; background: #000; height: clamp(300px, 34vw, 470px); aspect-ratio: auto; }
 .g-item .slot-img img, .g-item .slot-img video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 .g-item figcaption { font-size: .92rem; color: var(--cinza); margin-top: .7rem; line-height: 1.5; }
 .g-item figcaption strong { color: var(--tinta); font-weight: 700; }
-.g-video { grid-column: span 5; grid-row: span 2; display: flex; flex-direction: column; align-self: stretch; }
-.g-video .slot-img { flex: 1; aspect-ratio: auto; min-height: 360px; }
-.g-palestra { grid-column: span 7; }
-.g-cert { grid-column: span 7; }
-.g-marca { grid-column: span 12; }
-.g-par { grid-column: span 6; }
-.g-par .slot-img { aspect-ratio: 4 / 3; }
-.g-marca .slot-img { aspect-ratio: 21 / 8; }
-.g-palestra .slot-img, .g-cert .slot-img { aspect-ratio: 16 / 10; }
 @media (max-width: 760px) {
-  .galeria { grid-template-columns: 1fr; }
-  .g-video, .g-palestra, .g-cert, .g-marca, .g-par { grid-column: auto; grid-row: auto; }
-  .g-video { display: block; align-self: auto; }
-  .g-video .slot-img { aspect-ratio: 4 / 5; flex: none; min-height: 0; }
-  .g-palestra .slot-img { aspect-ratio: 16 / 9; }
-  .g-cert .slot-img { aspect-ratio: 4 / 3; }
+  .g-row, .g-row.inv { grid-template-columns: 1fr; }
+  .g-item .slot-img { height: auto; aspect-ratio: 4 / 3; }
+  .g-video .slot-img { aspect-ratio: 4 / 5; }
   .g-marca .slot-img { aspect-ratio: 1 / 1; }
 }
+
+/* Aviso antes de cada descrição acessível (para leitores de tela e leitura visual) */
+.aviso-desc { display: block; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--tinta); margin: .25rem 0 .15rem; }
