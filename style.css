@@ -1674,3 +1674,13 @@ h1, h2, h3 { overflow-wrap: anywhere; }
 
 /* Urbanist (OFL, ver fonts/OFL-Urbanist.txt): textos de apoio, peso variável */
 @font-face { font-family: "Urbanist"; src: url("fonts/Urbanist-VF.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+
+/* Home: painéis brancos arredondados sobre cinza claro (referência do print, sem copiar conteúdo) */
+:root:not([data-tema="escuro"]) body.pagina-paineis { background: #E7E6E4; }
+:root:not([data-tema="escuro"]) body.pagina-paineis .topo { padding: 12px 12px 0; }
+:root:not([data-tema="escuro"]) body.pagina-paineis .nav { background: #FFFFFF; border-radius: 999px; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+:root:not([data-tema="escuro"]) body.pagina-paineis .nav-links a:not(.btn) { background: #F1F0EE; border-radius: 999px; padding: .45rem .95rem; color: #1A1A1A; }
+:root:not([data-tema="escuro"]) body.pagina-paineis .nav-links a:not(.btn):hover { background: #F4B9D6; }
+:root:not([data-tema="escuro"]) body.pagina-paineis main > section { background: #FFFFFF; border-radius: 28px; margin: 12px; overflow: hidden; }
+:root:not([data-tema="escuro"]) body.pagina-paineis .hero { margin-top: 12px; }
+@media (max-width: 600px) { body.pagina-paineis main > section { margin: 8px; border-radius: 22px; } }
