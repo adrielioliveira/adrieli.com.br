@@ -1054,7 +1054,7 @@ a.tile:hover .geleia { transform: rotate(14deg) scale(1.06); }
   padding: .4rem .8rem; border-radius: 999px;
   background: transparent; color: #F4E7DC; border: 1px solid #870842;
 }
-.pp-sims button[aria-pressed="true"] { background: var(--limao); color: var(--preto); border-color: var(--limao); }
+.pp-sims button[aria-pressed="true"] { background: #FFD283; color: var(--creme); border-color: #FFD283; }
 .pp-lista { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem 1.2rem; justify-items: center; }
 .pp { display: grid; justify-items: center; gap: .9rem; text-align: center; width: 100%; }
 .pp-rotulo { display: grid; gap: .15rem; font-size: .8rem; line-height: 1.35; color: #F4E7DC; min-height: 4.6em; align-content: start; }
@@ -1326,7 +1326,7 @@ a.tile:hover .tile-img img.tile-elem { scale: 1.07; transform: translate(calc(va
 .sg-seta { stroke: #183900; }
 .sim-ativo .sim-botao { background: #CBEE2F; color: #183900; border-color: #183900; }
 .checagens li::before { background: #CBEE2F; color: #183900; }
-.pp-sims button[aria-pressed="true"] { background: #CBEE2F; color: #183900; border-color: #CBEE2F; }
+.pp-sims button[aria-pressed="true"] { background: #FFD283; color: var(--creme); border-color: #FFD283; }
 .pder-tag { border-color: currentColor; }
 .pder-tag i { background: currentColor; }
 .tag-p { background: #FEB3D2; color: #870842; }

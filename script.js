@@ -43,10 +43,33 @@ if ("IntersectionObserver" in window) {
    --------------------------------------------------------- */
 const simulacoes = {
   typical: { nome: "Typical color vision", matriz: null },
+  protanomaly: { nome: "Protanomaly", nota: "weak red", matriz: "0.576143 0.526292 -0.102434 0 0 0.057251 0.893141 0.049608 0 0 -0.001941 -0.024058 1.025999 0 0 0 0 0 1 0" },
+  deuteranomaly: { nome: "Deuteranomaly", nota: "weak green", matriz: "0.683661 0.430323 -0.113984 0 0 0.140042 0.836251 0.023706 0 0 -0.005910 0.021470 0.984441 0 0 0 0 0 1 0" },
+  tritanomaly: { nome: "Tritanomaly", nota: "weak blue", matriz: "1.127764 -0.038374 -0.089389 0 0 -0.039205 0.965404 0.073801 0 0 0.002367 0.345683 0.651950 0 0 0 0 0 1 0" },
   protanopia: { nome: "Protanopia", nota: "no red cones", matriz: "0.152286 1.052583 -0.204868 0 0 0.114503 0.786281 0.099216 0 0 -0.003882 -0.048116 1.051998 0 0 0 0 0 1 0" },
   deuteranopia: { nome: "Deuteranopia", nota: "no green cones", matriz: "0.367322 0.860646 -0.227968 0 0 0.280085 0.672501 0.047413 0 0 -0.011820 0.042940 0.968881 0 0 0 0 0 1 0" },
   tritanopia: { nome: "Tritanopia", nota: "no blue cones", matriz: "1.255528 -0.076749 -0.178779 0 0 -0.078411 0.930809 0.147602 0 0 0.004733 0.691367 0.303900 0 0 0 0 0 1 0" },
-  achromatopsia: { nome: "Achromatopsia", nota: "no color", matriz: "0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" },
+  achromatopsia: { nome: "Monochromacy", nota: "no color", matriz: "0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" },
+  "blue-cone": { nome: "Blue cone monochromacy", nota: "approximation", matriz: "0.1 0.2 0.7 0 0 0.1 0.2 0.7 0 0 0.1 0.2 0.7 0 0 0 0 0 1 0" },
+};
+
+/* Cores de cada simulação da paleta, lidas da figura da tese (Figura 6).
+   Ordem dentro de cada lista: branco, roxo, laranja, cinza escuro, verde, amarelo. */
+const ORDEM_PALETA = ["#F7F6F0", "#5C239E", "#F47A27", "#282828", "#BCF36C", "#F8D634"];
+const CORES_SIM = {
+  typical: ["#F7F6F0", "#5C239E", "#F47A27", "#282828", "#BCF36C", "#F8D634"],
+  protanomaly: ["#F5EEE3", "#203894", "#CB8B11", "#282828", "#E3E464", "#F3D734"],
+  deuteranomaly: ["#F5EEE3", "#203A88", "#D98502", "#282828", "#EADF8C", "#FCD268"],
+  tritanomaly: ["#F5EDF4", "#503867", "#FF6B49", "#29282B", "#CFE3BE", "#FDCE9C"],
+  achromatopsia: ["#EFEFEF", "#424242", "#8D8D8D", "#282828", "#D2D2D2", "#CECECE"],
+  protanopia: ["#F5EEE1", "#00448F", "#AE9A19", "#2A2829", "#F5DE61", "#F2D834"],
+  deuteranopia: ["#FEEAE8", "#00477A", "#C39300", "#2C2729", "#FFD6A2", "#FFD088"],
+  tritanopia: ["#F7EBFD", "#494448", "#FE696E", "#29282B", "#D5DEEF", "#FFC9D7"],
+  "blue-cone": ["#EFEDE9", "#4C3763", "#B5825C", "#282828", "#CDDBAB", "#DED196"],
+};
+const simDaCor = (id, hex) => {
+  const i2 = ORDEM_PALETA.findIndex((c) => c.toUpperCase() === (hex || "").toUpperCase());
+  return i2 >= 0 && CORES_SIM[id] ? CORES_SIM[id][i2] : hex;
 };
 
 const ns = "http://www.w3.org/2000/svg";
@@ -230,34 +253,48 @@ if (!semMovimento && ponteiroFino) {
       `<span class="pp-nota">${melhor[0]} ${melhor[1].toFixed(1)}:1 <i class="${cls}">${n}</i></span></div>`;
   }
 
+  function pintar(li, a, b) {
+    const extraA = li.dataset.extraA, extraB = li.dataset.extraB;
+    const ok = valido(a) && valido(b);
+    li.classList.toggle("pp-vazio", !ok);
+    const escuro = ok && lum(a) < 0.03 && lum(b) < 0.03;
+    const contorno = ok && (lum(a) < 0.03 || lum(b) < 0.03) ? " contorno" : "";
+    const posicao = [...li.parentNode.children].indexOf(li) % 2 ? "baixo" : "cima";
+    li.innerHTML =
+      rotulo(a, li.dataset.nomeA, extraA) +
+      `<div class="pp-forma${contorno}" style="--a:${valido(a) ? a : "#333"};--b:${valido(b) ? b : "#26030A"}" role="img" aria-label="${li.dataset.nomeA || "color"} ${valido(a) ? a : ""} and ${li.dataset.nomeB || "color"} ${valido(b) ? b : ""}">` +
+      (ok ? `<span class="pp-olho ${posicao}"></span>` : "") + `</div>` +
+      rotulo(b, li.dataset.nomeB, extraB);
+    if (escuro) li.querySelector(".pp-forma").classList.add("contorno");
+  }
+
   document.querySelectorAll(".paleta-pilulas").forEach((bloco) => {
     const itens = bloco.querySelectorAll(".pp");
-    itens.forEach((li, i) => {
-      const a = (li.dataset.corA || "").trim(), b = (li.dataset.corB || "").trim();
-      const extraA = li.dataset.extraA, extraB = li.dataset.extraB;
-      const ok = valido(a) && valido(b);
-      if (!ok) li.classList.add("pp-vazio");
-      const escuro = ok && lum(a) < 0.03 && lum(b) < 0.03;
-      const contorno = ok && (lum(a) < 0.03 || lum(b) < 0.03) ? " contorno" : "";
-      const posicao = i % 2 ? "baixo" : "cima";
-      li.innerHTML =
-        rotulo(a, li.dataset.nomeA, extraA) +
-        `<div class="pp-forma${contorno}" style="--a:${valido(a) ? a : "#333"};--b:${valido(b) ? b : "#26030A"}" role="img" aria-label="${li.dataset.nomeA || "color"} ${valido(a) ? a : ""} and ${li.dataset.nomeB || "color"} ${valido(b) ? b : ""}">` +
-        (ok ? `<span class="pp-olho ${posicao}"></span>` : "") + `</div>` +
-        rotulo(b, li.dataset.nomeB, extraB);
-      if (escuro) li.querySelector(".pp-forma").classList.add("contorno");
+    itens.forEach((li) => {
+      li.dataset.origA = (li.dataset.corA || "").trim();
+      li.dataset.origB = (li.dataset.corB || "").trim();
+      pintar(li, li.dataset.origA, li.dataset.origB);
     });
 
     const sims = bloco.querySelector(".pp-sims");
     if (!sims) return;
-    const tipos = [["typical", "Typical"], ["protanopia", "Protanopia"], ["deuteranopia", "Deuteranopia"], ["tritanopia", "Tritanopia"], ["achromatopsia", "Achromatopsia"]];
+    const tipos = [
+      ["typical", "Typical"], ["protanomaly", "Protanomaly"], ["deuteranomaly", "Deuteranomaly"],
+      ["tritanomaly", "Tritanomaly"], ["achromatopsia", "Monochromacy"], ["protanopia", "Protanopia"],
+      ["deuteranopia", "Deuteranopia"], ["tritanopia", "Tritanopia"], ["blue-cone", "Blue cone monochromacy"],
+    ];
     sims.innerHTML = tipos.map(([id, nome]) => `<button type="button" data-sim="${id}" aria-pressed="${id === "typical"}">${nome}</button>`).join("");
     sims.addEventListener("click", (e) => {
       const btn = e.target.closest("button");
       if (!btn) return;
+      const id = btn.dataset.sim;
       sims.querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", x === btn));
-      const f = btn.dataset.sim === "typical" ? "" : `url(#sim-${btn.dataset.sim})`;
-      bloco.querySelectorAll(".pp-forma, .fam-grade").forEach((el) => (el.style.filter = f));
+      bloco.querySelectorAll(".pp").forEach((li) => {
+        const a = simDaCor(id, li.dataset.origA), b = simDaCor(id, li.dataset.origB);
+        pintar(li, a, b);
+      });
+      const f = simulacoes[id] && simulacoes[id].matriz ? `url(#sim-${id})` : "";
+      bloco.querySelectorAll(".fam-grade").forEach((el) => (el.style.filter = f));
     });
   });
 })();
