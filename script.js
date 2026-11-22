@@ -364,3 +364,47 @@ if (!semMovimento && ponteiroFino) {
     pupila.style.setProperty("--py", (dy * k).toFixed(2) + "px");
   }, { passive: true });
 })();
+
+/* Gráfico da pesquisa: cada barra começa em 0, o corte avança da esquerda para a direita
+   e o número sobe até o valor final. Uma barra por vez. Movimento reduzido: mostra o valor final. */
+(function () {
+  const grades = document.querySelectorAll(".rng-grade");
+  if (!grades.length) return;
+  const reduzir = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const DURACAO = 1400, PAUSA = 250;
+  const itensDe = (g) => [...g.querySelectorAll(".rng")].map((it) => {
+    const barra = it.querySelector(".rng-barra");
+    const num = it.querySelector(".rng-num");
+    return { barra, num, final: parseFloat(barra.style.getPropertyValue("--v")) };
+  });
+  const pintar = (item, v) => {
+    item.barra.style.setProperty("--v", v.toFixed(1) + "%");
+    item.num.firstChild.textContent = v.toFixed(1);
+  };
+  const animar = (item) => new Promise((ok) => {
+    const t0 = performance.now();
+    const passo = (t) => {
+      const k = Math.min(1, (t - t0) / DURACAO);
+      const ease = 1 - Math.pow(1 - k, 3);
+      pintar(item, item.final * ease);
+      if (k < 1) requestAnimationFrame(passo); else ok();
+    };
+    requestAnimationFrame(passo);
+  });
+  grades.forEach((g) => {
+    const itens = itensDe(g);
+    if (reduzir) return;
+    itens.forEach((it) => pintar(it, 0));
+    let começou = false;
+    const obs = new IntersectionObserver(async ([e]) => {
+      if (!e.isIntersecting || começou) return;
+      começou = true;
+      obs.disconnect();
+      for (const it of itens) {
+        await animar(it);
+        await new Promise((r) => setTimeout(r, PAUSA));
+      }
+    }, { threshold: 0.4 });
+    obs.observe(g);
+  });
+})();
