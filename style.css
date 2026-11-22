@@ -1588,3 +1588,10 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
 
 /* Aviso antes de cada descrição acessível (para leitores de tela e leitura visual) */
 .aviso-desc { display: block; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--tinta); margin: .25rem 0 .15rem; }
+
+/* Amostras da paleta por simulação (estilo de faixas com nome e HEX) */
+.amostra { display: flex; flex-direction: column; aspect-ratio: 2 / 3; border-radius: 18px; overflow: hidden; }
+.amostra-faixa { flex: 1; display: flex; align-items: center; gap: .65rem; padding: 0 .9rem; font-size: .78rem; line-height: 1.3; letter-spacing: .03em; }
+.amostra-faixa b { font-weight: 700; }
+.ponto { width: .85rem; height: .85rem; border-radius: 50%; flex: none; }
+.amostra-fig.original .amostra { outline: 2.5px solid var(--tinta); outline-offset: 3px; }
