@@ -1652,3 +1652,10 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
 .metodo-card p { font-size: .98rem; line-height: 1.5; margin: 0; }
 @media (max-width: 900px) { .metodo-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .metodo-grade { grid-template-columns: 1fr; } .metodo-card { min-height: 0; } }
+
+/* Títulos em Space Mono (OFL, ver fonts/OFL.txt). Texto corrido segue em Bricolage Grotesque. */
+@font-face { font-family: "Space Mono"; src: url("fonts/SpaceMono-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Space Mono"; src: url("fonts/SpaceMono-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+h1, h2, h3, .titulo-centro, .assinatura { font-family: "Space Mono", ui-monospace, monospace; letter-spacing: -.02em; }
+h1 em, h2 em, h3 em { font-family: var(--serif); letter-spacing: 0; }
+h1, h2, h3 { overflow-wrap: anywhere; }
