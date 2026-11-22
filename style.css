@@ -1709,3 +1709,24 @@ h1, h2, h3 { overflow-wrap: anywhere; }
   body.pagina-paineis .colagem { overflow: hidden; border-radius: 24px; padding: 0 4%; box-sizing: border-box; }
   body.pagina-paineis .colagem .foto-card { width: min(23%, 230px); margin: 0 -1.5%; }
 }
+
+/* Home, desktop: montagem em duas colunas (esquerda: texto e contato; direita: mosaico de trabalhos) */
+@media (min-width: 1000px) {
+  body.pagina-paineis main#conteudo { display: grid; grid-template-columns: 480px minmax(0, 1fr); gap: 8px; align-items: start; padding: 0 0 8px; }
+  body.pagina-paineis .hero { grid-column: 1; grid-row: 1; margin: 0; border-radius: 24px; }
+  body.pagina-paineis .faixa-wrap { grid-column: 1; grid-row: 2; margin: 0; background: #FFFFFF; border-radius: 24px; padding: 14px 0; }
+  body.pagina-paineis #work { grid-column: 2; grid-row: 1 / span 2; margin: 0; background: #F4F3F1; border-radius: 24px; min-height: 80vh; }
+  body.pagina-paineis #contact { grid-column: 1 / -1; grid-row: 3; margin: 8px 0 0; border-radius: 24px; }
+  body.pagina-paineis .hero-miolo { display: block; min-height: 0; }
+  body.pagina-paineis .hero-miolo .titulo-hero, body.pagina-paineis .hero-miolo .hero-base { background: transparent; }
+  body.pagina-paineis #work .tiles { min-height: 0; }
+}
+@media (max-width: 999px) {
+  body.pagina-paineis main#conteudo { display: block; }
+}
+@media (min-width: 1000px) {
+  body.pagina-paineis #work { overflow: hidden; }
+  body.pagina-paineis #work .grade-wrap, body.pagina-paineis #work .container { max-width: none; width: 100%; padding-left: 24px; padding-right: 24px; box-sizing: border-box; }
+  body.pagina-paineis #work .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  body.pagina-paineis .titulo-hero { font-size: clamp(1.8rem, 2.6vw, 2.6rem); }
+}
