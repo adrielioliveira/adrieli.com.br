@@ -1566,11 +1566,11 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
 .est figcaption { font-size: .92rem; color: var(--cinza); line-height: 1.45; max-width: 30ch; }
 /* =========================================================
    DESKTOP: conteúdo ocupa quase toda a largura, com margem
-   lateral proporcional (4vw) e fonte um pouco maior.
+   lateral proporcional (9vw) e fonte um pouco maior.
    Celular e tablet não mudam.
    ========================================================= */
 @media (min-width: 901px) {
-  :root { --margem-pc: clamp(40px, 4vw, 96px); }
+  :root { --margem-pc: clamp(60px, 9vw, 220px); }
   body { font-size: 1.14rem; }
   .container, .capa-case, .cap-grid, .nav, .hero-miolo, .case-miolo {
     width: calc(100% - 2 * var(--margem-pc)); max-width: none; margin-inline: auto;
