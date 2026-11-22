@@ -1581,11 +1581,13 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
 .g-palestra { grid-column: span 7; }
 .g-cert { grid-column: span 7; }
 .g-marca { grid-column: span 12; }
+.g-par { grid-column: span 6; }
+.g-par .slot-img { aspect-ratio: 4 / 3; }
 .g-marca .slot-img { aspect-ratio: 21 / 8; }
 .g-palestra .slot-img, .g-cert .slot-img { aspect-ratio: 16 / 10; }
 @media (max-width: 760px) {
   .galeria { grid-template-columns: 1fr; }
-  .g-video, .g-palestra, .g-cert, .g-marca { grid-column: auto; grid-row: auto; }
+  .g-video, .g-palestra, .g-cert, .g-marca, .g-par { grid-column: auto; grid-row: auto; }
   .g-video { display: block; align-self: auto; }
   .g-video .slot-img { aspect-ratio: 4 / 5; flex: none; min-height: 0; }
   .g-palestra .slot-img { aspect-ratio: 16 / 9; }
