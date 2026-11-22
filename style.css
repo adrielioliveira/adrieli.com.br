@@ -1659,3 +1659,9 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
 h1, h2, h3, .titulo-centro, .assinatura { font-family: "Space Mono", ui-monospace, monospace; letter-spacing: -.02em; }
 h1 em, h2 em, h3 em { font-family: var(--serif); letter-spacing: 0; }
 h1, h2, h3 { overflow-wrap: anywhere; }
+
+/* Home: layout de referência, Space Mono regular + bold nas pílulas */
+.titulo-ref { font-family: "Space Mono", ui-monospace, monospace; font-weight: 400; font-size: clamp(2.2rem, 6.2vw, 5.6rem); line-height: 1.12; letter-spacing: -.02em; color: var(--tinta); }
+.pill-ref { display: inline-block; font-weight: 700; letter-spacing: -.03em; padding: .02em .22em .08em; border-radius: 999px; margin: .08em 0; }
+.pill-limao { background: #CBEE2F; color: #1E3A00; }
+.pill-amarelo { background: #FFD12A; color: #4C0610; }
