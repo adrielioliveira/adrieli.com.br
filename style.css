@@ -1553,3 +1553,18 @@ html.pausado *, html.pausado *::before, html.pausado *::after { animation-play-s
   100% { stroke-dasharray: 100 0; stroke-dashoffset: -100; }
 }
 @media (prefers-reduced-motion: reduce) { .anel-carga rect { animation: none; stroke-dasharray: 100 0; } }
+
+/* =========================================================
+   DESKTOP: conteúdo ocupa quase toda a largura, com margem
+   lateral proporcional (4vw) e fonte um pouco maior.
+   Celular e tablet não mudam.
+   ========================================================= */
+@media (min-width: 901px) {
+  :root { --margem-pc: clamp(40px, 4vw, 96px); }
+  body { font-size: 1.14rem; }
+  .container, .capa-case, .cap-grid, .nav, .hero-miolo, .case-miolo {
+    width: calc(100% - 2 * var(--margem-pc)); max-width: none; margin-inline: auto;
+  }
+  .cap-corpo > p { font-size: 1.2rem; }
+  .case-lead { font-size: clamp(1.25rem, 2.1vw, 1.55rem); }
+}
