@@ -1716,7 +1716,7 @@ h1, h2, h3 { overflow-wrap: anywhere; }
   body.pagina-paineis .hero { grid-column: 1; grid-row: 1; margin: 0; border-radius: 24px; }
   body.pagina-paineis .faixa-wrap { grid-column: 1; grid-row: 2; margin: 0; background: #FFFFFF; border-radius: 24px; padding: 14px 0; }
   body.pagina-paineis #work { grid-column: 2; grid-row: 1 / span 2; margin: 0; background: #F4F3F1; border-radius: 24px; min-height: 80vh; }
-  body.pagina-paineis #contact { grid-column: 1 / -1; grid-row: 3; margin: 8px 0 0; border-radius: 24px; }
+  body.pagina-paineis #contact { grid-column: 1 / -1; grid-row: 3; }
   body.pagina-paineis .hero-miolo { display: block; min-height: 0; }
   body.pagina-paineis .hero-miolo .titulo-hero, body.pagina-paineis .hero-miolo .hero-base { background: transparent; }
   body.pagina-paineis #work .tiles { min-height: 0; }
