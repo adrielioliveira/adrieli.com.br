@@ -1730,3 +1730,6 @@ h1, h2, h3 { overflow-wrap: anywhere; }
   body.pagina-paineis #work .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   body.pagina-paineis .titulo-hero { font-size: clamp(1.8rem, 2.6vw, 2.6rem); }
 }
+
+/* Contato na home: volta ao verde original da seção (forest + lima), fora da regra dos painéis brancos */
+:root:not([data-tema="escuro"]) body.pagina-paineis #contact { background: #183900; color: #CBEE2F; border: 1px solid #0B1900; border-radius: 40px; margin: 12px 0 0; }
