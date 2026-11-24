@@ -1787,8 +1787,8 @@ h1, h2, h3 { overflow-wrap: anywhere; }
 }
 
 /* Home, desktop: réplica exata do layout enviado (cartões cream, pílulas laranja e azul, mosaico cinza) */
-.pill-laranja { background: #FF6633; color: #4C0610; }
-.pill-azul { background: #9DA7EA; color: #26398A; }
+.pill-laranja { background: #FF6533; color: #4C0610; }
+.pill-azul { background: #9BA8EF; color: #425399; }
 @media (min-width: 1000px) {
   body.pagina-paineis .nav { height: 96px; }
   body.pagina-paineis .logo { font-family: "Space Mono", monospace; text-transform: uppercase; font-size: 1.9rem; letter-spacing: -.02em; color: #000; }
