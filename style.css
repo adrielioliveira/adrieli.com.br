@@ -1785,3 +1785,50 @@ h1, h2, h3 { overflow-wrap: anywhere; }
 @media (min-width: 1000px) {
   body.pagina-paineis #inicio { padding-left: 0; padding-right: 0; }
 }
+
+/* Home, desktop: réplica exata do layout enviado (cartões cream, pílulas laranja e azul, mosaico cinza) */
+.pill-laranja { background: #FF6633; color: #4C0610; }
+.pill-azul { background: #9DA7EA; color: #26398A; }
+@media (min-width: 1000px) {
+  body.pagina-paineis .nav { height: 96px; }
+  body.pagina-paineis .logo { font-family: "Space Mono", monospace; text-transform: uppercase; font-size: 1.9rem; letter-spacing: -.02em; color: #000; }
+  body.pagina-paineis .nav-links a:not(.btn) { background: #D9D9D9; color: #000; font-size: 1.35rem; padding: .85rem 1.6rem; }
+  body.pagina-paineis .nav-links a.btn { background: #870842; color: #FEB3D2; font-size: 1.35rem; padding: 1.1rem 2.4rem; }
+  body.pagina-paineis .hero-miolo { display: flex; flex-direction: column; gap: 16px; }
+  body.pagina-paineis .titulo-hero { padding: 60px 56px; font-size: clamp(2.4rem, 3.6vw, 3.8rem); line-height: 1.22; color: #000; }
+  body.pagina-paineis .titulo-hero em { font-style: italic; }
+  body.pagina-paineis .faixa-wrap { background: #F9F2ED; border-radius: 50px; height: 150px; padding: 0; }
+  body.pagina-paineis .faixa-wrap .faixa { display: none; }
+  body.pagina-paineis .hero-base { padding: 56px 56px; }
+  body.pagina-paineis .hero-base p { color: #000; font-size: 1.6rem; line-height: 1.35; }
+  body.pagina-paineis .hero-base .acoes { display: none; }
+  body.pagina-paineis #work .cabecalho-secao { display: none; }
+  body.pagina-paineis #work { padding: 16px; }
+  body.pagina-paineis #work .tiles { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 16px; height: 100%; min-height: 0; }
+  body.pagina-paineis #work .tile { background: #D9D9D9 !important; border-radius: 40px; color: transparent; }
+  body.pagina-paineis #work .tile > * { display: none; }
+  body.pagina-paineis #work .tile { display: block; }
+  body.pagina-paineis #work .tile:nth-child(n+5) { display: none; }
+  body.pagina-paineis #work .tile:nth-child(1) { grid-column: 1; grid-row: 1 / span 2; }
+  body.pagina-paineis #work .tile:nth-child(2) { grid-column: 2; grid-row: 1; }
+  body.pagina-paineis #work .tile:nth-child(3) { grid-column: 3; grid-row: 1; }
+  body.pagina-paineis #work .tile:nth-child(4) { grid-column: 2 / span 2; grid-row: 2; }
+  body.pagina-paineis #work .tile.t-2 { grid-column: auto; }
+  body.pagina-paineis #work .tile:nth-child(4).t-2 { grid-column: 2 / span 2; }
+  body.pagina-paineis #work .tile:nth-child(1).t-2 { grid-column: 1; }
+  body.pagina-paineis #work .tile:nth-child(3).t-2 { grid-column: 3; }
+}
+@media (min-width: 1000px) {
+  body.pagina-paineis .hero-miolo > .faixa-wrap { order: 0 !important; }
+  body.pagina-paineis #work { min-height: calc(100vh - 130px); display: flex; flex-direction: column; }
+  body.pagina-paineis #work .grade-wrap, body.pagina-paineis #work .container { flex: 1; display: flex; flex-direction: column; }
+  body.pagina-paineis #work .tiles { flex: 1; height: auto; min-height: 640px; grid-template-rows: 1fr 1fr; }
+  body.pagina-paineis #work .tile { grid-column: auto !important; grid-row: auto !important; width: auto; height: auto; min-height: 0; }
+  body.pagina-paineis #work .tile:nth-child(1) { grid-column: 1 !important; grid-row: 1 / span 2 !important; }
+  body.pagina-paineis #work .tile:nth-child(2) { grid-column: 2 !important; grid-row: 1 !important; }
+  body.pagina-paineis #work .tile:nth-child(3) { grid-column: 3 !important; grid-row: 1 !important; }
+  body.pagina-paineis #work .tile:nth-child(4) { grid-column: 2 / span 2 !important; grid-row: 2 !important; }
+}
+@media (min-width: 1000px) {
+  body.pagina-paineis .titulo-hero { font-size: clamp(2rem, 3vw, 3.2rem); }
+}
