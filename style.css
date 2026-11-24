@@ -1835,3 +1835,54 @@ h1, h2, h3 { overflow-wrap: anywhere; }
 
 /* Home: abaixo do layout do Frame 6 fica só a caixa "lets talk about". A seção work fica no HTML, só não aparece na home. */
 body.pagina-paineis #work { display: none; }
+
+/* ===== Home, desktop: Frame 6 do Figma (1098 x 536) reproduzido em proporção =====
+   Todas as medidas são do Figma em px; --u converte px do Figma em % da largura do quadro. */
+@media (min-width: 1000px) {
+  html body.pagina-paineis { --u: calc(100cqw / 1098.053); }
+  html body.pagina-paineis .menu-btn { display: none; }
+  html body.pagina-paineis .topo { position: sticky; top: 0; height: 0; padding: 0; container-type: inline-size; overflow: visible; }
+  html body.pagina-paineis .nav { position: absolute; left: calc(var(--u) * 6); top: calc(var(--u) * 10); width: calc(var(--u) * 1078.06); height: calc(var(--u) * 52.76); max-width: none; margin: 0; padding: 0; border: 0; border-radius: calc(var(--u) * 33.3); background: #F9F2ED; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; display: block; }
+  html body.pagina-paineis .logo { position: absolute; left: calc(var(--u) * 19.44); top: calc(var(--u) * 12.22); width: calc(var(--u) * 102.47); height: calc(var(--u) * 28.2); font-family: "Space Mono", monospace; font-weight: 400; font-size: calc(var(--u) * 18.05); line-height: 1; letter-spacing: calc(var(--u) * -0.361); text-transform: uppercase; color: #000; text-decoration: none; white-space: nowrap; }
+  html body.pagina-paineis .logo svg { position: absolute; left: calc(var(--u) * 83.28); top: 0; width: calc(var(--u) * 19.19); height: calc(var(--u) * 28.2); }
+  html body.pagina-paineis .nav-links { position: absolute; inset: 0; display: block; margin: 0; padding: 0; list-style: none; }
+  html body.pagina-paineis .nav-links li { position: absolute; margin: 0; }
+  html body.pagina-paineis .nav-links li:nth-child(1) { left: calc(var(--u) * 633.73); top: calc(var(--u) * 7.5); width: calc(var(--u) * 62.48); height: calc(var(--u) * 37.77); }
+  html body.pagina-paineis .nav-links li:nth-child(2) { left: calc(var(--u) * 700.38); top: calc(var(--u) * 7.5); width: calc(var(--u) * 80.26); height: calc(var(--u) * 37.77); }
+  html body.pagina-paineis .nav-links li:nth-child(3) { left: calc(var(--u) * 784.8); top: calc(var(--u) * 7.5); width: calc(var(--u) * 87.2); height: calc(var(--u) * 37.77); }
+  html body.pagina-paineis .nav-links li:nth-child(4) { left: calc(var(--u) * 876.17); top: calc(var(--u) * 7.5); width: calc(var(--u) * 66.93); height: calc(var(--u) * 37.77); }
+  html body.pagina-paineis .nav-links li:nth-child(5) { left: calc(var(--u) * 947.26); top: calc(var(--u) * 4.17); width: calc(var(--u) * 126.08); height: calc(var(--u) * 44.43); }
+  html body.pagina-paineis .nav-links a { display: flex; align-items: center; justify-content: center; box-sizing: border-box; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; border-radius: calc(var(--u) * 27.77); background: #D9D9D9; color: #000; font-family: var(--fonte); font-weight: 400; font-size: calc(var(--u) * 13.885); letter-spacing: calc(var(--u) * -0.2777); line-height: 1; white-space: nowrap; text-decoration: none; }
+  html body.pagina-paineis .nav-links a.btn-nav { background: #870842; color: #FEB3D2; }
+
+  html body.pagina-paineis main#conteudo { display: block; gap: 0; padding: 0; }
+  html body.pagina-paineis #inicio { position: relative; container-type: inline-size; aspect-ratio: 1098.053 / 536.252; width: 100%; min-height: 0; margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; overflow: visible; }
+  html body.pagina-paineis .hero-blobs { display: none; }
+  html body.pagina-paineis .hero-miolo { position: absolute; inset: 0; display: block; min-height: 0; max-width: none; margin: 0; gap: 0; }
+  html body.pagina-paineis .hero-miolo .titulo-hero { position: absolute; left: calc(var(--u) * 6); top: calc(var(--u) * 71.1); width: calc(var(--u) * 352.69); height: calc(var(--u) * 244.38); box-sizing: border-box; margin: 0; padding: calc(var(--u) * 22); background: #F9F2ED; border-radius: calc(var(--u) * 13.885); color: #000; font-family: "Space Mono", monospace; font-weight: 400; font-size: calc(var(--u) * 37); line-height: 1.12; letter-spacing: -0.02em; }
+  html body.pagina-paineis .hero-miolo .titulo-hero em { font-style: italic; font-weight: 400; }
+  html body.pagina-paineis .hero-miolo .titulo-hero .pill-ref { font-weight: 700; }
+  html body.pagina-paineis .faixa-wrap { position: absolute; left: calc(var(--u) * 6); top: calc(var(--u) * 326.68); width: calc(var(--u) * 352.69); height: calc(var(--u) * 45.27); min-height: 0; margin: 0; padding: 0; background: #F9F2ED; border-radius: calc(var(--u) * 13.885); overflow: hidden; }
+  html body.pagina-paineis .faixa { display: none; }
+  html body.pagina-paineis .hero-miolo .hero-base { position: absolute; left: calc(var(--u) * 6); top: calc(var(--u) * 380.28); width: calc(var(--u) * 352.69); height: calc(var(--u) * 146.26); max-width: none; box-sizing: border-box; margin: 0; padding: 0; background: #F9F2ED; border-radius: calc(var(--u) * 13.885); }
+  html body.pagina-paineis .hero-miolo .hero-base p { position: absolute; left: calc(var(--u) * 19.44); top: calc(var(--u) * 59.89); width: calc(var(--u) * 314.92); max-width: none; margin: 0; color: #000; font-family: var(--fonte); font-size: calc(var(--u) * 13.885); line-height: normal; }
+  html body.pagina-paineis .hero-miolo .hero-base .acoes { display: none; }
+
+  html body.pagina-paineis .quadro-mosaico { position: absolute; inset: 0; }
+  html body.pagina-paineis .quadro-mosaico span { position: absolute; display: block; }
+  html body.pagina-paineis .qm-painel { left: calc(var(--u) * 368.13); top: calc(var(--u) * 71.1); width: calc(var(--u) * 714.26); height: calc(var(--u) * 455.44); background: #F9F2ED; border-radius: calc(var(--u) * 13.885); }
+  html body.pagina-paineis .qm-a { left: calc(var(--u) * 376.74); top: calc(var(--u) * 78.59); width: calc(var(--u) * 227.81); height: calc(var(--u) * 441.83); background: #D9D9D9; border-radius: calc(var(--u) * 11.108); }
+  html body.pagina-paineis .qm-b { left: calc(var(--u) * 612.88); top: calc(var(--u) * 78.59); width: calc(var(--u) * 227.81); height: calc(var(--u) * 216.75); background: #D9D9D9; border-radius: calc(var(--u) * 11.108); }
+  html body.pagina-paineis .qm-c { left: calc(var(--u) * 849.03); top: calc(var(--u) * 78.59); width: calc(var(--u) * 227.81); height: calc(var(--u) * 216.75); background: #D9D9D9; border-radius: calc(var(--u) * 11.108); }
+  html body.pagina-paineis .qm-d { left: calc(var(--u) * 612.88); top: calc(var(--u) * 303.67); width: calc(var(--u) * 463.96); height: calc(var(--u) * 216.75); background: #D9D9D9; border-radius: calc(var(--u) * 11.108); }
+
+  html body.pagina-paineis #work { display: none; }
+  html body.pagina-paineis #contact { grid-column: auto; grid-row: auto; margin: 8px 0 0; }
+}
+
+/* Home, desktop: o botão de tema sai do meio da lateral e fica no canto inferior esquerdo, fora do quadro do Frame 6 */
+@media (min-width: 1000px) {
+  :root:root body.pagina-paineis .nav-links li > a { color: #000; }
+  :root:root body.pagina-paineis .nav-links li > a.btn-nav { color: #FEB3D2; }
+  :root:root body.pagina-paineis .interruptor.lateral, :root:root body.pagina-paineis .tema { top: auto; bottom: 16px; transform: none; }
+}
