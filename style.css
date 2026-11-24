@@ -1832,3 +1832,6 @@ h1, h2, h3 { overflow-wrap: anywhere; }
 @media (min-width: 1000px) {
   body.pagina-paineis .titulo-hero { font-size: clamp(2rem, 3vw, 3.2rem); }
 }
+
+/* Home: abaixo do layout do Frame 6 fica só a caixa "lets talk about". A seção work fica no HTML, só não aparece na home. */
+body.pagina-paineis #work { display: none; }
