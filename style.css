@@ -1976,3 +1976,8 @@ body.pagina-paineis #work { display: none; }
 :root:root[data-tema="escuro"] body.pagina-paineis .tema { background: #F4E7DC; }
 :root:root[data-tema="escuro"] body.pagina-paineis .tema button[aria-pressed="true"] { background: #5E012E; color: #F4E7DC; }
 :root:root[data-tema="escuro"] body.pagina-paineis .tema button[data-tema="claro"]:not([aria-pressed="true"]) { color: #5E012E; }
+
+/* "Scroll to top": oculto no topo; aparece com opacidade depois da primeira dobra */
+:root:root:root body.pagina-paineis .voltar-topo { opacity: 0; visibility: hidden; transition: opacity .4s ease, visibility .4s; }
+:root:root:root body.pagina-paineis .voltar-topo.visivel { opacity: 1; visibility: visible; }
+@media (prefers-reduced-motion: reduce) { :root:root:root body.pagina-paineis .voltar-topo { transition: none; } }

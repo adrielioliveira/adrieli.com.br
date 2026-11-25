@@ -420,3 +420,12 @@ if (!semMovimento && ponteiroFino) {
   }, { threshold: 0.5 });
   obs.observe(grade);
 })();
+
+/* "Scroll to top" (desktop): aparece com opacidade depois que a página passa da primeira dobra */
+(function () {
+  const voltar = document.querySelector(".voltar-topo");
+  if (!voltar) return;
+  const atualizar = () => voltar.classList.toggle("visivel", window.scrollY > 500);
+  window.addEventListener("scroll", atualizar, { passive: true });
+  atualizar();
+})();
