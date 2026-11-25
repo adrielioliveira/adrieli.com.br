@@ -1981,3 +1981,14 @@ body.pagina-paineis #work { display: none; }
 :root:root:root body.pagina-paineis .voltar-topo { opacity: 0; visibility: hidden; transition: opacity .4s ease, visibility .4s; }
 :root:root:root body.pagina-paineis .voltar-topo.visivel { opacity: 1; visibility: visible; }
 @media (prefers-reduced-motion: reduce) { :root:root:root body.pagina-paineis .voltar-topo { transition: none; } }
+
+/* Botão de tema animado: a parte ativa desliza entre o topo (Dark) e a base (Light); cores fazem transição */
+:root:root:root body.pagina-paineis .tema { isolation: isolate; transition: background-color .45s ease; }
+:root:root:root body.pagina-paineis .tema::before { content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 50%; border-radius: 999px; background: #F4E7DC; transform: translateY(100%); transition: transform .45s cubic-bezier(.4, 0, .2, 1), background-color .45s ease; z-index: 0; pointer-events: none; }
+:root:root:root body.pagina-paineis .tema:has(button[data-tema="escuro"][aria-pressed="true"])::before { transform: translateY(0); background: #5E012E; }
+:root:root:root body.pagina-paineis .tema button { position: relative; z-index: 1; background: transparent !important; color: #F4E7DC; transition: color .45s ease; }
+:root:root:root body.pagina-paineis .tema button[data-tema="claro"][aria-pressed="true"] { color: #5E012E; }
+:root:root[data-tema="escuro"] body.pagina-paineis .tema button:not([aria-pressed="true"]) { color: #5E012E; }
+:root:root[data-tema="escuro"] body.pagina-paineis .tema { background: #F4E7DC; }
+:root:root:root body.pagina-paineis .tema button::before { transition: none; }
+@media (prefers-reduced-motion: reduce) { :root:root:root body.pagina-paineis .tema, :root:root:root body.pagina-paineis .tema::before, :root:root:root body.pagina-paineis .tema button { transition: none; } }
