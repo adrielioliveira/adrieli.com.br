@@ -1968,7 +1968,7 @@ body.pagina-paineis #work { display: none; }
 :root:root:root body.pagina-paineis .tema button[data-tema="escuro"]::before { -webkit-mask-image: url(tema-icones/lua.png); mask-image: url(tema-icones/lua.png); }
 :root:root:root body.pagina-paineis .tema button[data-tema="claro"]::before { -webkit-mask-image: url(tema-icones/sol.png); mask-image: url(tema-icones/sol.png); }
 :root:root:root body.pagina-paineis .tema button[aria-pressed="true"] { background: #5E012E; color: #F4E7DC; }
-:root:root:root body.pagina-paineis .tema button[data-tema="claro"][aria-pressed="true"] { background: #F4E7DC; color: #5E012E; }
+
 :root:root[data-tema="escuro"] body.pagina-paineis .tema { background: #F4E7DC; }
 :root:root[data-tema="escuro"] body.pagina-paineis .tema button[aria-pressed="true"] { background: #5E012E; color: #F4E7DC; }
 :root:root[data-tema="escuro"] body.pagina-paineis .tema button[data-tema="claro"]:not([aria-pressed="true"]) { color: #5E012E; }
@@ -1983,7 +1983,7 @@ body.pagina-paineis #work { display: none; }
 :root:root:root body.pagina-paineis .tema::before { content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 50%; border-radius: 999px; background: #F4E7DC; transform: translateY(100%); transition: transform .45s cubic-bezier(.4, 0, .2, 1), background-color .45s ease; z-index: 0; pointer-events: none; }
 :root:root:root body.pagina-paineis .tema:has(button[data-tema="escuro"][aria-pressed="true"])::before { transform: translateY(0); background: #5E012E; }
 :root:root:root body.pagina-paineis .tema button { position: relative; z-index: 1; background: transparent !important; color: #F4E7DC; transition: color .45s ease; }
-:root:root:root body.pagina-paineis .tema button[data-tema="claro"][aria-pressed="true"] { color: #5E012E; }
+
 :root:root[data-tema="escuro"] body.pagina-paineis .tema button:not([aria-pressed="true"]) { color: #5E012E; }
 :root:root[data-tema="escuro"] body.pagina-paineis .tema { background: #F4E7DC; }
 :root:root:root body.pagina-paineis .tema button::before { transition: none; }
@@ -1993,4 +1993,29 @@ body.pagina-paineis #work { display: none; }
 @media (min-width: 1000px) {
   :root:root[data-tema="escuro"] body.pagina-paineis { background: #5E012E; }
   :root:root[data-tema="claro"] body.pagina-paineis { background: #F4E7DC; }
+}
+
+/* Visibilidade do botão de tema: Dark selecionado = botão claro; Light selecionado = botão escuro. "Scroll to top" sempre com contraste no fundo. */
+@media (min-width: 1000px) {
+  /* Dark selecionado: botão claro, polegar branco, rótulo escuro */
+  :root:root[data-tema="escuro"] body.pagina-paineis .tema { background: #F4E7DC; }
+  :root:root[data-tema="escuro"] body.pagina-paineis .tema::before { background: #FFFFFF; }
+  :root:root[data-tema="escuro"] body.pagina-paineis .tema button { color: rgba(94, 1, 46, .55); }
+  :root:root[data-tema="escuro"] body.pagina-paineis .tema button[aria-pressed="true"] { color: #5E012E; }
+  :root:root[data-tema="escuro"] body.pagina-paineis .voltar-topo { color: #F4E7DC; }
+  :root:root[data-tema="escuro"] body.pagina-paineis .voltar-topo::before { border-top-color: #F4E7DC; }
+
+  /* Light selecionado: botão escuro, polegar em vinho mais claro, rótulo claro */
+  :root:root[data-tema="claro"] body.pagina-paineis .tema { background: #5E012E; }
+  :root:root[data-tema="claro"] body.pagina-paineis .tema::before { background: #7A0A3C; }
+  :root:root[data-tema="claro"] body.pagina-paineis .tema button { color: rgba(244, 231, 220, .6); }
+  :root:root[data-tema="claro"] body.pagina-paineis .tema button[aria-pressed="true"] { color: #F4E7DC; }
+  :root:root[data-tema="claro"] body.pagina-paineis .voltar-topo { color: #5E012E; }
+  :root:root[data-tema="claro"] body.pagina-paineis .voltar-topo::before { border-top-color: #5E012E; }
+}
+
+/* Dark selecionado: polegar branco (vence a regra antiga do polegar); respiro interno para o ícone não encostar na borda */
+@media (min-width: 1000px) {
+  :root:root:root:root body.pagina-paineis .tema:has(button[data-tema="escuro"][aria-pressed="true"])::before { background: #FFFFFF; }
+  :root:root:root body.pagina-paineis .tema button { padding: calc(var(--k) * 6) 0; }
 }
