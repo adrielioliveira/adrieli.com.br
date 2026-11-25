@@ -198,7 +198,7 @@ if (!semMovimento && ponteiroFino) {
   grupo.innerHTML =
     `<button type="button" data-tema="escuro">${lua}<span>Dark</span></button>` +
     `<button type="button" data-tema="claro">${sol}<span>Light</span></button>`;
-  (document.querySelector("main#conteudo") || document.body).appendChild(grupo);
+  document.body.appendChild(grupo);
   const marcar = () =>
     grupo.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.tema === (raiz.dataset.tema || "escuro")));
   grupo.addEventListener("click", (e) => {
