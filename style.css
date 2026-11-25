@@ -1955,3 +1955,12 @@ body.pagina-paineis #work { display: none; }
   :root:root:root body.pagina-paineis .voltar-topo::before { content: ""; position: absolute; left: calc(var(--k) * -115.3); top: calc(var(--k) * 15.9); width: calc(var(--k) * 105.6); height: 0; border-top: 1px solid #5E012E; }
   :root:root:root body.pagina-paineis main#conteudo #contact { background: #1C3F01; }
 }
+
+/* Botão de tema e "Scroll to top" conforme os frames do Figma (variações Light e Dark) */
+/* Tema claro: trilho escuro, parte creme no botão Light ativo (já definido acima) */
+/* Tema escuro: trilho creme, parte escura no botão Dark ativo */
+:root:root[data-tema="escuro"] body.pagina-paineis .tema { background: #F9F2ED; }
+:root:root[data-tema="escuro"] body.pagina-paineis .tema button[aria-pressed="true"] { background: #5E012E; color: #F9F2ED; }
+:root:root[data-tema="escuro"] body.pagina-paineis .tema button:not([aria-pressed="true"]) { color: #5E012E; }
+:root:root[data-tema="escuro"] body.pagina-paineis .voltar-topo { color: #F9F2ED; }
+:root:root[data-tema="escuro"] body.pagina-paineis .voltar-topo::before { border-top-color: #F9F2ED; }
