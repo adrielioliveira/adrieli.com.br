@@ -1965,7 +1965,14 @@ body.pagina-paineis #work { display: none; }
 :root:root[data-tema="escuro"] body.pagina-paineis .voltar-topo { color: #F9F2ED; }
 :root:root[data-tema="escuro"] body.pagina-paineis .voltar-topo::before { border-top-color: #F9F2ED; }
 
-/* Ícones de sol e lua sempre visíveis, como no Figma; ícone e rótulo formam uma coluna centralizada */
-:root:root:root body.pagina-paineis .tema button:not([aria-pressed="true"]) svg { display: block; }
-:root:root:root body.pagina-paineis .tema button { gap: calc(var(--k) * 8); }
-:root:root:root body.pagina-paineis .tema button svg { flex: none; }
+
+/* Botão de tema: ícones de sol e lua (arquivos enviados) como máscara, na cor do texto; cores do botão ativo: Dark #5E012E, Light #F4E7DC */
+:root:root:root body.pagina-paineis .tema button svg { display: none; }
+:root:root:root body.pagina-paineis .tema button::before { content: ""; flex: none; width: calc(var(--k) * 26); height: calc(var(--k) * 26); background: currentColor; -webkit-mask: center / contain no-repeat; mask: center / contain no-repeat; }
+:root:root:root body.pagina-paineis .tema button[data-tema="escuro"]::before { -webkit-mask-image: url(tema-icones/lua.png); mask-image: url(tema-icones/lua.png); }
+:root:root:root body.pagina-paineis .tema button[data-tema="claro"]::before { -webkit-mask-image: url(tema-icones/sol.png); mask-image: url(tema-icones/sol.png); }
+:root:root:root body.pagina-paineis .tema button[aria-pressed="true"] { background: #5E012E; color: #F4E7DC; }
+:root:root:root body.pagina-paineis .tema button[data-tema="claro"][aria-pressed="true"] { background: #F4E7DC; color: #5E012E; }
+:root:root[data-tema="escuro"] body.pagina-paineis .tema { background: #F4E7DC; }
+:root:root[data-tema="escuro"] body.pagina-paineis .tema button[aria-pressed="true"] { background: #5E012E; color: #F4E7DC; }
+:root:root[data-tema="escuro"] body.pagina-paineis .tema button[data-tema="claro"]:not([aria-pressed="true"]) { color: #5E012E; }
