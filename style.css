@@ -1943,11 +1943,15 @@ body.pagina-paineis #work { display: none; }
   :root:root:root body.pagina-paineis #contact .rodape > a { display: none; }
   :root:root:root body.pagina-paineis #contact .pausar-movimento { position: absolute; left: calc(var(--u) * 1314.38); top: calc(var(--u) * 51.57); width: calc(var(--u) * 332.75); height: calc(var(--u) * 66.55); box-sizing: border-box; margin: 0; padding: 0; background: #1C3F01; color: #CBEE2F; border: 0; border-radius: 999px; font-family: var(--fonte); font-size: calc(var(--u) * 29.9); text-transform: uppercase; cursor: pointer; }
 
-  /* Fixos na tela: botão de tema (28.28, 663.84) e "Scroll to top" (51.30, 1235.44) */
-  :root:root:root body.pagina-paineis .tema { position: fixed; left: calc(var(--k) * 28.28); top: calc(var(--k) * 663.84); width: calc(var(--k) * 57.87); height: calc(var(--k) * 289.35); box-sizing: border-box; transform: none; flex-direction: column; gap: 0; padding: 0; margin: 0; background: #5E012E; border: 0; border-radius: calc(var(--k) * 29); overflow: hidden; z-index: 55; }
-  :root:root:root body.pagina-paineis .tema button { flex: 1 1 50%; width: 100%; padding: 0; margin: 0; border: 0; border-radius: 0; background: transparent; color: #F9F2ED; font-family: var(--fonte); font-weight: 600; font-size: calc(var(--k) * 21); }
-  :root:root:root body.pagina-paineis .tema button[aria-pressed="true"] { background: #F9F2ED; color: #5E012E; }
-  :root:root:root body.pagina-paineis .tema button span { writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 0; font-size: calc(var(--k) * 21); }
-  :root:root:root body.pagina-paineis .voltar-topo { display: block; position: fixed; left: calc(var(--k) * 51.3); top: calc(var(--k) * 1235.44); width: calc(var(--k) * 31); height: calc(var(--k) * 252.74); margin: 0; padding: 0; writing-mode: vertical-rl; transform: rotate(180deg); font-family: var(--fonte); font-size: calc(var(--k) * 26); color: #5E012E; text-decoration: none; white-space: nowrap; z-index: 55; }
-  :root:root:root body.pagina-paineis .voltar-topo::before { content: ""; position: absolute; left: calc(var(--k) * 15.9); top: calc(var(--k) * 151); height: calc(var(--k) * 105.6); border-left: 1px solid #5E012E; }
+  /* Fixos na tela (coordenadas do frame 1920 px): Dark/Light em (28.28, 663.84) 57.87 x 289.35; "Scroll to top" centrado em (66.8, 1051) com a linha abaixo */
+  :root:root:root body.pagina-paineis .tema { position: fixed; left: calc(var(--k) * 28.28); top: calc(var(--k) * 663.84); width: calc(var(--k) * 57.87); height: calc(var(--k) * 289.35); box-sizing: border-box; transform: none; flex-direction: column; gap: 0; padding: 0; margin: 0; background: #5E012E; border: 0; border-radius: 999px; overflow: hidden; z-index: 55; }
+  :root:root:root body.pagina-paineis .tema button { flex: 1 1 50%; width: 100%; height: 50%; padding: 0; margin: 0; border: 0; border-radius: 0; background: transparent; color: #F9F2ED; font-family: var(--fonte); font-weight: 600; font-size: calc(var(--k) * 26); }
+  :root:root:root body.pagina-paineis .tema button[aria-pressed="true"] { background: #F9F2ED; color: #5E012E; border-radius: 999px; }
+  :root:root:root body.pagina-paineis .tema button { display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: visible; }
+  :root:root:root body.pagina-paineis .tema button span { display: block; writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 0; font-size: calc(var(--k) * 26); line-height: 1; white-space: nowrap; }
+  :root:root:root body.pagina-paineis .tema button svg { width: calc(var(--k) * 26); height: calc(var(--k) * 26); }
+  :root:root:root body.pagina-paineis #contact .rodape > a { display: none; }
+  :root:root:root body.pagina-paineis .voltar-topo { display: block; position: fixed; left: calc(var(--k) * -1.7); top: calc(var(--k) * 1035.74); width: calc(var(--k) * 137); height: calc(var(--k) * 31); margin: 0; padding: 0; box-sizing: border-box; transform: rotate(-90deg); font-family: var(--fonte); font-size: calc(var(--k) * 26); line-height: calc(var(--k) * 31); text-align: center; color: #5E012E; text-decoration: none; white-space: nowrap; z-index: 55; }
+  :root:root:root body.pagina-paineis .voltar-topo::before { content: ""; position: absolute; left: calc(var(--k) * -115.3); top: calc(var(--k) * 15.9); width: calc(var(--k) * 105.6); height: 0; border-top: 1px solid #5E012E; }
+  :root:root:root body.pagina-paineis main#conteudo #contact { background: #1C3F01; }
 }
