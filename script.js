@@ -198,7 +198,7 @@ if (!semMovimento && ponteiroFino) {
   grupo.innerHTML =
     `<button type="button" data-tema="escuro">${lua}<span>Dark</span></button>` +
     `<button type="button" data-tema="claro">${sol}<span>Light</span></button>`;
-  document.body.appendChild(grupo);
+  (document.querySelector("main#conteudo") || document.body).appendChild(grupo);
   const marcar = () =>
     grupo.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.tema === (raiz.dataset.tema || "escuro")));
   grupo.addEventListener("click", (e) => {
@@ -341,7 +341,7 @@ if (!semMovimento && ponteiroFino) {
   const aplicar = (pausado) => {
     raiz.classList.toggle("pausado", pausado);
     b.setAttribute("aria-pressed", pausado);
-    b.textContent = pausado ? "Retomar animações" : "Pausar animações";
+    b.textContent = pausado ? "Resume motions" : "Pause motions";
     try { sessionStorage.setItem("pausado", pausado ? "1" : ""); } catch (e) {}
   };
   b.addEventListener("click", () => aplicar(!raiz.classList.contains("pausado")));

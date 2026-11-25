@@ -1836,53 +1836,93 @@ h1, h2, h3 { overflow-wrap: anywhere; }
 /* Home: abaixo do layout do Frame 6 fica só a caixa "lets talk about". A seção work fica no HTML, só não aparece na home. */
 body.pagina-paineis #work { display: none; }
 
-/* ===== Home, desktop: Frame 6 do Figma (1098 x 536) reproduzido em proporção =====
-   Todas as medidas são do Figma em px; --u converte px do Figma em % da largura do quadro. */
+
+/* ===== Home, desktop: "Layout do Site (geral)" do Figma (1142 x 1142), em px do frame ===== */
 @media (min-width: 1000px) {
-  html body.pagina-paineis { --u: calc(100cqw / 1098.053); }
+  html body.pagina-paineis { --u: calc(100cqw / 1142); padding: 0; background: #FFFFFF; }
   html body.pagina-paineis .menu-btn { display: none; }
-  html body.pagina-paineis .topo { position: sticky; top: 0; height: 0; padding: 0; container-type: inline-size; overflow: visible; }
-  html body.pagina-paineis .nav { position: absolute; left: calc(var(--u) * 6); top: calc(var(--u) * 10); width: calc(var(--u) * 1078.06); height: calc(var(--u) * 52.76); max-width: none; margin: 0; padding: 0; border: 0; border-radius: calc(var(--u) * 33.3); background: #F9F2ED; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; display: block; }
-  html body.pagina-paineis .logo { position: absolute; left: calc(var(--u) * 19.44); top: calc(var(--u) * 12.22); width: calc(var(--u) * 102.47); height: calc(var(--u) * 28.2); font-family: "Space Mono", monospace; font-weight: 400; font-size: calc(var(--u) * 18.05); line-height: 1; letter-spacing: calc(var(--u) * -0.361); text-transform: uppercase; color: #000; text-decoration: none; white-space: nowrap; }
+
+  /* Topo: nav do frame, na mesma largura do quadro */
+  html body.pagina-paineis .topo { position: sticky; top: 0; height: 0; padding: 0; width: min(100%, 1142px); margin: 0 auto; container-type: inline-size; overflow: visible; z-index: 50; }
+  html body.pagina-paineis .nav { position: absolute; left: calc(var(--u) * 66); top: calc(var(--u) * 20); width: calc(var(--u) * 1010); height: calc(var(--u) * 53); max-width: none; margin: 0; padding: 0; border: 0; border-radius: calc(var(--u) * 33.325); background: #F9F2ED; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; display: block; }
+  html body.pagina-paineis .logo { position: absolute; left: calc(var(--u) * 20); top: calc(var(--u) * 12.22); width: calc(var(--u) * 102.47); height: calc(var(--u) * 28.2); font-family: "Space Mono", monospace; font-weight: 400; font-size: calc(var(--u) * 18.051); line-height: 1; letter-spacing: calc(var(--u) * -0.361); text-transform: uppercase; color: #000; text-decoration: none; white-space: nowrap; }
   html body.pagina-paineis .logo svg { position: absolute; left: calc(var(--u) * 83.28); top: 0; width: calc(var(--u) * 19.19); height: calc(var(--u) * 28.2); }
   html body.pagina-paineis .nav-links { position: absolute; inset: 0; display: block; margin: 0; padding: 0; list-style: none; }
   html body.pagina-paineis .nav-links li { position: absolute; margin: 0; }
-  html body.pagina-paineis .nav-links li:nth-child(1) { left: calc(var(--u) * 633.73); top: calc(var(--u) * 7.5); width: calc(var(--u) * 62.48); height: calc(var(--u) * 37.77); }
-  html body.pagina-paineis .nav-links li:nth-child(2) { left: calc(var(--u) * 700.38); top: calc(var(--u) * 7.5); width: calc(var(--u) * 80.26); height: calc(var(--u) * 37.77); }
-  html body.pagina-paineis .nav-links li:nth-child(3) { left: calc(var(--u) * 784.8); top: calc(var(--u) * 7.5); width: calc(var(--u) * 87.2); height: calc(var(--u) * 37.77); }
-  html body.pagina-paineis .nav-links li:nth-child(4) { left: calc(var(--u) * 876.17); top: calc(var(--u) * 7.5); width: calc(var(--u) * 66.93); height: calc(var(--u) * 37.77); }
-  html body.pagina-paineis .nav-links li:nth-child(5) { left: calc(var(--u) * 947.26); top: calc(var(--u) * 4.17); width: calc(var(--u) * 126.08); height: calc(var(--u) * 44.43); }
-  html body.pagina-paineis .nav-links a { display: flex; align-items: center; justify-content: center; box-sizing: border-box; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; border-radius: calc(var(--u) * 27.77); background: #D9D9D9; color: #000; font-family: var(--fonte); font-weight: 400; font-size: calc(var(--u) * 13.885); letter-spacing: calc(var(--u) * -0.2777); line-height: 1; white-space: nowrap; text-decoration: none; }
+  html body.pagina-paineis .nav-links li:nth-child(1) { left: calc(var(--u) * 565); top: calc(var(--u) * 7.5); width: calc(var(--u) * 62.48); height: calc(var(--u) * 37.77); }
+  html body.pagina-paineis .nav-links li:nth-child(2) { left: calc(var(--u) * 631.65); top: calc(var(--u) * 7.5); width: calc(var(--u) * 80.26); height: calc(var(--u) * 37.77); }
+  html body.pagina-paineis .nav-links li:nth-child(3) { left: calc(var(--u) * 716.07); top: calc(var(--u) * 7.5); width: calc(var(--u) * 87.2); height: calc(var(--u) * 37.77); }
+  html body.pagina-paineis .nav-links li:nth-child(4) { left: calc(var(--u) * 807.44); top: calc(var(--u) * 7.5); width: calc(var(--u) * 66.93); height: calc(var(--u) * 37.77); }
+  html body.pagina-paineis .nav-links li:nth-child(5) { left: calc(var(--u) * 878.53); top: calc(var(--u) * 4.17); width: calc(var(--u) * 126.08); height: calc(var(--u) * 44.43); }
+  html body.pagina-paineis .nav-links a { display: flex; align-items: center; justify-content: center; box-sizing: border-box; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; border-radius: calc(var(--u) * 27.771); background: #D9D9D9; color: #000; font-family: var(--fonte); font-weight: 400; font-size: calc(var(--u) * 13.885); letter-spacing: calc(var(--u) * -0.2777); line-height: 1; white-space: nowrap; text-decoration: none; }
   html body.pagina-paineis .nav-links a.btn-nav { background: #870842; color: #FEB3D2; }
-
-  html body.pagina-paineis main#conteudo { display: block; gap: 0; padding: 0; }
-  html body.pagina-paineis #inicio { position: relative; container-type: inline-size; aspect-ratio: 1098.053 / 536.252; width: 100%; min-height: 0; margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; overflow: visible; }
-  html body.pagina-paineis .hero-blobs { display: none; }
-  html body.pagina-paineis .hero-miolo { position: absolute; inset: 0; display: block; min-height: 0; max-width: none; margin: 0; gap: 0; }
-  html body.pagina-paineis .hero-miolo .titulo-hero { position: absolute; left: calc(var(--u) * 6); top: calc(var(--u) * 71.1); width: calc(var(--u) * 352.69); height: calc(var(--u) * 244.38); box-sizing: border-box; margin: 0; padding: calc(var(--u) * 22); background: #F9F2ED; border-radius: calc(var(--u) * 13.885); color: #000; font-family: "Space Mono", monospace; font-weight: 400; font-size: calc(var(--u) * 37); line-height: 1.12; letter-spacing: -0.02em; }
-  html body.pagina-paineis .hero-miolo .titulo-hero em { font-style: italic; font-weight: 400; }
-  html body.pagina-paineis .hero-miolo .titulo-hero .pill-ref { font-weight: 700; }
-  html body.pagina-paineis .faixa-wrap { position: absolute; left: calc(var(--u) * 6); top: calc(var(--u) * 326.68); width: calc(var(--u) * 352.69); height: calc(var(--u) * 45.27); min-height: 0; margin: 0; padding: 0; background: #F9F2ED; border-radius: calc(var(--u) * 13.885); overflow: hidden; }
-  html body.pagina-paineis .faixa { display: none; }
-  html body.pagina-paineis .hero-miolo .hero-base { position: absolute; left: calc(var(--u) * 6); top: calc(var(--u) * 380.28); width: calc(var(--u) * 352.69); height: calc(var(--u) * 146.26); max-width: none; box-sizing: border-box; margin: 0; padding: 0; background: #F9F2ED; border-radius: calc(var(--u) * 13.885); }
-  html body.pagina-paineis .hero-miolo .hero-base p { position: absolute; left: calc(var(--u) * 19.44); top: calc(var(--u) * 59.89); width: calc(var(--u) * 314.92); max-width: none; margin: 0; color: #000; font-family: var(--fonte); font-size: calc(var(--u) * 13.885); line-height: normal; }
-  html body.pagina-paineis .hero-miolo .hero-base .acoes { display: none; }
-
-  html body.pagina-paineis .quadro-mosaico { position: absolute; inset: 0; }
-  html body.pagina-paineis .quadro-mosaico span { position: absolute; display: block; }
-  html body.pagina-paineis .qm-painel { left: calc(var(--u) * 368.13); top: calc(var(--u) * 71.1); width: calc(var(--u) * 714.26); height: calc(var(--u) * 455.44); background: #F9F2ED; border-radius: calc(var(--u) * 13.885); }
-  html body.pagina-paineis .qm-a { left: calc(var(--u) * 376.74); top: calc(var(--u) * 78.59); width: calc(var(--u) * 227.81); height: calc(var(--u) * 441.83); background: #D9D9D9; border-radius: calc(var(--u) * 11.108); }
-  html body.pagina-paineis .qm-b { left: calc(var(--u) * 612.88); top: calc(var(--u) * 78.59); width: calc(var(--u) * 227.81); height: calc(var(--u) * 216.75); background: #D9D9D9; border-radius: calc(var(--u) * 11.108); }
-  html body.pagina-paineis .qm-c { left: calc(var(--u) * 849.03); top: calc(var(--u) * 78.59); width: calc(var(--u) * 227.81); height: calc(var(--u) * 216.75); background: #D9D9D9; border-radius: calc(var(--u) * 11.108); }
-  html body.pagina-paineis .qm-d { left: calc(var(--u) * 612.88); top: calc(var(--u) * 303.67); width: calc(var(--u) * 463.96); height: calc(var(--u) * 216.75); background: #D9D9D9; border-radius: calc(var(--u) * 11.108); }
-
-  html body.pagina-paineis #work { display: none; }
-  html body.pagina-paineis #contact { grid-column: auto; grid-row: auto; margin: 8px 0 0; }
-}
-
-/* Home, desktop: o botão de tema sai do meio da lateral e fica no canto inferior esquerdo, fora do quadro do Frame 6 */
-@media (min-width: 1000px) {
   :root:root body.pagina-paineis .nav-links li > a { color: #000; }
   :root:root body.pagina-paineis .nav-links li > a.btn-nav { color: #FEB3D2; }
-  :root:root body.pagina-paineis .interruptor.lateral, :root:root body.pagina-paineis .tema { top: auto; bottom: 16px; transform: none; }
+
+  /* Canvas do quadro: hero + contato + rodapé no mesmo sistema de coordenadas */
+  html body.pagina-paineis main#conteudo { display: block; position: relative; width: min(100%, 1142px); margin: 0 auto; aspect-ratio: 1142 / 1142; container-type: inline-size; padding: 0; gap: 0; overflow: visible; }
+  html body.pagina-paineis main#conteudo > section { margin: 0; }
+  html body.pagina-paineis #inicio { position: absolute; inset: 0; width: auto; min-height: 0; aspect-ratio: auto; margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; overflow: visible; }
+  html body.pagina-paineis .hero-blobs { display: none; }
+  html body.pagina-paineis .hero-miolo { position: absolute; inset: 0; display: block; min-height: 0; max-width: none; margin: 0; gap: 0; }
+
+  /* Cards da coluna esquerda (o frame não tem texto nestes cards; o texto segue no HTML para leitores de tela) */
+  html body.pagina-paineis .hero-miolo .titulo-hero { position: absolute; left: calc(var(--u) * 66); top: calc(var(--u) * 81); width: calc(var(--u) * 326); height: calc(var(--u) * 257); box-sizing: border-box; margin: 0; padding: 0; background: #F9F2ED; border-radius: calc(var(--u) * 15); color: transparent; font-size: 0; line-height: 0; }
+  html body.pagina-paineis .hero-miolo .titulo-hero * { font-size: 0; }
+  html body.pagina-paineis .hero-miolo .faixa-wrap { position: absolute; left: calc(var(--u) * 66); top: calc(var(--u) * 345); width: calc(var(--u) * 326); height: calc(var(--u) * 50); min-height: 0; margin: 0; padding: 0; background: #F9F2ED; border-radius: calc(var(--u) * 15); overflow: hidden; }
+  html body.pagina-paineis .hero-miolo .faixa { display: none; }
+  html body.pagina-paineis .hero-miolo .hero-base { position: absolute; left: calc(var(--u) * 66); top: calc(var(--u) * 403); width: calc(var(--u) * 326); height: calc(var(--u) * 134); box-sizing: border-box; max-width: none; margin: 0; padding: 0; background: #F9F2ED; border-radius: calc(var(--u) * 15); }
+  html body.pagina-paineis .hero-miolo .hero-base p { position: absolute; inset: 0; margin: 0; font-size: 0; color: transparent; line-height: 0; }
+  html body.pagina-paineis .hero-miolo .hero-base .acoes { display: none; }
+
+  /* Mosaico do frame */
+  html body.pagina-paineis .quadro-mosaico { position: absolute; inset: 0; }
+  html body.pagina-paineis .quadro-mosaico span { position: absolute; display: block; }
+  html body.pagina-paineis .qm-painel { left: calc(var(--u) * 398); top: calc(var(--u) * 81); width: calc(var(--u) * 678); height: calc(var(--u) * 456); background: #F9F2ED; border-radius: calc(var(--u) * 13.885); }
+  html body.pagina-paineis .qm-a { left: calc(var(--u) * 403); top: calc(var(--u) * 88); width: calc(var(--u) * 216.45); height: calc(var(--u) * 442); background: #D9D9D9; border-radius: calc(var(--u) * 11.108); }
+  html body.pagina-paineis .qm-b { left: calc(var(--u) * 627.78); top: calc(var(--u) * 88); width: calc(var(--u) * 216.45); height: calc(var(--u) * 216.83); background: #D9D9D9; border-radius: calc(var(--u) * 11.108); }
+  html body.pagina-paineis .qm-c { left: calc(var(--u) * 852.55); top: calc(var(--u) * 88); width: calc(var(--u) * 216.45); height: calc(var(--u) * 216.83); background: #D9D9D9; border-radius: calc(var(--u) * 11.108); }
+  html body.pagina-paineis .qm-d { left: calc(var(--u) * 627.78); top: calc(var(--u) * 313.17); width: calc(var(--u) * 441.22); height: calc(var(--u) * 216.83); background: #D9D9D9; border-radius: calc(var(--u) * 11.108); }
+  html body.pagina-paineis .qm-faixa { left: calc(var(--u) * 66); top: calc(var(--u) * 544); width: calc(var(--u) * 1010); height: calc(var(--u) * 58); background: #F9F2ED; border-radius: calc(var(--u) * 15); }
+
+  /* Caixa "lets talk" (#1C3F01, 1010 x 380 em (66, 610)) */
+  html body.pagina-paineis #contact { position: absolute; left: calc(var(--u) * 66); top: calc(var(--u) * 610); width: calc(var(--u) * 1010); height: calc(var(--u) * 380); margin: 0; padding: 0; background: #1C3F01; border: 0; border-radius: calc(var(--u) * 25); color: #CBEE2F; overflow: visible; }
+  html body.pagina-paineis #contact::before { content: ""; position: absolute; left: calc(var(--u) * 15); top: calc(var(--u) * 12.94); width: calc(var(--u) * 981); height: calc(var(--u) * 354.11); box-sizing: border-box; border: 1px solid #CBEE2F; border-radius: calc(var(--u) * 15); pointer-events: none; }
+  html body.pagina-paineis #contact .container { width: auto; max-width: none; margin: 0; padding: 0; height: 0; }
+  html body.pagina-paineis #contact .contato-topo { position: static; height: 0; }
+  html body.pagina-paineis #contact .titulo-formas { position: static; margin: 0; padding: 0; }
+  html body.pagina-paineis #contact .titulo-formas .fx { position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0; font-family: "Space Mono", monospace; font-weight: 700; font-size: calc(var(--u) * 37.8); line-height: 1; white-space: nowrap; }
+  html body.pagina-paineis #contact .titulo-formas .fx-svg { position: absolute; width: calc(var(--u) * 52.65); height: calc(var(--u) * 52.65); }
+  html body.pagina-paineis #contact .titulo-formas .fx-flor { position: absolute; width: calc(var(--u) * 54); height: calc(var(--u) * 54); }
+  html body.pagina-paineis #contact .titulo-formas .fx-flor b { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #870842; font-size: calc(var(--u) * 27); }
+  html body.pagina-paineis #contact .titulo-formas > :nth-child(1) { left: calc(var(--u) * 273.06); top: calc(var(--u) * 57); width: calc(var(--u) * 156.6); height: calc(var(--u) * 62.1); background: #9BA8EF; color: #26030A; }
+  html body.pagina-paineis #contact .titulo-formas > :nth-child(2) { left: calc(var(--u) * 447.5); top: calc(var(--u) * 57); width: calc(var(--u) * 128.25); height: calc(var(--u) * 62.1); background: #F4E7DC; color: #870842; }
+  html body.pagina-paineis #contact .titulo-formas > :nth-child(3) { left: calc(var(--u) * 593.6); top: calc(var(--u) * 57); width: calc(var(--u) * 143.1); height: calc(var(--u) * 62.1); background: #870842; color: #FEB3D2; border-radius: 2px; }
+  html body.pagina-paineis #contact .titulo-formas > :nth-child(4) { left: calc(var(--u) * 193.66); top: calc(var(--u) * 141.54); }
+  html body.pagina-paineis #contact .titulo-formas > :nth-child(5) { left: calc(var(--u) * 249.52); top: calc(var(--u) * 138.52); width: calc(var(--u) * 297.01); height: calc(var(--u) * 62.1); background: #FF0149; color: #26030A; }
+  html body.pagina-paineis #contact .titulo-formas > :nth-child(6) { left: calc(var(--u) * 606.93); top: calc(var(--u) * 136.82); width: calc(var(--u) * 209.26); height: calc(var(--u) * 62.1); background: #CBEE2F; color: #183900; letter-spacing: .2em; }
+  html body.pagina-paineis #contact .titulo-formas > :nth-child(7) { left: calc(var(--u) * 549.73); top: calc(var(--u) * 140.87); }
+  html body.pagina-paineis #contact .adesivo, html body.pagina-paineis #contact .assinatura { display: none; }
+
+  /* Contato: etiqueta, e-mail e botão do LinkedIn */
+  html body.pagina-paineis #contact .contato-simples { position: static; }
+  html body.pagina-paineis #contact .etiqueta-clara { position: absolute; left: calc(var(--u) * 438.09); top: calc(var(--u) * 223.82); width: calc(var(--u) * 130.24); height: calc(var(--u) * 27.65); box-sizing: border-box; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0; background: transparent; border: calc(var(--u) * 0.892) solid #CBEE2F; border-radius: calc(var(--u) * 44.6); color: #CBEE2F; font-family: var(--fonte); font-size: calc(var(--u) * 16.057); text-transform: uppercase; white-space: nowrap; }
+  html body.pagina-paineis #contact .email-grande { position: absolute; left: calc(var(--u) * 267.7); top: calc(var(--u) * 260.39); width: calc(var(--u) * 475); height: calc(var(--u) * 41); display: flex; align-items: center; justify-content: center; font-family: "Space Mono", monospace; font-style: normal; font-weight: 400; font-size: calc(var(--u) * 27.654); color: #CBEE2F; text-decoration: underline; white-space: nowrap; }
+  html body.pagina-paineis #contact .redes { position: absolute; left: calc(var(--u) * 362.26); top: calc(var(--u) * 310.35); width: calc(var(--u) * 275.65); height: calc(var(--u) * 27.65); margin: 0; padding: 0; list-style: none; }
+  html body.pagina-paineis #contact .redes li { width: 100%; height: 100%; }
+  html body.pagina-paineis #contact .redes a { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; box-sizing: border-box; background: #870842; color: #FEB3D2; border-radius: calc(var(--u) * 44.6); font-family: var(--fonte); font-size: calc(var(--u) * 16.057); text-transform: uppercase; text-decoration: none; white-space: nowrap; }
+
+  /* Rodapé: faixa lima em (67, 998), 1010 x 104 */
+  html body.pagina-paineis #contact .rodape { position: absolute; left: calc(var(--u) * 1); top: calc(var(--u) * 388); width: calc(var(--u) * 1010); height: calc(var(--u) * 104); box-sizing: border-box; margin: 0; padding: 0; background: #CBEE2F; border: 0; border-radius: calc(var(--u) * 25); color: #1C3F01; display: block; }
+  html body.pagina-paineis #contact .rodape > div { text-align: left; position: absolute; left: calc(var(--u) * 32); top: calc(var(--u) * 24); width: calc(var(--u) * 551); }
+  html body.pagina-paineis #contact .rodape p { margin: 0 0 calc(var(--u) * 6); font-family: var(--fonte); font-size: calc(var(--u) * 12); line-height: normal; color: #1C3F01; }
+  html body.pagina-paineis #contact .rodape .nota-acess { max-width: none; color: #1C3F01; font-size: calc(var(--u) * 12); margin: 0; }
+  html body.pagina-paineis #contact .rodape > a { position: absolute; left: calc(var(--u) * -42.2); top: calc(var(--u) * -255.4); width: calc(var(--u) * 19); height: calc(var(--u) * 151.6); writing-mode: vertical-rl; transform: rotate(180deg); font-family: var(--fonte); font-size: calc(var(--u) * 15.652); color: #5E012E; text-decoration: none; white-space: nowrap; }
+  html body.pagina-paineis #contact .pausar-movimento { position: absolute; left: calc(var(--u) * 785); top: calc(var(--u) * 31); width: calc(var(--u) * 200); height: calc(var(--u) * 40); box-sizing: border-box; margin: 0; padding: 0; background: #1C3F01; color: #CBEE2F; border: 0; border-radius: calc(var(--u) * 50); font-family: var(--fonte); font-size: calc(var(--u) * 18); text-transform: uppercase; cursor: pointer; }
+
+  /* Botão de tema: coluna da esquerda, dentro do quadro (17, 400) 34.8 x 173.9 */
+  html body.pagina-paineis .tema { position: absolute; left: calc(var(--u) * 17); top: calc(var(--u) * 400); width: calc(var(--u) * 34.78); height: calc(var(--u) * 173.9); box-sizing: border-box; flex-direction: column; gap: 0; padding: 0; margin: 0; background: #5E012E; border: 0; border-radius: calc(var(--u) * 43.5); overflow: hidden; z-index: 55; transform: none; }
+  html body.pagina-paineis .tema button { flex: 1 1 50%; width: 100%; padding: 0; margin: 0; border: 0; border-radius: 0; background: transparent; color: #F9F2ED; font-family: var(--fonte); font-weight: 600; font-size: calc(var(--u) * 15.652); }
+  html body.pagina-paineis .tema button[aria-pressed="true"] { background: #F9F2ED; color: #5E012E; }
+  html body.pagina-paineis .tema button span { writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 0; font-size: calc(var(--u) * 15.652); }
 }
