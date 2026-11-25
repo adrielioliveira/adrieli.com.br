@@ -1931,4 +1931,13 @@ body.pagina-paineis #work { display: none; }
   html body.pagina-paineis .voltar-topo { display: block; position: fixed; left: calc(50% - min(50%, 571px) + var(--k) * 24.8); top: calc(var(--k) * 743); width: calc(var(--k) * 19); height: calc(var(--k) * 152); margin: 0; padding: 0; writing-mode: vertical-rl; transform: rotate(180deg); font-family: var(--fonte); font-size: calc(var(--k) * 15.652); color: #5E012E; text-decoration: none; white-space: nowrap; z-index: 55; }
   html body.pagina-paineis .voltar-topo::before { content: ""; position: absolute; left: calc(var(--k) * 9.4); top: calc(var(--k) * 88.5); height: calc(var(--k) * 63.5); border-left: 1px solid #5E012E; }
 }
+
+/* Polish: margens e alinhamento das páginas de caso */
+/* seções alinham à mesma largura do hero (1200px), sem recuo extra à direita */
+.capitulo .cap-grid.container { max-width: 1200px; }
+/* título: o ponto final fica colado à última palavra */
+.nq { white-space: nowrap; }
+/* celular: texto do hero na mesma margem (22px a partir da borda) que as seções */
+@media (max-width: 600px) {
+  .case-hero { padding-left: 14px; padding-right: 14px; }
 }
