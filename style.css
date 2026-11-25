@@ -1837,101 +1837,6 @@ h1, h2, h3 { overflow-wrap: anywhere; }
 body.pagina-paineis #work { display: none; }
 
 
-/* ===== Home, desktop: "Layout do Site (geral)" do Figma (1142 x 1142), em px do frame ===== */
-@media (min-width: 1000px) {
-  html body.pagina-paineis { --u: calc(100cqw / 1142); padding: 0; background: #FFFFFF; }
-  html body.pagina-paineis .menu-btn { display: none; }
-
-  /* Topo: nav do frame, na mesma largura do quadro */
-  html body.pagina-paineis .topo { position: sticky; top: 0; height: 0; padding: 0; width: min(100%, 1142px); margin: 0 auto; container-type: inline-size; overflow: visible; z-index: 50; }
-  html body.pagina-paineis .nav { position: absolute; left: calc(var(--u) * 66); top: calc(var(--u) * 20); width: calc(var(--u) * 1010); height: calc(var(--u) * 53); max-width: none; margin: 0; padding: 0; border: 0; border-radius: calc(var(--u) * 33.325); background: #F9F2ED; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; display: block; }
-  html body.pagina-paineis .logo { position: absolute; left: calc(var(--u) * 20); top: calc(var(--u) * 12.22); width: calc(var(--u) * 102.47); height: calc(var(--u) * 28.2); font-family: "Space Mono", monospace; font-weight: 400; font-size: calc(var(--u) * 18.051); line-height: 1; letter-spacing: calc(var(--u) * -0.361); text-transform: uppercase; color: #000; text-decoration: none; white-space: nowrap; }
-  html body.pagina-paineis .logo svg { position: absolute; left: calc(var(--u) * 83.28); top: 0; width: calc(var(--u) * 19.19); height: calc(var(--u) * 28.2); }
-  html body.pagina-paineis .nav-links { position: absolute; inset: 0; display: block; margin: 0; padding: 0; list-style: none; }
-  html body.pagina-paineis .nav-links li { position: absolute; margin: 0; }
-  html body.pagina-paineis .nav-links li:nth-child(1) { left: calc(var(--u) * 565); top: calc(var(--u) * 7.5); width: calc(var(--u) * 62.48); height: calc(var(--u) * 37.77); }
-  html body.pagina-paineis .nav-links li:nth-child(2) { left: calc(var(--u) * 631.65); top: calc(var(--u) * 7.5); width: calc(var(--u) * 80.26); height: calc(var(--u) * 37.77); }
-  html body.pagina-paineis .nav-links li:nth-child(3) { left: calc(var(--u) * 716.07); top: calc(var(--u) * 7.5); width: calc(var(--u) * 87.2); height: calc(var(--u) * 37.77); }
-  html body.pagina-paineis .nav-links li:nth-child(4) { left: calc(var(--u) * 807.44); top: calc(var(--u) * 7.5); width: calc(var(--u) * 66.93); height: calc(var(--u) * 37.77); }
-  html body.pagina-paineis .nav-links li:nth-child(5) { left: calc(var(--u) * 878.53); top: calc(var(--u) * 4.17); width: calc(var(--u) * 126.08); height: calc(var(--u) * 44.43); }
-  html body.pagina-paineis .nav-links a { display: flex; align-items: center; justify-content: center; box-sizing: border-box; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; border-radius: calc(var(--u) * 27.771); background: #D9D9D9; color: #000; font-family: var(--fonte); font-weight: 400; font-size: calc(var(--u) * 13.885); letter-spacing: calc(var(--u) * -0.2777); line-height: 1; white-space: nowrap; text-decoration: none; }
-  html body.pagina-paineis .nav-links a.btn-nav { background: #870842; color: #FEB3D2; }
-  :root:root body.pagina-paineis .nav-links li > a { color: #000; }
-  :root:root body.pagina-paineis .nav-links li > a.btn-nav { color: #FEB3D2; }
-
-  /* Canvas do quadro: hero + contato + rodapé no mesmo sistema de coordenadas */
-  html body.pagina-paineis main#conteudo { display: block; position: relative; width: min(100%, 1142px); margin: 0 auto; aspect-ratio: 1142 / 1142; container-type: inline-size; padding: 0; gap: 0; overflow: visible; }
-  html body.pagina-paineis main#conteudo > section { margin: 0; }
-  html body.pagina-paineis #inicio { position: absolute; inset: 0; width: auto; min-height: 0; aspect-ratio: auto; margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; overflow: visible; }
-  html body.pagina-paineis .hero-blobs { display: none; }
-  html body.pagina-paineis .hero-miolo { position: absolute; inset: 0; display: block; min-height: 0; max-width: none; margin: 0; gap: 0; }
-
-  /* Cards da coluna esquerda (o frame não tem texto nestes cards; o texto segue no HTML para leitores de tela) */
-  html body.pagina-paineis .hero-miolo .titulo-hero { position: absolute; left: calc(var(--u) * 66); top: calc(var(--u) * 81); width: calc(var(--u) * 326); height: calc(var(--u) * 257); box-sizing: border-box; margin: 0; padding: 0; background: #F9F2ED; border-radius: calc(var(--u) * 15); color: transparent; font-size: 0; line-height: 0; }
-  html body.pagina-paineis .hero-miolo .titulo-hero * { font-size: 0; }
-  html body.pagina-paineis .hero-miolo .faixa-wrap { position: absolute; left: calc(var(--u) * 66); top: calc(var(--u) * 345); width: calc(var(--u) * 326); height: calc(var(--u) * 50); min-height: 0; margin: 0; padding: 0; background: #F9F2ED; border-radius: calc(var(--u) * 15); overflow: hidden; }
-  html body.pagina-paineis .hero-miolo .faixa { display: none; }
-  html body.pagina-paineis .hero-miolo .hero-base { position: absolute; left: calc(var(--u) * 66); top: calc(var(--u) * 403); width: calc(var(--u) * 326); height: calc(var(--u) * 134); box-sizing: border-box; max-width: none; margin: 0; padding: 0; background: #F9F2ED; border-radius: calc(var(--u) * 15); }
-  html body.pagina-paineis .hero-miolo .hero-base p { position: absolute; inset: 0; margin: 0; font-size: 0; color: transparent; line-height: 0; }
-  html body.pagina-paineis .hero-miolo .hero-base .acoes { display: none; }
-
-  /* Mosaico do frame */
-  html body.pagina-paineis .quadro-mosaico { position: absolute; inset: 0; }
-  html body.pagina-paineis .quadro-mosaico span { position: absolute; display: block; }
-  html body.pagina-paineis .qm-painel { left: calc(var(--u) * 398); top: calc(var(--u) * 81); width: calc(var(--u) * 678); height: calc(var(--u) * 456); background: #F9F2ED; border-radius: calc(var(--u) * 13.885); }
-  html body.pagina-paineis .qm-a { left: calc(var(--u) * 403); top: calc(var(--u) * 88); width: calc(var(--u) * 216.45); height: calc(var(--u) * 442); background: #D9D9D9; border-radius: calc(var(--u) * 11.108); }
-  html body.pagina-paineis .qm-b { left: calc(var(--u) * 627.78); top: calc(var(--u) * 88); width: calc(var(--u) * 216.45); height: calc(var(--u) * 216.83); background: #D9D9D9; border-radius: calc(var(--u) * 11.108); }
-  html body.pagina-paineis .qm-c { left: calc(var(--u) * 852.55); top: calc(var(--u) * 88); width: calc(var(--u) * 216.45); height: calc(var(--u) * 216.83); background: #D9D9D9; border-radius: calc(var(--u) * 11.108); }
-  html body.pagina-paineis .qm-d { left: calc(var(--u) * 627.78); top: calc(var(--u) * 313.17); width: calc(var(--u) * 441.22); height: calc(var(--u) * 216.83); background: #D9D9D9; border-radius: calc(var(--u) * 11.108); }
-  html body.pagina-paineis .qm-faixa { left: calc(var(--u) * 66); top: calc(var(--u) * 544); width: calc(var(--u) * 1010); height: calc(var(--u) * 58); background: #F9F2ED; border-radius: calc(var(--u) * 15); }
-
-  /* Caixa "lets talk" (#1C3F01, 1010 x 380 em (66, 610)) */
-  html body.pagina-paineis #contact { position: absolute; left: calc(var(--u) * 66); top: calc(var(--u) * 610); width: calc(var(--u) * 1010); height: calc(var(--u) * 380); margin: 0; padding: 0; background: #1C3F01; border: 0; border-radius: calc(var(--u) * 25); color: #CBEE2F; overflow: visible; }
-  html body.pagina-paineis #contact::before { content: ""; position: absolute; left: calc(var(--u) * 15); top: calc(var(--u) * 12.94); width: calc(var(--u) * 981); height: calc(var(--u) * 354.11); box-sizing: border-box; border: 1px solid #CBEE2F; border-radius: calc(var(--u) * 15); pointer-events: none; }
-  html body.pagina-paineis #contact .container { width: auto; max-width: none; margin: 0; padding: 0; height: 0; }
-  html body.pagina-paineis #contact .contato-topo { position: static; height: 0; }
-  html body.pagina-paineis #contact .titulo-formas { position: static; margin: 0; padding: 0; }
-  html body.pagina-paineis #contact .titulo-formas .fx { position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0; font-family: "Space Mono", monospace; font-weight: 700; font-size: calc(var(--u) * 37.8); line-height: 1; white-space: nowrap; }
-  html body.pagina-paineis #contact .titulo-formas .fx-svg { position: absolute; width: calc(var(--u) * 52.65); height: calc(var(--u) * 52.65); }
-  html body.pagina-paineis #contact .titulo-formas .fx-flor { position: absolute; width: calc(var(--u) * 54); height: calc(var(--u) * 54); }
-  html body.pagina-paineis #contact .titulo-formas .fx-flor b { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #870842; font-size: calc(var(--u) * 27); }
-  html body.pagina-paineis #contact .titulo-formas > :nth-child(1) { left: calc(var(--u) * 273.06); top: calc(var(--u) * 57); width: calc(var(--u) * 156.6); height: calc(var(--u) * 62.1); background: #9BA8EF; color: #26030A; }
-  html body.pagina-paineis #contact .titulo-formas > :nth-child(2) { left: calc(var(--u) * 447.5); top: calc(var(--u) * 57); width: calc(var(--u) * 128.25); height: calc(var(--u) * 62.1); background: #F4E7DC; color: #870842; }
-  html body.pagina-paineis #contact .titulo-formas > :nth-child(3) { left: calc(var(--u) * 593.6); top: calc(var(--u) * 57); width: calc(var(--u) * 143.1); height: calc(var(--u) * 62.1); background: #870842; color: #FEB3D2; border-radius: 2px; }
-  html body.pagina-paineis #contact .titulo-formas > :nth-child(4) { left: calc(var(--u) * 193.66); top: calc(var(--u) * 141.54); }
-  html body.pagina-paineis #contact .titulo-formas > :nth-child(5) { left: calc(var(--u) * 249.52); top: calc(var(--u) * 138.52); width: calc(var(--u) * 297.01); height: calc(var(--u) * 62.1); background: #FF0149; color: #26030A; }
-  html body.pagina-paineis #contact .titulo-formas > :nth-child(6) { left: calc(var(--u) * 606.93); top: calc(var(--u) * 136.82); width: calc(var(--u) * 209.26); height: calc(var(--u) * 62.1); background: #CBEE2F; color: #183900; letter-spacing: .2em; }
-  html body.pagina-paineis #contact .titulo-formas > :nth-child(7) { left: calc(var(--u) * 549.73); top: calc(var(--u) * 140.87); }
-  html body.pagina-paineis #contact .adesivo, html body.pagina-paineis #contact .assinatura { display: none; }
-
-  /* Contato: etiqueta, e-mail e botão do LinkedIn */
-  html body.pagina-paineis #contact .contato-simples { position: static; }
-  html body.pagina-paineis #contact .etiqueta-clara { position: absolute; left: calc(var(--u) * 438.09); top: calc(var(--u) * 223.82); width: calc(var(--u) * 130.24); height: calc(var(--u) * 27.65); box-sizing: border-box; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0; background: transparent; border: calc(var(--u) * 0.892) solid #CBEE2F; border-radius: calc(var(--u) * 44.6); color: #CBEE2F; font-family: var(--fonte); font-size: calc(var(--u) * 16.057); text-transform: uppercase; white-space: nowrap; }
-  html body.pagina-paineis #contact .email-grande { position: absolute; left: calc(var(--u) * 267.7); top: calc(var(--u) * 260.39); width: calc(var(--u) * 475); height: calc(var(--u) * 41); display: flex; align-items: center; justify-content: center; font-family: "Space Mono", monospace; font-style: normal; font-weight: 400; font-size: calc(var(--u) * 27.654); color: #CBEE2F; text-decoration: underline; white-space: nowrap; }
-  html body.pagina-paineis #contact .redes { position: absolute; left: calc(var(--u) * 362.26); top: calc(var(--u) * 310.35); width: calc(var(--u) * 275.65); height: calc(var(--u) * 27.65); margin: 0; padding: 0; list-style: none; }
-  html body.pagina-paineis #contact .redes li { width: 100%; height: 100%; }
-  html body.pagina-paineis #contact .redes a { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; box-sizing: border-box; background: #870842; color: #FEB3D2; border-radius: calc(var(--u) * 44.6); font-family: var(--fonte); font-size: calc(var(--u) * 16.057); text-transform: uppercase; text-decoration: none; white-space: nowrap; }
-
-  /* Rodapé: faixa lima em (67, 998), 1010 x 104 */
-  html body.pagina-paineis #contact .rodape { position: absolute; left: calc(var(--u) * 1); top: calc(var(--u) * 388); width: calc(var(--u) * 1010); height: calc(var(--u) * 104); box-sizing: border-box; margin: 0; padding: 0; background: #CBEE2F; border: 0; border-radius: calc(var(--u) * 25); color: #1C3F01; display: block; }
-  html body.pagina-paineis #contact .rodape > div { text-align: left; position: absolute; left: calc(var(--u) * 32); top: calc(var(--u) * 24); width: calc(var(--u) * 551); }
-  html body.pagina-paineis #contact .rodape p { margin: 0 0 calc(var(--u) * 6); font-family: var(--fonte); font-size: calc(var(--u) * 12); line-height: normal; color: #1C3F01; }
-  html body.pagina-paineis #contact .rodape .nota-acess { max-width: none; color: #1C3F01; font-size: calc(var(--u) * 12); margin: 0; text-align: left; }
-  html body.pagina-paineis #contact .rodape strong { color: #1C3F01; font-weight: 700; }
-  html body.pagina-paineis #contact .rodape > a { position: absolute; left: calc(var(--u) * -42.2); top: calc(var(--u) * -255.4); width: calc(var(--u) * 19); height: calc(var(--u) * 151.6); writing-mode: vertical-rl; transform: rotate(180deg); font-family: var(--fonte); font-size: calc(var(--u) * 15.652); color: #5E012E; text-decoration: none; white-space: nowrap; }
-  html body.pagina-paineis #contact .pausar-movimento { position: absolute; left: calc(var(--u) * 785); top: calc(var(--u) * 31); width: calc(var(--u) * 200); height: calc(var(--u) * 40); box-sizing: border-box; margin: 0; padding: 0; background: #1C3F01; color: #CBEE2F; border: 0; border-radius: calc(var(--u) * 50); font-family: var(--fonte); font-size: calc(var(--u) * 18); text-transform: uppercase; cursor: pointer; }
-
-  /* Botão de tema e "Scroll to top": fixos na tela, na coluna da esquerda do quadro (escala = largura do quadro / 1142) */
-  html body.pagina-paineis { --cw: min(100vw, 1142px); --k: calc(var(--cw) / 1142); }
-  html body.pagina-paineis .tema { position: fixed; left: calc(50% - min(50%, 571px) + var(--k) * 17); top: calc(var(--k) * 400); width: calc(var(--k) * 34.78); height: calc(var(--k) * 173.9); box-sizing: border-box; transform: none; flex-direction: column; gap: 0; padding: 0; margin: 0; background: #5E012E; border: 0; border-radius: calc(var(--k) * 43.5); overflow: hidden; z-index: 55; }
-  html body.pagina-paineis .tema button { flex: 1 1 50%; width: 100%; padding: 0; margin: 0; border: 0; border-radius: 0; background: transparent; color: #F9F2ED; font-family: var(--fonte); font-weight: 600; font-size: calc(var(--k) * 15.652); }
-  html body.pagina-paineis .tema button[aria-pressed="true"] { background: #F9F2ED; color: #5E012E; }
-  html body.pagina-paineis .tema button span { writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 0; font-size: calc(var(--k) * 15.652); }
-  html body.pagina-paineis #contact .rodape > a { display: none; }
-  html body.pagina-paineis .voltar-topo { display: block; position: fixed; left: calc(50% - min(50%, 571px) + var(--k) * 24.8); top: calc(var(--k) * 743); width: calc(var(--k) * 19); height: calc(var(--k) * 152); margin: 0; padding: 0; writing-mode: vertical-rl; transform: rotate(180deg); font-family: var(--fonte); font-size: calc(var(--k) * 15.652); color: #5E012E; text-decoration: none; white-space: nowrap; z-index: 55; }
-  html body.pagina-paineis .voltar-topo::before { content: ""; position: absolute; left: calc(var(--k) * 9.4); top: calc(var(--k) * 88.5); height: calc(var(--k) * 63.5); border-left: 1px solid #5E012E; }
-}
-
 /* Polish: margens e alinhamento das páginas de caso */
 /* seções alinham à mesma largura do hero (1200px), sem recuo extra à direita */
 .capitulo .cap-grid.container { max-width: 1200px; }
@@ -1956,14 +1861,93 @@ body.pagina-paineis #work { display: none; }
   body:not(.pagina-paineis) .capitulo:last-of-type { border: 0; }
 }
 
-/* Home, desktop: vence as regras do tema claro (mesma especificidade, posicionadas depois) para bater com o frame */
+/* ===== Home, desktop: "Layout do Site (geral)" 1920 x 1900 (coordenadas do frame em px, u = largura / 1920) =====
+   P = prefixo com especificidade suficiente para vencer as regras antigas do tema claro. */
 @media (min-width: 1000px) {
-  :root:not([data-tema="escuro"]) body.pagina-paineis { background: #FFFFFF; padding: 0; }
-  :root:not([data-tema="escuro"]) body.pagina-paineis .topo { padding: 0; }
-  :root:not([data-tema="escuro"]) body.pagina-paineis .nav { background: #F9F2ED; border: 0; box-shadow: none; border-radius: calc(var(--u) * 33.325); }
-  :root:not([data-tema="escuro"]) body.pagina-paineis .nav-links a:not(.btn) { background: #D9D9D9; color: #000; padding: 0; border-radius: calc(var(--u) * 27.771); }
-  :root:not([data-tema="escuro"]) body.pagina-paineis .nav-links a:not(.btn):hover { background: #D9D9D9; }
-  :root:not([data-tema="escuro"]) body.pagina-paineis main > section { border: 0; margin: 0; border-radius: 0; background: transparent; overflow: visible; }
-  :root:not([data-tema="escuro"]) body.pagina-paineis .hero { margin: 0; }
-  :root:not([data-tema="escuro"]) body.pagina-paineis #contact { margin: 0; border: 0; border-radius: calc(var(--u) * 25); background: #1C3F01; }
+  :root:root:root body.pagina-paineis { --u: calc(100cqw / 1920); --k: calc(100vw / 1920); background: #FFFFFF; padding: 0; }
+  :root:root:root body.pagina-paineis .menu-btn { display: none; }
+
+  /* Topo: nav do frame */
+  :root:root:root body.pagina-paineis .topo { position: sticky; top: 0; height: 0; padding: 0; width: 100%; margin: 0; container-type: inline-size; overflow: visible; z-index: 50; }
+  :root:root:root body.pagina-paineis .nav { position: absolute; left: calc(var(--u) * 119.81); top: calc(var(--u) * 33.27); width: calc(var(--u) * 1680.39); height: calc(var(--u) * 88.18); max-width: none; margin: 0; padding: 0; border: 0; border-radius: calc(var(--u) * 44); background: #F9F2ED; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; display: block; }
+  :root:root:root body.pagina-paineis .logo { position: absolute; left: calc(var(--u) * 23.27); top: calc(var(--u) * 20.33); width: calc(var(--u) * 170.49); height: calc(var(--u) * 46.92); font-family: "Space Mono", monospace; font-weight: 400; font-size: calc(var(--u) * 30.03); line-height: 1; letter-spacing: calc(var(--u) * -0.6); text-transform: uppercase; color: #000; text-decoration: none; white-space: nowrap; }
+  :root:root:root body.pagina-paineis .logo svg { position: absolute; left: calc(var(--u) * 138.56); top: 0; width: calc(var(--u) * 31.93); height: calc(var(--u) * 46.92); }
+  :root:root:root body.pagina-paineis .nav-links { position: absolute; inset: 0; display: block; margin: 0; padding: 0; list-style: none; }
+  :root:root:root body.pagina-paineis .nav-links li { position: absolute; margin: 0; }
+  :root:root:root body.pagina-paineis .nav-links li:nth-child(1) { left: calc(var(--u) * 930.01); top: calc(var(--u) * 12.48); width: calc(var(--u) * 103.96); height: calc(var(--u) * 62.84); }
+  :root:root:root body.pagina-paineis .nav-links li:nth-child(2) { left: calc(var(--u) * 1040.9); top: calc(var(--u) * 12.48); width: calc(var(--u) * 133.53); height: calc(var(--u) * 62.84); }
+  :root:root:root body.pagina-paineis .nav-links li:nth-child(3) { left: calc(var(--u) * 1181.36); top: calc(var(--u) * 12.48); width: calc(var(--u) * 145.08); height: calc(var(--u) * 62.84); }
+  :root:root:root body.pagina-paineis .nav-links li:nth-child(4) { left: calc(var(--u) * 1333.37); top: calc(var(--u) * 12.48); width: calc(var(--u) * 111.35); height: calc(var(--u) * 62.84); }
+  :root:root:root body.pagina-paineis .nav-links li:nth-child(5) { left: calc(var(--u) * 1451.65); top: calc(var(--u) * 6.94); width: calc(var(--u) * 209.76); height: calc(var(--u) * 73.93); }
+  :root:root:root body.pagina-paineis .nav-links a { display: flex; align-items: center; justify-content: center; box-sizing: border-box; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; border-radius: 999px; background: #D9D9D9; color: #000; font-family: var(--fonte); font-weight: 400; font-size: calc(var(--u) * 23.1); letter-spacing: calc(var(--u) * -0.46); line-height: 1; white-space: nowrap; text-decoration: none; }
+  :root:root:root body.pagina-paineis .nav-links a.btn-nav { background: #870842; color: #FEB3D2; }
+  :root:root:root body.pagina-paineis .nav-links a:not(.btn):hover { background: #D9D9D9; }
+
+  /* Canvas do frame: hero, contato e rodapé no mesmo sistema de coordenadas (1920 x 1900) */
+  :root:root:root body.pagina-paineis main#conteudo { display: block; position: relative; width: 100%; margin: 0; aspect-ratio: 1920 / 1900; container-type: inline-size; padding: 0; gap: 0; overflow: visible; }
+  :root:root:root body.pagina-paineis main#conteudo > section { margin: 0; border: 0; border-radius: 0; background: transparent; overflow: visible; }
+  :root:root:root body.pagina-paineis #inicio { position: absolute; inset: 0; width: auto; min-height: 0; aspect-ratio: auto; margin: 0; padding: 0; background: transparent; box-shadow: none; }
+  :root:root:root body.pagina-paineis .hero-blobs { display: none; }
+  :root:root:root body.pagina-paineis .hero-miolo { position: absolute; inset: 0; display: block; min-height: 0; max-width: none; margin: 0; gap: 0; }
+
+  /* Cards da coluna esquerda (sem texto no frame; texto segue no HTML para leitores de tela) */
+  :root:root:root body.pagina-paineis .hero-miolo .titulo-hero { position: absolute; left: calc(var(--u) * 109.81); top: calc(var(--u) * 134.76); width: calc(var(--u) * 542.38); height: calc(var(--u) * 427.58); box-sizing: border-box; margin: 0; padding: 0; background: #F9F2ED; border-radius: calc(var(--u) * 25); color: transparent; font-size: 0; line-height: 0; }
+  :root:root:root body.pagina-paineis .hero-miolo .titulo-hero * { font-size: 0; }
+  :root:root:root body.pagina-paineis .hero-miolo .faixa-wrap { position: absolute; left: calc(var(--u) * 109.81); top: calc(var(--u) * 573.99); width: calc(var(--u) * 542.38); height: calc(var(--u) * 83.19); min-height: 0; margin: 0; padding: 0; background: #F9F2ED; border-radius: calc(var(--u) * 25); overflow: hidden; }
+  :root:root:root body.pagina-paineis .hero-miolo .faixa { display: none; }
+  :root:root:root body.pagina-paineis .hero-miolo .hero-base { position: absolute; left: calc(var(--u) * 109.81); top: calc(var(--u) * 670.49); width: calc(var(--u) * 542.38); height: calc(var(--u) * 222.94); box-sizing: border-box; max-width: none; margin: 0; padding: 0; background: #F9F2ED; border-radius: calc(var(--u) * 25); }
+  :root:root:root body.pagina-paineis .hero-miolo .hero-base p { position: absolute; inset: 0; margin: 0; font-size: 0; color: transparent; line-height: 0; }
+  :root:root:root body.pagina-paineis .hero-miolo .hero-base .acoes { display: none; }
+
+  /* Mosaico e faixa */
+  :root:root:root body.pagina-paineis .quadro-mosaico { position: absolute; inset: 0; }
+  :root:root:root body.pagina-paineis .quadro-mosaico span { position: absolute; display: block; }
+  :root:root:root body.pagina-paineis .qm-painel { left: calc(var(--u) * 662.17); top: calc(var(--u) * 134.76); width: calc(var(--u) * 1128.02); height: calc(var(--u) * 758.67); background: #F9F2ED; border-radius: calc(var(--u) * 23); }
+  :root:root:root body.pagina-paineis .qm-a { left: calc(var(--u) * 670.49); top: calc(var(--u) * 146.41); width: calc(var(--u) * 360.11); height: calc(var(--u) * 735.38); background: #D9D9D9; border-radius: calc(var(--u) * 18.5); }
+  :root:root:root body.pagina-paineis .qm-b { left: calc(var(--u) * 1044.46); top: calc(var(--u) * 146.41); width: calc(var(--u) * 360.11); height: calc(var(--u) * 360.76); background: #D9D9D9; border-radius: calc(var(--u) * 18.5); }
+  :root:root:root body.pagina-paineis .qm-c { left: calc(var(--u) * 1418.43); top: calc(var(--u) * 146.41); width: calc(var(--u) * 360.11); height: calc(var(--u) * 360.76); background: #D9D9D9; border-radius: calc(var(--u) * 18.5); }
+  :root:root:root body.pagina-paineis .qm-d { left: calc(var(--u) * 1044.46); top: calc(var(--u) * 521.03); width: calc(var(--u) * 734.08); height: calc(var(--u) * 360.76); background: #D9D9D9; border-radius: calc(var(--u) * 18.5); }
+  :root:root:root body.pagina-paineis .qm-faixa { left: calc(var(--u) * 109.81); top: calc(var(--u) * 905.08); width: calc(var(--u) * 1680.39); height: calc(var(--u) * 96.5); background: #F9F2ED; border-radius: calc(var(--u) * 25); }
+
+  /* Caixa "lets talk" em (109.81, 1014.89) 1680.39 x 632.22 */
+  :root:root:root body.pagina-paineis #contact { position: absolute; left: calc(var(--u) * 109.81); top: calc(var(--u) * 1014.89); width: calc(var(--u) * 1680.39); height: calc(var(--u) * 632.22); margin: 0; padding: 0; background: #1C3F01; border: 0; border-radius: calc(var(--u) * 41.6); color: #CBEE2F; overflow: visible; }
+  :root:root:root body.pagina-paineis #contact::before { content: ""; position: absolute; left: calc(var(--u) * 24.95); top: calc(var(--u) * 21.53); width: calc(var(--u) * 1632.14); height: calc(var(--u) * 589.15); box-sizing: border-box; border: 1px solid #CBEE2F; border-radius: calc(var(--u) * 25); pointer-events: none; }
+  :root:root:root body.pagina-paineis #contact .container { width: auto; max-width: none; margin: 0; padding: 0; height: 0; }
+  :root:root:root body.pagina-paineis #contact .contato-topo { position: static; height: 0; }
+  :root:root:root body.pagina-paineis #contact .titulo-formas { position: static; margin: 0; padding: 0; }
+  :root:root:root body.pagina-paineis #contact .titulo-formas .fx { position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0; font-family: "Space Mono", monospace; font-weight: 700; font-size: calc(var(--u) * 62.9); line-height: 1; white-space: nowrap; }
+  :root:root:root body.pagina-paineis #contact .titulo-formas .fx-svg { position: absolute; width: calc(var(--u) * 87.6); height: calc(var(--u) * 87.6); }
+  :root:root:root body.pagina-paineis #contact .titulo-formas .fx-flor { position: absolute; width: calc(var(--u) * 89.85); height: calc(var(--u) * 89.85); }
+  :root:root:root body.pagina-paineis #contact .titulo-formas .fx-flor b { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #870842; font-size: calc(var(--u) * 44.9); }
+  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(1) { left: calc(var(--u) * 464.29); top: calc(var(--u) * 94.83); width: calc(var(--u) * 260.55); height: calc(var(--u) * 103.32); background: #9BA8EF; color: #26030A; }
+  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(2) { left: calc(var(--u) * 754.53); top: calc(var(--u) * 94.83); width: calc(var(--u) * 213.38); height: calc(var(--u) * 103.32); background: #F4E7DC; color: #870842; }
+  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(3) { left: calc(var(--u) * 997.59); top: calc(var(--u) * 94.83); width: calc(var(--u) * 238.09); height: calc(var(--u) * 103.32); background: #870842; color: #FEB3D2; border-radius: 3px; }
+  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(4) { left: calc(var(--u) * 322.2); top: calc(var(--u) * 235.49); }
+  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(5) { left: calc(var(--u) * 425.13); top: calc(var(--u) * 230.46); width: calc(var(--u) * 494.15); height: calc(var(--u) * 103.32); background: #FF0149; color: #26030A; }
+  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(6) { left: calc(var(--u) * 1019.78); top: calc(var(--u) * 227.63); width: calc(var(--u) * 348.15); height: calc(var(--u) * 103.32); background: #CBEE2F; color: #183900; font-size: calc(var(--u) * 62.3); letter-spacing: .2em; }
+  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(7) { left: calc(var(--u) * 924.61); top: calc(var(--u) * 234.37); }
+  :root:root:root body.pagina-paineis #contact .adesivo, :root:root:root body.pagina-paineis #contact .assinatura { display: none; }
+  :root:root:root body.pagina-paineis #contact .contato-simples { position: static; }
+  :root:root:root body.pagina-paineis #contact .etiqueta-clara { position: absolute; left: calc(var(--u) * 738.86); top: calc(var(--u) * 372.37); width: calc(var(--u) * 216.69); height: calc(var(--u) * 46.01); box-sizing: border-box; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0; background: transparent; border: calc(var(--u) * 1.5) solid #CBEE2F; border-radius: 999px; color: #CBEE2F; font-family: var(--fonte); font-size: calc(var(--u) * 26.7); text-transform: uppercase; white-space: nowrap; }
+  :root:root:root body.pagina-paineis #contact .email-grande { position: absolute; left: calc(var(--u) * 455.39); top: calc(var(--u) * 433.22); width: calc(var(--u) * 789); height: calc(var(--u) * 68); display: flex; align-items: center; justify-content: center; font-family: "Space Mono", monospace; font-style: normal; font-weight: 400; font-size: calc(var(--u) * 46); color: #CBEE2F; text-decoration: underline; white-space: nowrap; }
+  :root:root:root body.pagina-paineis #contact .redes { position: absolute; left: calc(var(--u) * 612.71); top: calc(var(--u) * 516.33); width: calc(var(--u) * 458.61); height: calc(var(--u) * 46.01); margin: 0; padding: 0; list-style: none; }
+  :root:root:root body.pagina-paineis #contact .redes li { width: 100%; height: 100%; }
+  :root:root:root body.pagina-paineis #contact .redes a { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; box-sizing: border-box; background: #870842; color: #FEB3D2; border-radius: 999px; font-family: var(--fonte); font-size: calc(var(--u) * 26.7); text-transform: uppercase; text-decoration: none; white-space: nowrap; }
+
+  /* Rodapé: faixa lima em (111.47, 1660.42) 1680.39 x 173.03 (relativa à caixa: 1.66, 645.53) */
+  :root:root:root body.pagina-paineis #contact .rodape { position: absolute; left: calc(var(--u) * 1.66); top: calc(var(--u) * 645.53); width: calc(var(--u) * 1680.39); height: calc(var(--u) * 173.03); box-sizing: border-box; margin: 0; padding: 0; background: #CBEE2F; border: 0; border-radius: calc(var(--u) * 41.6); color: #1C3F01; display: block; }
+  :root:root:root body.pagina-paineis #contact .rodape > div { text-align: left; position: absolute; left: calc(var(--u) * 53.24); top: calc(var(--u) * 39.93); width: calc(var(--u) * 916.7); }
+  :root:root:root body.pagina-paineis #contact .rodape p { margin: 0 0 calc(var(--u) * 10); font-family: var(--fonte); font-size: calc(var(--u) * 20); line-height: normal; color: #1C3F01; }
+  :root:root:root body.pagina-paineis #contact .rodape .nota-acess { max-width: none; color: #1C3F01; font-size: calc(var(--u) * 20); margin: 0; text-align: left; }
+  :root:root:root body.pagina-paineis #contact .rodape strong { color: #1C3F01; font-weight: 700; }
+  :root:root:root body.pagina-paineis #contact .rodape > a { display: none; }
+  :root:root:root body.pagina-paineis #contact .pausar-movimento { position: absolute; left: calc(var(--u) * 1314.38); top: calc(var(--u) * 51.57); width: calc(var(--u) * 332.75); height: calc(var(--u) * 66.55); box-sizing: border-box; margin: 0; padding: 0; background: #1C3F01; color: #CBEE2F; border: 0; border-radius: 999px; font-family: var(--fonte); font-size: calc(var(--u) * 29.9); text-transform: uppercase; cursor: pointer; }
+
+  /* Fixos na tela: botão de tema (28.28, 663.84) e "Scroll to top" (51.30, 1235.44) */
+  :root:root:root body.pagina-paineis .tema { position: fixed; left: calc(var(--k) * 28.28); top: calc(var(--k) * 663.84); width: calc(var(--k) * 57.87); height: calc(var(--k) * 289.35); box-sizing: border-box; transform: none; flex-direction: column; gap: 0; padding: 0; margin: 0; background: #5E012E; border: 0; border-radius: calc(var(--k) * 29); overflow: hidden; z-index: 55; }
+  :root:root:root body.pagina-paineis .tema button { flex: 1 1 50%; width: 100%; padding: 0; margin: 0; border: 0; border-radius: 0; background: transparent; color: #F9F2ED; font-family: var(--fonte); font-weight: 600; font-size: calc(var(--k) * 21); }
+  :root:root:root body.pagina-paineis .tema button[aria-pressed="true"] { background: #F9F2ED; color: #5E012E; }
+  :root:root:root body.pagina-paineis .tema button span { writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 0; font-size: calc(var(--k) * 21); }
+  :root:root:root body.pagina-paineis .voltar-topo { display: block; position: fixed; left: calc(var(--k) * 51.3); top: calc(var(--k) * 1235.44); width: calc(var(--k) * 31); height: calc(var(--k) * 252.74); margin: 0; padding: 0; writing-mode: vertical-rl; transform: rotate(180deg); font-family: var(--fonte); font-size: calc(var(--k) * 26); color: #5E012E; text-decoration: none; white-space: nowrap; z-index: 55; }
+  :root:root:root body.pagina-paineis .voltar-topo::before { content: ""; position: absolute; left: calc(var(--k) * 15.9); top: calc(var(--k) * 151); height: calc(var(--k) * 105.6); border-left: 1px solid #5E012E; }
 }
