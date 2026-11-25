@@ -1955,3 +1955,15 @@ body.pagina-paineis #work { display: none; }
   body:not(.pagina-paineis) .capitulo { margin: 16px; padding: clamp(40px, 5vw, 72px) clamp(32px, 4vw, 64px); background: #F9F2ED; border-radius: 50px; border: 0; }
   body:not(.pagina-paineis) .capitulo:last-of-type { border: 0; }
 }
+
+/* Home, desktop: vence as regras do tema claro (mesma especificidade, posicionadas depois) para bater com o frame */
+@media (min-width: 1000px) {
+  :root:not([data-tema="escuro"]) body.pagina-paineis { background: #FFFFFF; padding: 0; }
+  :root:not([data-tema="escuro"]) body.pagina-paineis .topo { padding: 0; }
+  :root:not([data-tema="escuro"]) body.pagina-paineis .nav { background: #F9F2ED; border: 0; box-shadow: none; border-radius: calc(var(--u) * 33.325); }
+  :root:not([data-tema="escuro"]) body.pagina-paineis .nav-links a:not(.btn) { background: #D9D9D9; color: #000; padding: 0; border-radius: calc(var(--u) * 27.771); }
+  :root:not([data-tema="escuro"]) body.pagina-paineis .nav-links a:not(.btn):hover { background: #D9D9D9; }
+  :root:not([data-tema="escuro"]) body.pagina-paineis main > section { border: 0; margin: 0; border-radius: 0; background: transparent; overflow: visible; }
+  :root:not([data-tema="escuro"]) body.pagina-paineis .hero { margin: 0; }
+  :root:not([data-tema="escuro"]) body.pagina-paineis #contact { margin: 0; border: 0; border-radius: calc(var(--u) * 25); background: #1C3F01; }
+}
