@@ -1964,3 +1964,8 @@ body.pagina-paineis #work { display: none; }
 :root:root[data-tema="escuro"] body.pagina-paineis .tema button:not([aria-pressed="true"]) { color: #5E012E; }
 :root:root[data-tema="escuro"] body.pagina-paineis .voltar-topo { color: #F9F2ED; }
 :root:root[data-tema="escuro"] body.pagina-paineis .voltar-topo::before { border-top-color: #F9F2ED; }
+
+/* Ícones de sol e lua sempre visíveis, como no Figma; ícone e rótulo formam uma coluna centralizada */
+:root:root:root body.pagina-paineis .tema button:not([aria-pressed="true"]) svg { display: block; }
+:root:root:root body.pagina-paineis .tema button { gap: calc(var(--k) * 8); }
+:root:root:root body.pagina-paineis .tema button svg { flex: none; }
