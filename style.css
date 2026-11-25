@@ -1988,3 +1988,9 @@ body.pagina-paineis #work { display: none; }
 :root:root[data-tema="escuro"] body.pagina-paineis .tema { background: #F4E7DC; }
 :root:root:root body.pagina-paineis .tema button::before { transition: none; }
 @media (prefers-reduced-motion: reduce) { :root:root:root body.pagina-paineis .tema, :root:root:root body.pagina-paineis .tema::before, :root:root:root body.pagina-paineis .tema button { transition: none; } }
+
+/* Fundo da página segue o tema: Dark #5E012E, Light #F4E7DC (home, desktop) */
+@media (min-width: 1000px) {
+  :root:root[data-tema="escuro"] body.pagina-paineis { background: #5E012E; }
+  :root:root[data-tema="claro"] body.pagina-paineis { background: #F4E7DC; }
+}
