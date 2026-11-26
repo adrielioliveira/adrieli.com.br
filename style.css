@@ -2026,3 +2026,19 @@ body.pagina-paineis #work { display: none; }
 @media (min-width: 1000px) {
   html:has(body.pagina-paineis) { background: #F4E7DC; }
 }
+
+/* Botão de tema conforme os frames enviados (Botão Light e Botão Dark):
+   Light selecionado: trilho creme, parte ativa escura embaixo; Dark selecionado: trilho escuro, parte ativa creme em cima.
+   Rótulo "Dark" sempre #5E012E e "Light" sempre #F9F2ED. */
+:root:root:root:root:root body.pagina-paineis .tema::before { background: #5E012E; }
+:root:root:root:root:root body.pagina-paineis .tema:has(button[data-tema="escuro"][aria-pressed="true"])::before { background: #F9F2ED; }
+:root:root:root:root:root body.pagina-paineis .tema:has(button[data-tema="claro"][aria-pressed="true"])::before { background: #5E012E; }
+:root:root[data-tema="claro"] body.pagina-paineis .tema { background: #F9F2ED; }
+:root:root[data-tema="escuro"] body.pagina-paineis .tema { background: #5E012E; }
+:root:root:root:root:root body.pagina-paineis .tema button { background: transparent; color: #F9F2ED; }
+:root:root:root:root:root body.pagina-paineis .tema button[data-tema="escuro"] { color: #5E012E; }
+:root:root:root:root:root body.pagina-paineis .tema button[data-tema="claro"] { color: #F9F2ED; }
+:root:root[data-tema="claro"] body.pagina-paineis .voltar-topo { color: #5E012E; }
+:root:root[data-tema="escuro"] body.pagina-paineis .voltar-topo { color: #F9F2ED; }
+:root:root[data-tema="claro"] body.pagina-paineis .voltar-topo::before { border-top-color: #5E012E; }
+:root:root[data-tema="escuro"] body.pagina-paineis .voltar-topo::before { border-top-color: #F9F2ED; }
