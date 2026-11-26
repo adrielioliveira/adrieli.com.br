@@ -1861,96 +1861,98 @@ body.pagina-paineis #work { display: none; }
   body:not(.pagina-paineis) .capitulo:last-of-type { border: 0; }
 }
 
-/* ===== Home, desktop: "Layout do Site (geral)" 1920 x 1900; conteúdo centralizado em 1400 px com margem de 255 px; números arredondados (u = largura / 1920) ===== */
+/* ===== Home, desktop: "Layout do Site (geral)" 1920 x 1580 (nó 37:77), números arredondados; u = largura / 1920 ===== */
 @media (min-width: 1000px) {
   :root:root:root body.pagina-paineis { --u: calc(100cqw / 1920); --k: calc(100vw / 1920); background: #F4E7DC; padding: 0; }
   :root:root:root body.pagina-paineis .menu-btn { display: none; }
 
-  /* Topo: nav de 1400 x 75 em (255, 50) */
+  /* Topo: nav 1450 x 77 em (235, 28) */
   :root:root:root body.pagina-paineis .topo { position: sticky; top: 0; height: 0; padding: 0; width: 100%; margin: 0; container-type: inline-size; overflow: visible; z-index: 50; }
-  :root:root:root body.pagina-paineis .nav { position: absolute; left: calc(var(--u) * 255); top: calc(var(--u) * 50); width: calc(var(--u) * 1400); height: calc(var(--u) * 75); max-width: none; margin: 0; padding: 0; border: 0; border-radius: calc(var(--u) * 50); background: #F9F2ED; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; display: block; }
-  :root:root:root body.pagina-paineis .logo { position: absolute; left: calc(var(--u) * 22); top: calc(var(--u) * 17); width: calc(var(--u) * 142); height: calc(var(--u) * 39); font-family: "Space Mono", monospace; font-weight: 400; font-size: calc(var(--u) * 27); line-height: 1; letter-spacing: calc(var(--u) * -0.5); text-transform: uppercase; color: #000; text-decoration: none; white-space: nowrap; }
-  :root:root:root body.pagina-paineis .logo svg { position: absolute; left: calc(var(--u) * 123); top: 0; width: calc(var(--u) * 28); height: calc(var(--u) * 42); }
+  :root:root:root body.pagina-paineis .nav { position: absolute; left: calc(var(--u) * 235); top: calc(var(--u) * 28); width: calc(var(--u) * 1450); height: calc(var(--u) * 77); max-width: none; margin: 0; padding: 0; border: 0; border-radius: calc(var(--u) * 38); background: #F9F2ED; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; display: block; }
+  :root:root:root body.pagina-paineis .logo { position: absolute; left: calc(var(--u) * 28); top: calc(var(--u) * 18); width: calc(var(--u) * 146); height: calc(var(--u) * 40); font-family: "Space Mono", monospace; font-weight: 400; font-size: calc(var(--u) * 28); line-height: 1; letter-spacing: calc(var(--u) * -0.5); text-transform: uppercase; color: #000; text-decoration: none; white-space: nowrap; }
+  :root:root:root body.pagina-paineis .logo svg { position: absolute; left: calc(var(--u) * 127); top: 0; width: calc(var(--u) * 29); height: calc(var(--u) * 43); }
   :root:root:root body.pagina-paineis .nav-links { position: absolute; inset: 0; display: block; margin: 0; padding: 0; list-style: none; }
   :root:root:root body.pagina-paineis .nav-links li { position: absolute; margin: 0; }
-  :root:root:root body.pagina-paineis .nav-links li:nth-child(1) { left: calc(var(--u) * 787); top: calc(var(--u) * 12); width: calc(var(--u) * 87); height: calc(var(--u) * 52); }
-  :root:root:root body.pagina-paineis .nav-links li:nth-child(2) { left: calc(var(--u) * 879); top: calc(var(--u) * 12); width: calc(var(--u) * 111); height: calc(var(--u) * 52); }
-  :root:root:root body.pagina-paineis .nav-links li:nth-child(3) { left: calc(var(--u) * 997); top: calc(var(--u) * 12); width: calc(var(--u) * 121); height: calc(var(--u) * 52); }
-  :root:root:root body.pagina-paineis .nav-links li:nth-child(4) { left: calc(var(--u) * 1124); top: calc(var(--u) * 12); width: calc(var(--u) * 93); height: calc(var(--u) * 52); }
-  :root:root:root body.pagina-paineis .nav-links li:nth-child(5) { left: calc(var(--u) * 1222); top: calc(var(--u) * 7); width: calc(var(--u) * 175); height: calc(var(--u) * 62); }
-  :root:root:root body.pagina-paineis .nav-links a { display: flex; align-items: center; justify-content: center; box-sizing: border-box; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; border-radius: 999px; background: #D9D9D9; color: #000; font-family: var(--fonte); font-weight: 400; font-size: calc(var(--u) * 20); letter-spacing: calc(var(--u) * -0.4); line-height: 1; white-space: nowrap; text-decoration: none; }
+  :root:root:root body.pagina-paineis .nav-links li:nth-child(1) { left: calc(var(--u) * 814); top: calc(var(--u) * 11); width: calc(var(--u) * 89); height: calc(var(--u) * 54); }
+  :root:root:root body.pagina-paineis .nav-links li:nth-child(2) { left: calc(var(--u) * 909); top: calc(var(--u) * 11); width: calc(var(--u) * 115); height: calc(var(--u) * 54); }
+  :root:root:root body.pagina-paineis .nav-links li:nth-child(3) { left: calc(var(--u) * 1030); top: calc(var(--u) * 11); width: calc(var(--u) * 124); height: calc(var(--u) * 54); }
+  :root:root:root body.pagina-paineis .nav-links li:nth-child(4) { left: calc(var(--u) * 1160); top: calc(var(--u) * 11); width: calc(var(--u) * 96); height: calc(var(--u) * 54); }
+  :root:root:root body.pagina-paineis .nav-links li:nth-child(5) { left: calc(var(--u) * 1262); top: calc(var(--u) * 6); width: calc(var(--u) * 180); height: calc(var(--u) * 64); }
+  :root:root:root body.pagina-paineis .nav-links a { display: flex; align-items: center; justify-content: center; box-sizing: border-box; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; border-radius: 999px; background: #D9D9D9; color: #000; font-family: var(--fonte); font-weight: 400; font-size: calc(var(--u) * 21); letter-spacing: calc(var(--u) * -0.4); line-height: 1; white-space: nowrap; text-decoration: none; }
   :root:root:root body.pagina-paineis .nav-links a.btn-nav { background: #870842; color: #FEB3D2; }
   :root:root:root body.pagina-paineis .nav-links a:not(.btn):hover { background: #D9D9D9; }
 
-  /* Canvas do frame */
-  :root:root:root body.pagina-paineis main#conteudo { display: block; position: relative; width: 100%; margin: 0; aspect-ratio: 1920 / 1900; container-type: inline-size; padding: 0; gap: 0; overflow: visible; }
+  /* Canvas do frame: 1920 x 1580 */
+  :root:root:root body.pagina-paineis main#conteudo { display: block; position: relative; width: 100%; margin: 0; aspect-ratio: 1920 / 1580; container-type: inline-size; padding: 0; gap: 0; overflow: visible; }
   :root:root:root body.pagina-paineis main#conteudo > section { margin: 0; border: 0; border-radius: 0; background: transparent; overflow: visible; }
   :root:root:root body.pagina-paineis #inicio { position: absolute; inset: 0; width: auto; min-height: 0; aspect-ratio: auto; margin: 0; padding: 0; background: transparent; box-shadow: none; }
   :root:root:root body.pagina-paineis .hero-blobs { display: none; }
   :root:root:root body.pagina-paineis .hero-miolo { position: absolute; inset: 0; display: block; min-height: 0; max-width: none; margin: 0; gap: 0; }
 
   /* Cards da coluna esquerda (sem texto no frame; o texto segue no HTML para leitores de tela) */
-  :root:root:root body.pagina-paineis .hero-miolo .titulo-hero { position: absolute; left: calc(var(--u) * 255); top: calc(var(--u) * 135); width: calc(var(--u) * 450); height: calc(var(--u) * 360); box-sizing: border-box; margin: 0; padding: 0; background: #F9F2ED; border-radius: calc(var(--u) * 22); color: transparent; font-size: 0; line-height: 0; }
+  :root:root:root body.pagina-paineis .hero-miolo .titulo-hero { position: absolute; left: calc(var(--u) * 233); top: calc(var(--u) * 115); width: calc(var(--u) * 368); height: calc(var(--u) * 369); box-sizing: border-box; margin: 0; padding: 0; background: #F9F2ED; border-radius: calc(var(--u) * 22); color: transparent; font-size: 0; line-height: 0; }
   :root:root:root body.pagina-paineis .hero-miolo .titulo-hero * { font-size: 0; }
-  :root:root:root body.pagina-paineis .hero-miolo .faixa-wrap { position: absolute; left: calc(var(--u) * 255); top: calc(var(--u) * 505); width: calc(var(--u) * 450); height: calc(var(--u) * 70); min-height: 0; margin: 0; padding: 0; background: #F9F2ED; border-radius: calc(var(--u) * 22); overflow: hidden; }
+  :root:root:root body.pagina-paineis .hero-miolo .faixa-wrap { position: absolute; left: calc(var(--u) * 233); top: calc(var(--u) * 494); width: calc(var(--u) * 368); height: calc(var(--u) * 72); min-height: 0; margin: 0; padding: 0; background: #F9F2ED; border-radius: calc(var(--u) * 22); overflow: hidden; }
   :root:root:root body.pagina-paineis .hero-miolo .faixa { display: none; }
-  :root:root:root body.pagina-paineis .hero-miolo .hero-base { position: absolute; left: calc(var(--u) * 255); top: calc(var(--u) * 585); width: calc(var(--u) * 450); height: calc(var(--u) * 185); box-sizing: border-box; max-width: none; margin: 0; padding: 0; background: #F9F2ED; border-radius: calc(var(--u) * 22); }
+  :root:root:root body.pagina-paineis .hero-miolo .hero-base { position: absolute; left: calc(var(--u) * 233); top: calc(var(--u) * 576); width: calc(var(--u) * 368); height: calc(var(--u) * 193); box-sizing: border-box; max-width: none; margin: 0; padding: 0; background: #F9F2ED; border-radius: calc(var(--u) * 22); }
   :root:root:root body.pagina-paineis .hero-miolo .hero-base p { position: absolute; inset: 0; margin: 0; font-size: 0; color: transparent; line-height: 0; }
   :root:root:root body.pagina-paineis .hero-miolo .hero-base .acoes { display: none; }
 
   /* Mosaico e faixa */
   :root:root:root body.pagina-paineis .quadro-mosaico { position: absolute; inset: 0; }
   :root:root:root body.pagina-paineis .quadro-mosaico span { position: absolute; display: block; }
-  :root:root:root body.pagina-paineis .qm-painel { left: calc(var(--u) * 715); top: calc(var(--u) * 135); width: calc(var(--u) * 940); height: calc(var(--u) * 635); background: #F9F2ED; border-radius: calc(var(--u) * 20); }
-  :root:root:root body.pagina-paineis .qm-a { left: calc(var(--u) * 721); top: calc(var(--u) * 145); width: calc(var(--u) * 300); height: calc(var(--u) * 614); background: #D9D9D9; border-radius: calc(var(--u) * 15); }
-  :root:root:root body.pagina-paineis .qm-b { left: calc(var(--u) * 1033); top: calc(var(--u) * 145); width: calc(var(--u) * 300); height: calc(var(--u) * 301); background: #D9D9D9; border-radius: calc(var(--u) * 15); }
-  :root:root:root body.pagina-paineis .qm-c { left: calc(var(--u) * 1345); top: calc(var(--u) * 145); width: calc(var(--u) * 300); height: calc(var(--u) * 301); background: #D9D9D9; border-radius: calc(var(--u) * 15); }
-  :root:root:root body.pagina-paineis .qm-d { left: calc(var(--u) * 1033); top: calc(var(--u) * 458); width: calc(var(--u) * 613); height: calc(var(--u) * 301); background: #D9D9D9; border-radius: calc(var(--u) * 15); }
-  :root:root:root body.pagina-paineis .qm-faixa { left: calc(var(--u) * 255); top: calc(var(--u) * 780); width: calc(var(--u) * 1400); height: calc(var(--u) * 80); background: #F9F2ED; border-radius: calc(var(--u) * 22); }
+  :root:root:root body.pagina-paineis .qm-painel { left: calc(var(--u) * 611); top: calc(var(--u) * 115); width: calc(var(--u) * 1077); height: calc(var(--u) * 655); background: #F9F2ED; border-radius: calc(var(--u) * 21); }
+  :root:root:root body.pagina-paineis .qm-a { left: calc(var(--u) * 621); top: calc(var(--u) * 126); width: calc(var(--u) * 407); height: calc(var(--u) * 635); background: #D9D9D9; border-radius: calc(var(--u) * 16); }
+  :root:root:root body.pagina-paineis .qm-b { left: calc(var(--u) * 1038); top: calc(var(--u) * 126); width: calc(var(--u) * 316); height: calc(var(--u) * 311); background: #D9D9D9; border-radius: calc(var(--u) * 16); }
+  :root:root:root body.pagina-paineis .qm-c { left: calc(var(--u) * 1364); top: calc(var(--u) * 126); width: calc(var(--u) * 316); height: calc(var(--u) * 311); background: #D9D9D9; border-radius: calc(var(--u) * 16); }
+  :root:root:root body.pagina-paineis .qm-d { left: calc(var(--u) * 1038); top: calc(var(--u) * 447); width: calc(var(--u) * 642); height: calc(var(--u) * 314); background: #D9D9D9; border-radius: calc(var(--u) * 16); }
+  :root:root:root body.pagina-paineis .qm-faixa { left: calc(var(--u) * 239); top: calc(var(--u) * 780); width: calc(var(--u) * 1450); height: calc(var(--u) * 83); background: #F9F2ED; border-radius: calc(var(--u) * 22); }
 
-  /* Caixa "lets talk": (255, 870) 1400 x 530 */
-  :root:root:root body.pagina-paineis #contact { position: absolute; left: calc(var(--u) * 255); top: calc(var(--u) * 870); width: calc(var(--u) * 1400); height: calc(var(--u) * 530); margin: 0; padding: 0; background: #1C3F01; border: 0; border-radius: calc(var(--u) * 37); color: #CBEE2F; overflow: visible; }
+  /* Caixa "lets talk": (235, 873) 1450 x 546; posições dos elementos em coordenadas do frame */
+  :root:root:root body.pagina-paineis #contact { position: absolute; left: calc(var(--u) * 235); top: calc(var(--u) * 873); width: calc(var(--u) * 1450); height: calc(var(--u) * 546); margin: 0; padding: 0; background: #1C3F01; border: 0; border-radius: calc(var(--u) * 37); color: #CBEE2F; overflow: visible; }
   :root:root:root body.pagina-paineis main#conteudo #contact { background: #1C3F01; }
-  :root:root:root body.pagina-paineis #contact::before { content: ""; position: absolute; left: calc(var(--u) * 20); top: calc(var(--u) * 18); width: calc(var(--u) * 1360); height: calc(var(--u) * 490); box-sizing: border-box; border: 1px solid #CBEE2F; border-radius: calc(var(--u) * 22); pointer-events: none; }
+  :root:root:root body.pagina-paineis #contact::before { content: ""; position: absolute; left: calc(var(--u) * 21); top: calc(var(--u) * 18); width: calc(var(--u) * 1408); height: calc(var(--u) * 508); box-sizing: border-box; border: 1px solid #CBEE2F; border-radius: calc(var(--u) * 22); pointer-events: none; }
   :root:root:root body.pagina-paineis #contact .container { width: auto; max-width: none; margin: 0; padding: 0; height: 0; }
   :root:root:root body.pagina-paineis #contact .contato-topo { position: static; height: 0; }
   :root:root:root body.pagina-paineis #contact .titulo-formas { position: static; margin: 0; padding: 0; }
   :root:root:root body.pagina-paineis #contact .titulo-formas .fx { position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0; font-family: "Space Mono", monospace; font-weight: 700; font-size: calc(var(--u) * 56); line-height: 1; white-space: nowrap; }
-  :root:root:root body.pagina-paineis #contact .titulo-formas .fx-svg { position: absolute; width: calc(var(--u) * 73); height: calc(var(--u) * 73); }
-  :root:root:root body.pagina-paineis #contact .titulo-formas .fx-flor { position: absolute; width: calc(var(--u) * 75); height: calc(var(--u) * 75); }
+  :root:root:root body.pagina-paineis #contact .titulo-formas .fx-svg { position: absolute; width: calc(var(--u) * 76); height: calc(var(--u) * 76); }
+  :root:root:root body.pagina-paineis #contact .titulo-formas .fx-flor { position: absolute; width: calc(var(--u) * 78); height: calc(var(--u) * 78); }
   :root:root:root body.pagina-paineis #contact .titulo-formas .fx-flor b { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #870842; font-size: calc(var(--u) * 40); }
-  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(1) { left: calc(var(--u) * 386); top: calc(var(--u) * 80); width: calc(var(--u) * 217); height: calc(var(--u) * 86); background: #9BA8EF; color: #26030A; border-radius: 999px; }
-  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(2) { left: calc(var(--u) * 628); top: calc(var(--u) * 80); width: calc(var(--u) * 178); height: calc(var(--u) * 86); background: #F4E7DC; color: #870842; }
-  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(3) { left: calc(var(--u) * 831); top: calc(var(--u) * 80); width: calc(var(--u) * 199); height: calc(var(--u) * 86); background: #870842; color: #FEB3D2; border-radius: 3px; }
-  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(4) { left: calc(var(--u) * 267); top: calc(var(--u) * 197); }
-  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(5) { left: calc(var(--u) * 353); top: calc(var(--u) * 193); width: calc(var(--u) * 412); height: calc(var(--u) * 86); background: #FF0149; color: #26030A; }
-  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(6) { left: calc(var(--u) * 849); top: calc(var(--u) * 191); width: calc(var(--u) * 291); height: calc(var(--u) * 86); background: #CBEE2F; color: #183900; font-size: calc(var(--u) * 55); letter-spacing: .2em; }
-  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(7) { left: calc(var(--u) * 770); top: calc(var(--u) * 196); }
+  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(1) { left: calc(var(--u) * 392); top: calc(var(--u) * 87); width: calc(var(--u) * 225); height: calc(var(--u) * 89); background: #9BA8EF; color: #26030A; border-radius: 999px; }
+  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(2) { left: calc(var(--u) * 643); top: calc(var(--u) * 87); width: calc(var(--u) * 184); height: calc(var(--u) * 89); background: #F4E7DC; color: #870842; }
+  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(3) { left: calc(var(--u) * 852); top: calc(var(--u) * 87); width: calc(var(--u) * 205); height: calc(var(--u) * 89); background: #870842; color: #FEB3D2; border-radius: 3px; }
+  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(4) { left: calc(var(--u) * 270); top: calc(var(--u) * 206); }
+  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(5) { left: calc(var(--u) * 356); top: calc(var(--u) * 202); width: calc(var(--u) * 427); height: calc(var(--u) * 89); background: #FF0149; color: #26030A; }
+  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(6) { left: calc(var(--u) * 880); top: calc(var(--u) * 199); width: calc(var(--u) * 300); height: calc(var(--u) * 89); background: #CBEE2F; color: #183900; font-size: calc(var(--u) * 55); letter-spacing: .2em; }
+  :root:root:root body.pagina-paineis #contact .titulo-formas > :nth-child(7) { left: calc(var(--u) * 792); top: calc(var(--u) * 205); }
   :root:root:root body.pagina-paineis #contact .adesivo, :root:root:root body.pagina-paineis #contact .assinatura { display: none; }
   :root:root:root body.pagina-paineis #contact .contato-simples { position: static; }
-  :root:root:root body.pagina-paineis #contact .etiqueta-clara { position: absolute; left: calc(var(--u) * 626); top: calc(var(--u) * 323); width: calc(var(--u) * 159); height: calc(var(--u) * 30); box-sizing: border-box; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0; background: transparent; border: calc(var(--u) * 1) solid #CBEE2F; border-radius: 999px; color: #CBEE2F; font-family: var(--fonte); font-size: calc(var(--u) * 18); text-transform: uppercase; white-space: nowrap; }
-  :root:root:root body.pagina-paineis #contact .email-grande { position: absolute; left: calc(var(--u) * 354); top: calc(var(--u) * 353); width: calc(var(--u) * 1212); height: calc(var(--u) * 60); display: flex; align-items: center; justify-content: center; font-family: "Space Mono", monospace; font-style: normal; font-weight: 400; font-size: calc(var(--u) * 41); color: #CBEE2F; text-decoration: underline; white-space: nowrap; }
-  :root:root:root body.pagina-paineis #contact .redes { position: absolute; left: calc(var(--u) * 502); top: calc(var(--u) * 431); width: calc(var(--u) * 406); height: calc(var(--u) * 38); margin: 0; padding: 0; list-style: none; }
+  :root:root:root body.pagina-paineis #contact .etiqueta-clara { position: absolute; left: calc(var(--u) * 648); top: calc(var(--u) * 336); width: calc(var(--u) * 164); height: calc(var(--u) * 31); box-sizing: border-box; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0; background: transparent; border: calc(var(--u) * 1) solid #CBEE2F; border-radius: 999px; color: #CBEE2F; font-family: var(--fonte); font-size: calc(var(--u) * 18); text-transform: uppercase; white-space: nowrap; }
+  :root:root:root body.pagina-paineis #contact .email-grande { position: absolute; left: calc(var(--u) * 367); top: calc(var(--u) * 367); width: calc(var(--u) * 724); height: calc(var(--u) * 63); display: flex; align-items: center; justify-content: center; font-family: "Space Mono", monospace; font-style: normal; font-weight: 400; font-size: calc(var(--u) * 40); color: #CBEE2F; text-decoration: underline; white-space: nowrap; }
+  :root:root:root body.pagina-paineis #contact .redes { position: absolute; left: calc(var(--u) * 520); top: calc(var(--u) * 448); width: calc(var(--u) * 420); height: calc(var(--u) * 40); margin: 0; padding: 0; list-style: none; }
   :root:root:root body.pagina-paineis #contact .redes li { width: 100%; height: 100%; }
   :root:root:root body.pagina-paineis #contact .redes a { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; box-sizing: border-box; background: #870842; color: #FEB3D2; border-radius: 999px; font-family: var(--fonte); font-size: calc(var(--u) * 24); text-transform: uppercase; text-decoration: none; white-space: nowrap; }
 
-  /* Rodapé: faixa lima (255, 1410) 1400 x 144 */
-  :root:root:root body.pagina-paineis #contact .rodape { position: absolute; left: calc(var(--u) * 0); top: calc(var(--u) * 540); width: calc(var(--u) * 1400); height: calc(var(--u) * 144); box-sizing: border-box; margin: 0; padding: 0; background: #CBEE2F; border: 0; border-radius: calc(var(--u) * 37); color: #1C3F01; display: block; }
-  :root:root:root body.pagina-paineis #contact .rodape > div { text-align: left; position: absolute; left: calc(var(--u) * 44); top: calc(var(--u) * 20); width: calc(var(--u) * 765); }
-  :root:root:root body.pagina-paineis #contact .rodape p { margin: 0 0 calc(var(--u) * 10); font-family: var(--fonte); font-size: calc(var(--u) * 18); line-height: normal; color: #1C3F01; }
+  /* Rodapé: faixa lima (235, 1428) 1450 x 119 */
+  :root:root:root body.pagina-paineis #contact .rodape { position: absolute; left: 0; top: calc(var(--u) * 555); width: calc(var(--u) * 1450); height: calc(var(--u) * 119); box-sizing: border-box; margin: 0; padding: 0; background: #CBEE2F; border: 0; border-radius: calc(var(--u) * 37); color: #1C3F01; display: block; }
+  :root:root:root body.pagina-paineis #contact .rodape > div { text-align: left; position: absolute; left: calc(var(--u) * 46); top: calc(var(--u) * 22); width: calc(var(--u) * 954); }
+  :root:root:root body.pagina-paineis #contact .rodape p { margin: 0 0 calc(var(--u) * 8); font-family: var(--fonte); font-size: calc(var(--u) * 18); line-height: normal; color: #1C3F01; }
   :root:root:root body.pagina-paineis #contact .rodape .nota-acess { max-width: none; color: #1C3F01; font-size: calc(var(--u) * 18); margin: 0; text-align: left; }
   :root:root:root body.pagina-paineis #contact .rodape strong { color: #1C3F01; font-weight: 700; }
   :root:root:root body.pagina-paineis #contact .rodape > a { display: none; }
-  :root:root:root body.pagina-paineis #contact .pausar-movimento { position: absolute; left: calc(var(--u) * 1097); top: calc(var(--u) * 43); width: calc(var(--u) * 278); height: calc(var(--u) * 56); box-sizing: border-box; margin: 0; padding: 0; background: #1C3F01; color: #CBEE2F; border: 0; border-radius: 999px; font-family: var(--fonte); font-size: calc(var(--u) * 27); text-transform: uppercase; cursor: pointer; }
+  :root:root:root body.pagina-paineis #contact .pausar-movimento { position: absolute; left: calc(var(--u) * 1251); top: calc(var(--u) * 26); width: calc(var(--u) * 178); height: calc(var(--u) * 36); box-sizing: border-box; margin: 0; padding: 0; background: #1C3F01; color: #CBEE2F; border: 0; border-radius: 999px; font-family: var(--fonte); font-size: calc(var(--u) * 18); text-transform: uppercase; cursor: pointer; }
 
-  /* Fixos na tela, centralizados na altura da janela: botão Dark/Light (25 x 125) e "Scroll to top" logo abaixo */
-  :root:root:root body.pagina-paineis .tema { position: fixed; left: calc(var(--k) * 41); top: calc(50% - var(--k) * 124); width: calc(var(--k) * 25); height: calc(var(--k) * 125); box-sizing: border-box; transform: none; flex-direction: column; gap: 0; padding: 0; margin: 0; background: #5E012E; border: 0; border-radius: 999px; overflow: hidden; z-index: 55; }
-  :root:root:root body.pagina-paineis .tema button { flex: 1 1 50%; width: 100%; height: 50%; padding: 0; margin: 0; border: 0; border-radius: 0; background: transparent; color: #F9F2ED; font-family: var(--fonte); font-weight: 600; font-size: calc(var(--k) * 11); }
+  /* Fixos na tela, centralizados na altura da janela, conforme o grupo do frame (coluna x 56; 372 px de altura):
+     Dark/Light 38 x 188, "Scroll to top" logo abaixo e a linha por último */
+  :root:root:root body.pagina-paineis .tema { position: fixed; left: calc(var(--k) * 56); top: calc(50% - var(--k) * 186); width: calc(var(--k) * 38); height: calc(var(--k) * 188); box-sizing: border-box; transform: none; flex-direction: column; gap: 0; padding: 0; margin: 0; background: #5E012E; border: 0; border-radius: 999px; overflow: hidden; z-index: 55; }
+  :root:root:root body.pagina-paineis .tema button { flex: 1 1 50%; width: 100%; height: 50%; padding: calc(var(--k) * 6) 0; margin: 0; border: 0; border-radius: 0; background: transparent; color: #F9F2ED; font-family: var(--fonte); font-weight: 600; font-size: calc(var(--k) * 16); }
   :root:root:root body.pagina-paineis .tema button[aria-pressed="true"] { background: #F4E7DC; color: #5E012E; border-radius: 999px; }
-  :root:root:root body.pagina-paineis .tema button span { writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 0; font-size: calc(var(--k) * 11); line-height: 1; white-space: nowrap; }
-  :root:root:root body.pagina-paineis .tema button svg { width: calc(var(--k) * 11); height: calc(var(--k) * 11); }
-  :root:root:root body.pagina-paineis .voltar-topo { display: block; position: fixed; left: calc(var(--k) * 23.5); top: calc(50% + var(--k) * 37); width: calc(var(--k) * 60); height: calc(var(--k) * 14); margin: 0; padding: 0; box-sizing: border-box; transform: rotate(-90deg); font-family: var(--fonte); font-size: calc(var(--k) * 11); line-height: calc(var(--k) * 14); text-align: center; color: #5E012E; text-decoration: none; white-space: nowrap; z-index: 55; }
-  :root:root:root body.pagina-paineis .voltar-topo::before { content: ""; position: absolute; left: calc(var(--k) * -50); top: calc(var(--k) * 7); width: calc(var(--k) * 46); height: 0; border-top: 1px solid #5E012E; }
+  :root:root:root body.pagina-paineis .tema button span { writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 0; font-size: calc(var(--k) * 16); line-height: 1; white-space: nowrap; }
+  :root:root:root body.pagina-paineis .tema button svg { width: calc(var(--k) * 16); height: calc(var(--k) * 16); }
+  :root:root:root body.pagina-paineis .voltar-topo { display: block; position: fixed; left: calc(var(--k) * 30.3); top: calc(50% + var(--k) * 53.5); width: calc(var(--k) * 89); height: calc(var(--k) * 20); margin: 0; padding: 0; box-sizing: border-box; transform: rotate(-90deg); font-family: var(--fonte); font-size: calc(var(--k) * 16); line-height: calc(var(--k) * 20); text-align: center; color: #5E012E; text-decoration: none; white-space: nowrap; z-index: 55; }
+  :root:root:root body.pagina-paineis .voltar-topo::before { content: ""; position: absolute; left: calc(var(--k) * -78); top: calc(var(--k) * 10); width: calc(var(--k) * 69); height: 0; border-top: 1px solid #5E012E; }
+  :root:root:root body.pagina-paineis main#conteudo #contact { background: #1C3F01; }
 }
 /* Botão de tema e "Scroll to top" conforme os frames do Figma (variações Light e Dark) */
 /* Tema claro: trilho escuro, parte creme no botão Light ativo (já definido acima) */
@@ -1964,7 +1966,7 @@ body.pagina-paineis #work { display: none; }
 
 /* Botão de tema: ícones de sol e lua (arquivos enviados) como máscara, na cor do texto; cores do botão ativo: Dark #5E012E, Light #F4E7DC */
 :root:root:root body.pagina-paineis .tema button svg { display: none; }
-:root:root:root body.pagina-paineis .tema button::before { content: ""; flex: none; width: calc(var(--k) * 11); height: calc(var(--k) * 11); background: currentColor; -webkit-mask: center / contain no-repeat; mask: center / contain no-repeat; }
+:root:root:root body.pagina-paineis .tema button::before { content: ""; flex: none; width: calc(var(--k) * 16); height: calc(var(--k) * 16); background: currentColor; -webkit-mask: center / contain no-repeat; mask: center / contain no-repeat; }
 :root:root:root body.pagina-paineis .tema button[data-tema="escuro"]::before { -webkit-mask-image: url(tema-icones/lua.png); mask-image: url(tema-icones/lua.png); }
 :root:root:root body.pagina-paineis .tema button[data-tema="claro"]::before { -webkit-mask-image: url(tema-icones/sol.png); mask-image: url(tema-icones/sol.png); }
 :root:root:root body.pagina-paineis .tema button[aria-pressed="true"] { background: #5E012E; color: #F4E7DC; }
@@ -2018,4 +2020,9 @@ body.pagina-paineis #work { display: none; }
 @media (min-width: 1000px) {
   :root:root:root:root body.pagina-paineis .tema:has(button[data-tema="escuro"][aria-pressed="true"])::before { background: #FFFFFF; }
   :root:root:root body.pagina-paineis .tema button { padding: calc(var(--k) * 6) 0; }
+}
+
+/* Fundo creme cobre toda a página da home (desktop), inclusive abaixo da área visível */
+@media (min-width: 1000px) {
+  html:has(body.pagina-paineis) { background: #F4E7DC; }
 }
