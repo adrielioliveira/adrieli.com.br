@@ -67,3 +67,29 @@ body { min-width: 320px; font-family: "Urbanist", sans-serif; color: #000; }
 .mail-link { color: inherit; }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Research links (Box of Research Links): texto e seta aparecem no hover/foco */
+.research-links { padding: 0; }
+.research-link {
+  display: flex; align-items: flex-end; justify-content: space-between; overflow: hidden;
+  padding: 18px; border: 0; border-radius: 15px; color: #183900; background: #CBEE2F;
+  font-family: "Urbanist", sans-serif; font-size: 19px; font-weight: 600; text-align: left; cursor: pointer;
+  transition: border-radius 240ms ease, filter 240ms ease, transform 240ms ease;
+}
+.research-link__label, .research-link__arrow {
+  opacity: 0; transform: translateY(8px);
+  transition: opacity 240ms ease, transform 240ms ease;
+}
+.research-link:hover, .research-link:focus-visible {
+  border-radius: 36px 15px 15px; filter: saturate(1.15); transform: translateY(-1px);
+}
+.research-link:hover .research-link__label, .research-link:hover .research-link__arrow,
+.research-link:focus-visible .research-link__label, .research-link:focus-visible .research-link__arrow {
+  opacity: 1; transform: translateY(0);
+}
+.research-link:active { transform: translateY(1px); }
+.research-link:focus-visible { outline: 3px solid #FF6533; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .research-link, .research-link__label, .research-link__arrow { transition: none; }
+  .research-link:hover, .research-link:focus-visible, .research-link:active { transform: none; }
+}
