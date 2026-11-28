@@ -22,164 +22,22 @@
   <link rel="stylesheet" href="prototipo.css">
 </head>
 <body>
-  <main class="site-shell">
-    <section class="portfolio-grid" aria-label="Portfolio introduction and selected work">
-      <aside class="intro-rail" id="info">
-        <nav class="top-nav" aria-label="Primary navigation">
-          <button type="button" class="nav-pill nav-pill--info" data-ir="info">Info</button>
-          <button type="button" class="nav-pill nav-pill--contact" data-ir="contact">Contact</button>
-        </nav>
-
-        <div class="presentation-card">
-          <img src="assets/prototipo/f1ba9.svg" alt="" class="eye-icon">
-          <div class="presentation-copy">
-            <p>Create for <strong>needs.</strong></p>
-            <p>Exist for <strong>purpose.</strong></p>
-          </div>
-        </div>
-
-        <div class="bio-card">
-          <p>Hi, I&apos;m Adrieli. I&apos;m an junior art director, and I study accessibility in visual communication, specifically how messages reach, or fail to reach, people with color vision deficiency. I believe a message only really communicates when the person receiving it understands it. If part of the audience doesn&apos;t get it, then for them, the communication just didn&apos;t happen.</p>
-          <div class="bio-actions">
-            <button type="button" class="outline-button outline-button--orange" data-ir="work">Start with my undergrad thesis</button>
-            <button type="button" class="outline-button outline-button--berry" data-ir="contact">Get to know me!</button>
-          </div>
-        </div>
-
-        <div class="research-links" aria-label="Research links">
-          <button type="button" class="research-link" data-link="thesis"><span>Undergrad thesis</span><span aria-hidden="true">↗</span></button>
-          <button type="button" class="research-link" data-link="archive"><span>CNPq research</span><span aria-hidden="true">↗</span></button>
-          <button type="button" class="research-link" data-link="editorial"><span>Costa Ouro</span><span aria-hidden="true">↗</span></button>
-        </div>
-
-        <div class="brand-card" aria-label="Brands Adrieli has worked with">
-          <img src="assets/prototipo/481c2.png" alt="Disney" class="brand brand--disney">
-          <span class="chevrolet-crop">
-            <img src="assets/prototipo/73cce.png" alt="Chevrolet" class="brand brand--chevrolet">
-          </span>
-          <img src="assets/prototipo/6dced.png" alt="Peanuts" class="brand brand--peanuts">
-        </div>
-      </aside>
-
-      <section class="work-panel" id="work">
-        <header class="work-tabs">
-          <button type="button" data-ir="work">Research</button>
-          <button type="button" data-tab="editorial">Work</button>
-        </header>
-        <div class="work-grid">
-          <button type="button" class="research-card research-card--thesis is-selected" data-card="thesis" aria-pressed="true" aria-label="Open Undergrad thesis">
-            <span class="thesis-labels">
-              <span class="project-name">Color first.</span>
-              <span class="project-meta">Undergrad Thesis • 2024</span>
-            </span>
-            <span class="card-hover-label">Undergrad thesis</span>
-          </button>
-          <button type="button" class="research-card research-card--portrait" data-card="portrait" aria-pressed="false" aria-label="Open Portrait study">
-            <span class="card-hover-label">Portrait study</span>
-          </button>
-          <button type="button" class="research-card research-card--archive" data-card="archive" aria-pressed="false" aria-label="Open Research archive">
-            <span class="card-hover-label">Research archive</span>
-          </button>
-          <button type="button" class="research-card research-card--experiments" data-card="experiments" aria-pressed="false" aria-label="Open Visual experiments">
-            <span class="card-hover-label">Visual experiments</span>
-          </button>
-          <button type="button" class="research-card research-card--editorial" data-card="editorial" aria-pressed="false" aria-label="Open Editorial work">
-            <span class="card-hover-label">Editorial work</span>
-          </button>
-        </div>
-      </section>
-    </section>
-
-    <section class="contact-panel" id="contact">
-      <div class="contact-border">
-        <div class="contact-art" aria-label="Let’s talk about accessible color">
-          <div class="art-row art-row--top">
-            <span class="lets">let’s</span>
-            <span class="talk">
-              <img src="assets/prototipo/c5476.svg" alt="">
-              <b>talk</b>
-            </span>
-            <span class="about">about</span>
-          </div>
-          <div class="art-row art-row--bottom">
-            <img src="assets/prototipo/02f93.svg" alt="" class="asterisk">
-            <span class="accessible">
-              <img src="assets/prototipo/77ac3.svg" alt="">
-              <b>accessible</b>
-            </span>
-            <span class="bang">
-              <img src="assets/prototipo/efb25.svg" alt="">
-              <b>!</b>
-            </span>
-            <span class="color">
-              <img src="assets/prototipo/02de2.svg" alt="">
-              <b>COLOR</b>
-            </span>
-          </div>
-        </div>
-
-        <a class="write-pill" href="mailto:adrielibtholiveira@gmail.com">write to me</a>
-        <a class="email-link" href="mailto:adrielibtholiveira@gmail.com">adrielibtholiveira@gmail.com</a>
-        <a class="linkedin-link" href="https://www.linkedin.com/in/adrieliboliveira/" target="_blank" rel="noreferrer">
-          <span>Let’s connect on linkedin</span>
-          <img src="assets/prototipo/a644a.svg" alt="">
-        </a>
-      </div>
-    </section>
-
-    <footer class="site-footer">
-      <div class="footer-copy">
-        <p><strong>© 2026 Adrieli Both de Oliveira.</strong> Licensed characters and marks belong to their owners.</p>
-        <p><strong>Accessibility:</strong> Text on this site meets WCAG 2.2 AA contrast. Color never carries meaning on its own: labels, numbers and shapes do. Use the “Color vision check” button to see any page through a simulation. <a href="colophon.html" target="_blank" rel="noreferrer">How this site was built →</a></p>
-      </div>
-      <div class="footer-actions">
-        <button type="button" class="pause-button" id="pause-button" aria-pressed="false">Pause Motions</button>
-        <button type="button" class="top-button" id="top-button">
-          <img src="assets/prototipo/b717c.svg" alt="">
-          <span>Scroll to top</span>
-        </button>
-      </div>
-    </footer>
-  </main>
-
+  <div class="viewport" id="viewport">
+    <div class="home" id="home" role="main" aria-label="Home">
+<div class="a box" style="left:437px;top:16px;width:1473px;height:912px;"><div class="a pill mv" style="left:11px;top:7px;width:101px;height:27px;"><div class="t f-rg18" style="left:14px;top:3px;width:73px;height:22px">Research</div></div><div class="a pill mv" style="left:117px;top:7px;width:62px;height:27px;"><div class="t f-rg18" style="left:11px;top:3px;width:40px;height:22px">Work</div></div><div class="a card bl" style="left:6px;top:41px;width:950px;height:550px;"><div class="a pill pk" style="left:10px;top:502px;width:142px;height:37px;"><div class="t f-sb24" style="left:15.07px;top:4px;width:109px;height:29px">Color first.</div></div><div class="a pill pk" style="left:159px;top:502px;width:238px;height:37px;"><div class="t f-lt20" style="left:14px;top:7px;width:210px;height:24px">Undergrad Thesis • 2024</div></div></div><div class="a card bl" style="left:6px;top:596px;width:300px;height:310px;"></div><div class="a card bl" style="left:311px;top:596px;width:849px;height:310px;"></div><div class="a card bl" style="left:961px;top:41px;width:504px;height:550px;"></div><div class="a card bl" style="left:1165px;top:596px;width:300px;height:310px;"></div></div><div class="a box" style="left:11px;top:61px;width:420px;height:114px;"><div class="t f-ur30" style="left:109px;top:56.92px;width:228px;height:36px">Exist for purpose.</div><div class="t f-ur30" style="left:109px;top:20px;width:231px;height:36px">Create for needs.</div><div class="a " style="left:29px;top:16px;width:56px;height:81.2px;"><div class="a " style="left:0px;top:0px;width:56px;height:40.6px;background:#FF6533"></div><div class="a " style="left:0px;top:40.6px;width:56px;height:40.6px;background:#9BA8EF"></div><div class="a " style="left:3.3px;top:26.0px;width:49.4px;height:26.0px;background:#FF9173"></div><div class="a " style="left:18.2px;top:30.9px;width:19.6px;height:20.4px;background:#F9F2ED"></div><div class="a " style="left:23.3px;top:36.0px;width:9.4px;height:9.2px;background:#4C0610"></div></div></div><div class="a box" style="left:11px;top:180px;width:420px;height:243px;"><div class="t f-bio16" style="left:17px;top:14px;width:386px;height:161px">Hi, I&#39;m Adrieli. I&#39;m an junior art director, and I study accessibility in visual communication, specifically how messages reach, or fail to reach, people with color vision deficiency. I believe a message only really communicates when the person receiving it understands it. If part of the audience doesn&#39;t get it, then for them, the communication just didn&#39;t happen.</div><div class="a btn-o" style="left:17px;top:196px;width:187px;height:34px;"><div class="t f-lt12 c-or" style="left:12px;top:7px;width:161px;height:20px">Start with my undergrad thesis</div></div><div class="a btn-b" style="left:210px;top:196px;width:105px;height:34px;"><div class="t f-lt12 c-wn" style="left:9px;top:7px;width:87px;height:20px">Get to know me!</div></div></div><div class="a box r2000" style="left:11px;top:878px;width:420px;height:50px;"><img class="a" src="assets/prototipo/481c2.png" alt="Disney" style="left:16px;top:11px;width:66px;height:28px"><span class="a" style="left:92px;top:15px;width:150px;height:20.1px;overflow:hidden"><img src="assets/prototipo/73cce.png" alt="Chevrolet" style="position:absolute;left:0;top:-82px;width:150px;height:150px"></span><img class="a" src="assets/prototipo/6dced.png" alt="Peanuts" style="left:252px;top:14px;width:84px;height:22.27px"></div><div class="a box" style="left:11px;top:428px;width:420px;height:445px;"><div class="a lime r15" style="left:6px;top:298px;width:408px;height:140px;"></div><div class="a lime r15" style="left:6px;top:153px;width:408px;height:140px;"></div><div class="a lime r15" style="left:6px;top:8px;width:408px;height:140px;"></div></div><div class="a box" style="left:11px;top:16px;width:420px;height:40px;"><div class="a pill dk" style="left:237px;top:7px;width:68px;height:27px;"><div class="t f-rg18 c-lime" style="left:19px;top:3px;width:30px;height:22px">Info</div></div><div class="a pill lm" style="left:311px;top:7px;width:100px;height:27px;"><div class="t f-rg18 c-green" style="left:18px;top:3px;width:64px;height:22px">Contact</div></div></div><div class="a lime r20" style="left:10px;top:1486px;width:1900px;height:120px;"><div class="t f-foot18" style="left:27px;top:16px;width:1292px;height:88px"><strong>© 2026 Adrieli Both de Oliveira.</strong> Licensed characters and marks belong to their owners.&nbsp; <strong>Accessibility:</strong> Text on this site meets WCAG 2.2 AA contrast. Color never carries meaning on its own: labels, numbers and shapes do. Use the “Color vision check” button to see any page through a simulation. <a href="colophon.html" target="_blank" rel="noreferrer">How this site was built →</a></div><div class="a pausa" style="left:1699px;top:24px;width:178.17px;height:35.63px;"><div class="t f-rg18 c-green center" style="left:24px;top:5px;width:129.69px;height:26.18px">Pause Motions</div></div><div class="a " style="left:1699px;top:75px;width:178px;height:22.38px;"><div class="t f-rg18 c-green" style="left:81.37px;top:0px;width:96.63px;height:22.38px">Scroll to top</div><div class="a linha" style="left:0px;top:11px;width:74.25px;height:0px;"></div></div></div><div class="a dk" style="left:10px;top:934px;width:1900px;height:545px;"><div class="a moldura" style="left:19px;top:23px;width:1860px;height:500px;"></div><div class="a pill blue" style="left:613px;top:85.45px;width:224.88px;height:89.18px;"><div class="t f-sm58 c-ink center" style="left:0px;top:0px;width:224.88px;height:89.18px">let’s</div></div><div class="a " style="left:863.5px;top:85.45px;width:184.17px;height:89.18px;"><img class="a" src="assets/prototipo/c5476.svg" alt="" style="left:0px;top:0px;width:184.17px;height:89.18px"><div class="t f-sm58 c-wine center" style="left:0px;top:0px;width:184.17px;height:89.18px">talk</div></div><div class="a about" style="left:1073.29px;top:85.45px;width:205.5px;height:89.18px;"><div class="t f-sm58 c-pink center" style="left:0px;top:0px;width:205.5px;height:89.18px">about</div></div><div class="a " style="left:491px;top:204.45px;width:75.61px;height:75.61px;"><img class="a" src="assets/prototipo/02f93.svg" alt="" style="left:0px;top:0px;width:75.61px;height:75.61px"></div><div class="a " style="left:576.61px;top:195.45px;width:426.5px;height:94.07px;"><img class="a" src="assets/prototipo/77ac3.svg" alt="" style="left:0px;top:4.89px;width:426.5px;height:89.18px"><div class="t f-sm58 c-ink center" style="left:0px;top:4.89px;width:426.5px;height:89.18px">accessible</div></div><div class="a " style="left:1013.11px;top:203.45px;width:77.54px;height:77.54px;"><img class="a" src="assets/prototipo/efb25.svg" alt="" style="left:0px;top:0px;width:77.54px;height:77.54px"><div class="t f-bang c-wine center" style="left:0px;top:0px;width:77.54px;height:77.54px">!</div></div><div class="a " style="left:1100.65px;top:197.45px;width:300.49px;height:89.18px;"><img class="a" src="assets/prototipo/02de2.svg" alt="" style="left:0px;top:0px;width:300.49px;height:89.18px"><div class="t f-sm57 c-green center" style="left:0px;top:0px;width:300.49px;height:89.18px">COLOR</div></div><div class="a pill-o" style="left:868.6px;top:334.24px;width:164.11px;height:30.71px;"><div class="t f-wr19 c-lime center" style="left:0px;top:0px;width:164.11px;height:30.71px">write to me</div></div><div class="t f-mail center" style="left:587.55px;top:365.26px;width:724px;height:63px">adrielibtholiveira@gmail.com</div><div class="a pill wn" style="left:740.58px;top:445.9px;width:420.27px;height:39.71px;"><div class="t f-lk24 c-pink center" style="left:0px;top:0px;width:420.27px;height:39.71px">Let’s connect on linkedin</div></div></div>
+    </div>
+  </div>
   <script>
   (function () {
-    function irPara(id) {
-      var el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    var vp = document.getElementById("viewport");
+    var home = document.getElementById("home");
+    function ajustar() {
+      var s = Math.min(1, window.innerWidth / 1920);
+      home.style.transform = "scale(" + s + ")";
+      vp.style.height = (1620 * s) + "px";
     }
-    document.querySelectorAll("[data-ir]").forEach(function (b) {
-      b.addEventListener("click", function () { irPara(b.dataset.ir); });
-    });
-
-    var cards = document.querySelectorAll("[data-card]");
-    function selecionar(id) {
-      cards.forEach(function (c) {
-        var ativo = c.dataset.card === id;
-        c.classList.toggle("is-selected", ativo);
-        c.setAttribute("aria-pressed", ativo ? "true" : "false");
-      });
-    }
-    cards.forEach(function (c) {
-      c.addEventListener("click", function () { selecionar(c.dataset.card); });
-    });
-    var linkMap = { thesis: "thesis", archive: "archive", editorial: "editorial" };
-    document.querySelectorAll("[data-link]").forEach(function (b) {
-      b.addEventListener("click", function () { selecionar(linkMap[b.dataset.link]); irPara("work"); });
-    });
-    document.querySelector("[data-tab]").addEventListener("click", function () { selecionar("editorial"); });
-
-    var pausa = document.getElementById("pause-button");
-    pausa.addEventListener("click", function () {
-      var pausado = !document.documentElement.classList.contains("motions-paused");
-      document.documentElement.classList.toggle("motions-paused", pausado);
-      pausa.setAttribute("aria-pressed", pausado ? "true" : "false");
-      pausa.textContent = pausado ? "Resume Motions" : "Pause Motions";
-    });
-
-    document.getElementById("top-button").addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+    ajustar();
+    window.addEventListener("resize", ajustar);
   })();
   </script>
 </body>
