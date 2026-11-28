@@ -19,130 +19,131 @@
   <meta name="theme-color" content="#26030A">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <script>try{document.documentElement.dataset.theme=(localStorage.getItem("tema")==="escuro")?"dark":"light"}catch(e){document.documentElement.dataset.theme="light"}</script>
   <link rel="stylesheet" href="prototipo.css">
 </head>
 <body>
-  <div class="site-shell" id="site-shell">
-    <aside class="utility-rail" aria-label="Display controls">
-      <div class="brand-mark" aria-hidden="true"><img src="assets/prototipo/bad7b.png" alt=""></div>
-      <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false">
-        <img class="toggle-track" src="assets/prototipo/76c02.svg" alt="">
-        <span class="toggle-selection" id="toggle-selection"></span>
-        <span class="toggle-option toggle-option--light">
-          Light
-          <img src="assets/prototipo/2083a.svg" alt="">
-        </span>
-        <span class="toggle-option toggle-option--dark">
-          Dark
-          <img src="assets/prototipo/c2f62.svg" alt="">
-        </span>
-      </button>
-      <button class="scroll-top" type="button" id="scroll-top">
-        <span>Scroll to top</span>
-        <img src="assets/prototipo/7aa88.svg" alt="">
-      </button>
-    </aside>
-
-    <main class="main-column">
-      <header class="topbar">
-        <button class="brand-name" type="button" id="brand-home">
-          <span>ADRIELI</span>
-          <span class="brand-mark brand-mark--compact" aria-hidden="true"><img src="assets/prototipo/bad7b.png" alt=""></span>
-        </button>
-        <nav aria-label="Primary navigation">
-          <button type="button" data-ir="work">work</button>
-          <button type="button" data-ir="method">method</button>
-          <button type="button" data-ir="research">research</button>
-          <button type="button" data-ir="about">about</button>
-          <button class="contact-nav" type="button" data-ir="contact">get in touch</button>
+  <main class="site-shell">
+    <section class="portfolio-grid" aria-label="Portfolio introduction and selected work">
+      <aside class="intro-rail" id="info">
+        <nav class="top-nav" aria-label="Primary navigation">
+          <button type="button" class="nav-pill nav-pill--info" data-ir="info">Info</button>
+          <button type="button" class="nav-pill nav-pill--contact" data-ir="contact">Contact</button>
         </nav>
-      </header>
 
-      <section class="portfolio-grid" id="work" aria-label="Selected work">
-        <button class="project-card project-card--intro" type="button" aria-label="Open featured project"></button>
-        <button class="project-card project-card--small" id="method" type="button" aria-label="Open method project"></button>
-        <button class="project-card project-card--medium" id="research" type="button" aria-label="Open research project"></button>
-        <div class="projects-visual" aria-label="Project image placeholders">
-          <button class="visual-card visual-card--tall" type="button" aria-label="Open project one"></button>
-          <button class="visual-card" type="button" aria-label="Open project two"></button>
-          <button class="visual-card" type="button" aria-label="Open project three"></button>
-          <button class="visual-card visual-card--wide" type="button" aria-label="Open project four"></button>
-        </div>
-        <div class="grid-strip" id="about"></div>
-      </section>
-
-      <section class="contact-panel" id="contact">
-        <div class="contact-panel__inner">
-          <div class="contact-headline" aria-label="let’s talk about accessible color">
-            <div class="headline-row headline-row--top">
-              <span class="word word--lets">let’s</span>
-              <span class="word word--talk">
-                <img src="assets/prototipo/c5476.svg" alt="">
-                <span>talk</span>
-              </span>
-              <span class="word word--about">about</span>
-            </div>
-            <div class="headline-row headline-row--bottom">
-              <img class="asterisk" src="assets/prototipo/02f93.svg" alt="">
-              <span class="word word--accessible">
-                <img src="assets/prototipo/77ac3.svg" alt="">
-                <span>accessible</span>
-              </span>
-              <span class="word word--bang">
-                <img src="assets/prototipo/efb25.svg" alt="">
-                <span>!</span>
-              </span>
-              <span class="word word--color">
-                <img src="assets/prototipo/02de2.svg" alt="">
-                <span>COLOR</span>
-              </span>
-            </div>
+        <div class="presentation-card">
+          <img src="assets/prototipo/f1ba9.svg" alt="" class="eye-icon">
+          <div class="presentation-copy">
+            <p>Create for <strong>needs.</strong></p>
+            <p>Exist for <strong>purpose.</strong></p>
           </div>
-          <div class="email-group">
-            <span>write to me</span>
-            <a href="mailto:adrielibtholiveira@gmail.com">adrielibtholiveira@gmail.com</a>
+        </div>
+
+        <div class="bio-card">
+          <p>Hi, I&apos;m Adrieli. I&apos;m an junior art director, and I study accessibility in visual communication, specifically how messages reach, or fail to reach, people with color vision deficiency. I believe a message only really communicates when the person receiving it understands it. If part of the audience doesn&apos;t get it, then for them, the communication just didn&apos;t happen.</p>
+          <div class="bio-actions">
+            <button type="button" class="outline-button outline-button--orange" data-ir="work">Start with my undergrad thesis</button>
+            <button type="button" class="outline-button outline-button--berry" data-ir="contact">Get to know me!</button>
           </div>
-          <a class="linkedin-button" href="https://www.linkedin.com/in/adrieliboliveira/" target="_blank" rel="noreferrer">
-            Let’s connect on linkedin
-            <img src="assets/prototipo/a644a.svg" alt="">
-          </a>
+        </div>
+
+        <div class="research-links" aria-label="Research links">
+          <button type="button" class="research-link" data-link="thesis"><span>Undergrad thesis</span><span aria-hidden="true">↗</span></button>
+          <button type="button" class="research-link" data-link="archive"><span>CNPq research</span><span aria-hidden="true">↗</span></button>
+          <button type="button" class="research-link" data-link="editorial"><span>Costa Ouro</span><span aria-hidden="true">↗</span></button>
+        </div>
+
+        <div class="brand-card" aria-label="Brands Adrieli has worked with">
+          <img src="assets/prototipo/481c2.png" alt="Disney" class="brand brand--disney">
+          <span class="chevrolet-crop">
+            <img src="assets/prototipo/73cce.png" alt="Chevrolet" class="brand brand--chevrolet">
+          </span>
+          <img src="assets/prototipo/6dced.png" alt="Peanuts" class="brand brand--peanuts">
+        </div>
+      </aside>
+
+      <section class="work-panel" id="work">
+        <header class="work-tabs">
+          <button type="button" data-ir="work">Research</button>
+          <button type="button" data-tab="editorial">Work</button>
+        </header>
+        <div class="work-grid">
+          <button type="button" class="research-card research-card--thesis is-selected" data-card="thesis" aria-pressed="true" aria-label="Open Undergrad thesis">
+            <span class="thesis-labels">
+              <span class="project-name">Color first.</span>
+              <span class="project-meta">Undergrad Thesis • 2024</span>
+            </span>
+            <span class="card-hover-label">Undergrad thesis</span>
+          </button>
+          <button type="button" class="research-card research-card--portrait" data-card="portrait" aria-pressed="false" aria-label="Open Portrait study">
+            <span class="card-hover-label">Portrait study</span>
+          </button>
+          <button type="button" class="research-card research-card--archive" data-card="archive" aria-pressed="false" aria-label="Open Research archive">
+            <span class="card-hover-label">Research archive</span>
+          </button>
+          <button type="button" class="research-card research-card--experiments" data-card="experiments" aria-pressed="false" aria-label="Open Visual experiments">
+            <span class="card-hover-label">Visual experiments</span>
+          </button>
+          <button type="button" class="research-card research-card--editorial" data-card="editorial" aria-pressed="false" aria-label="Open Editorial work">
+            <span class="card-hover-label">Editorial work</span>
+          </button>
         </div>
       </section>
+    </section>
 
-      <footer>
-        <div class="footer-copy">
-          <p>
-            <strong>© 2026 Adrieli Both de Oliveira.</strong> Licensed characters and marks belong to their owners.
-          </p>
-          <p>
-            <strong>Accessibility:</strong> Text on this site meets WCAG 2.2 AA contrast. Color never carries meaning on
-            its own: labels, numbers and shapes do. Use the “Color vision check” button to see any page through a
-            simulation.
-            <a href="colophon.html" target="_blank" rel="noreferrer">How this site was built →</a>
-          </p>
+    <section class="contact-panel" id="contact">
+      <div class="contact-border">
+        <div class="contact-art" aria-label="Let’s talk about accessible color">
+          <div class="art-row art-row--top">
+            <span class="lets">let’s</span>
+            <span class="talk">
+              <img src="assets/prototipo/c5476.svg" alt="">
+              <b>talk</b>
+            </span>
+            <span class="about">about</span>
+          </div>
+          <div class="art-row art-row--bottom">
+            <img src="assets/prototipo/02f93.svg" alt="" class="asterisk">
+            <span class="accessible">
+              <img src="assets/prototipo/77ac3.svg" alt="">
+              <b>accessible</b>
+            </span>
+            <span class="bang">
+              <img src="assets/prototipo/efb25.svg" alt="">
+              <b>!</b>
+            </span>
+            <span class="color">
+              <img src="assets/prototipo/02de2.svg" alt="">
+              <b>COLOR</b>
+            </span>
+          </div>
         </div>
-        <button class="motion-button" type="button" id="motion-button" aria-pressed="false">Pause motions</button>
-      </footer>
-    </main>
-  </div>
+
+        <a class="write-pill" href="mailto:adrielibtholiveira@gmail.com">write to me</a>
+        <a class="email-link" href="mailto:adrielibtholiveira@gmail.com">adrielibtholiveira@gmail.com</a>
+        <a class="linkedin-link" href="https://www.linkedin.com/in/adrieliboliveira/" target="_blank" rel="noreferrer">
+          <span>Let’s connect on linkedin</span>
+          <img src="assets/prototipo/a644a.svg" alt="">
+        </a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-copy">
+        <p><strong>© 2026 Adrieli Both de Oliveira.</strong> Licensed characters and marks belong to their owners.</p>
+        <p><strong>Accessibility:</strong> Text on this site meets WCAG 2.2 AA contrast. Color never carries meaning on its own: labels, numbers and shapes do. Use the “Color vision check” button to see any page through a simulation. <a href="colophon.html" target="_blank" rel="noreferrer">How this site was built →</a></p>
+      </div>
+      <div class="footer-actions">
+        <button type="button" class="pause-button" id="pause-button" aria-pressed="false">Pause Motions</button>
+        <button type="button" class="top-button" id="top-button">
+          <img src="assets/prototipo/b717c.svg" alt="">
+          <span>Scroll to top</span>
+        </button>
+      </div>
+    </footer>
+  </main>
 
   <script>
   (function () {
-    var root = document.documentElement;
-    var shell = document.getElementById("site-shell");
-    var toggle = document.getElementById("theme-toggle");
-    var selection = document.getElementById("toggle-selection");
-    function aplicarTema(dark) {
-      root.dataset.theme = dark ? "dark" : "light";
-      selection.classList.toggle("toggle-selection--dark", dark);
-      toggle.setAttribute("aria-pressed", dark ? "true" : "false");
-      toggle.setAttribute("aria-label", "Switch to " + (dark ? "light" : "dark") + " theme");
-      try { localStorage.setItem("tema", dark ? "escuro" : "claro"); } catch (e) {}
-    }
-    aplicarTema(root.dataset.theme === "dark");
-    toggle.addEventListener("click", function () { aplicarTema(root.dataset.theme !== "dark"); });
-
     function irPara(id) {
       var el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -150,16 +151,34 @@
     document.querySelectorAll("[data-ir]").forEach(function (b) {
       b.addEventListener("click", function () { irPara(b.dataset.ir); });
     });
-    function topo() { window.scrollTo({ top: 0, behavior: "smooth" }); }
-    document.getElementById("scroll-top").addEventListener("click", topo);
-    document.getElementById("brand-home").addEventListener("click", topo);
 
-    var motion = document.getElementById("motion-button");
-    motion.addEventListener("click", function () {
-      var pausado = !shell.classList.contains("motions-paused");
-      shell.classList.toggle("motions-paused", pausado);
-      motion.setAttribute("aria-pressed", pausado ? "true" : "false");
-      motion.textContent = pausado ? "Play motions" : "Pause motions";
+    var cards = document.querySelectorAll("[data-card]");
+    function selecionar(id) {
+      cards.forEach(function (c) {
+        var ativo = c.dataset.card === id;
+        c.classList.toggle("is-selected", ativo);
+        c.setAttribute("aria-pressed", ativo ? "true" : "false");
+      });
+    }
+    cards.forEach(function (c) {
+      c.addEventListener("click", function () { selecionar(c.dataset.card); });
+    });
+    var linkMap = { thesis: "thesis", archive: "archive", editorial: "editorial" };
+    document.querySelectorAll("[data-link]").forEach(function (b) {
+      b.addEventListener("click", function () { selecionar(linkMap[b.dataset.link]); irPara("work"); });
+    });
+    document.querySelector("[data-tab]").addEventListener("click", function () { selecionar("editorial"); });
+
+    var pausa = document.getElementById("pause-button");
+    pausa.addEventListener("click", function () {
+      var pausado = !document.documentElement.classList.contains("motions-paused");
+      document.documentElement.classList.toggle("motions-paused", pausado);
+      pausa.setAttribute("aria-pressed", pausado ? "true" : "false");
+      pausa.textContent = pausado ? "Resume Motions" : "Pause Motions";
+    });
+
+    document.getElementById("top-button").addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   })();
   </script>
