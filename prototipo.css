@@ -3,10 +3,10 @@
 @font-face { font-family: "Urbanist"; src: url("fonts/Urbanist-VF.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
 
 html, body { margin: 0; padding: 0; background: #F1F1F1; }
-body { min-width: 320px; font-family: "Urbanist", sans-serif; color: #000; }
+body { min-width: 1920px; font-family: "Urbanist", sans-serif; color: #000; }
 
-.viewport { position: relative; width: 100%; overflow: hidden; }
-.home { position: absolute; top: 0; left: 50%; width: 1920px; height: 1620px; margin-left: -960px; transform-origin: top center; background: #F1F1F1; }
+.viewport { position: relative; width: 1920px; height: 1620px; margin: 0 auto; }
+.home { position: absolute; top: 0; left: 0; width: 1920px; height: 1620px; background: #F1F1F1; }
 
 .a { position: absolute; box-sizing: border-box; }
 .t { position: absolute; display: flex; align-items: center; white-space: nowrap; }

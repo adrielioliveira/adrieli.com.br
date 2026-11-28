@@ -35,15 +35,6 @@
         if (w) w.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     });
-    var vp = document.getElementById("viewport");
-    var home = document.getElementById("home");
-    function ajustar() {
-      var s = Math.min(1, window.innerWidth / 1920);
-      home.style.transform = "scale(" + s + ")";
-      vp.style.height = (1620 * s) + "px";
-    }
-    ajustar();
-    window.addEventListener("resize", ajustar);
   })();
   </script>
 </body>
